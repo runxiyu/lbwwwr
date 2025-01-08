@@ -4,7 +4,6 @@
 {{ define "main" }}
 	<h1>{{ .Title }}</h1>
 	{{ .Content }}
-	<h2>Releases</h2>
 	<ul>
 	        {{ range .Pages }}
 	        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
