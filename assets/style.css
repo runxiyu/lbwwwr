@@ -8,6 +8,8 @@ html {
 	--dim-text-color: #333;
 	--link-color: #24527d;
 	--text-decoration-color: #CCC;
+	--header-fg: black;
+	--header-bg: #f2f2f2;
 	color: var(--fg);
 	background-color: var(--bg);
 }
@@ -20,15 +22,17 @@ html {
 		--dim-text-color: #999;
 		--link-color: #5ca7ed;
 		--text-decoration-color: #575745;
+		--header-fg: #f8f9fa;
+		--header-bg: #30363b;
 	}
 }
 
-body {
+main {
 	margin: 0 auto;
-	padding: 1rem;
+	padding: 0 1rem;
 }
 
-body:not(.wide) {
+main:not(.wide) {
 	max-width: 50rem;
 }
 
@@ -118,4 +122,50 @@ img:not(.no-auto-width) {
 	width: 66%;
 	margin: 0 auto;
 	display: block;
+}
+
+
+
+
+header {
+	color: var(--header-fg);
+	background-color: var(--header-bg);
+	margin: 0;
+	padding: 1rem;
+	text-align: center;
+}
+
+header a {
+	text-decoration: none !important;
+	color: var(--header-fg) !important;
+}
+
+#site-title {
+	font-weight: bold;
+	font-size: 130%;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	margin-top: 0.5rem;
+	line-height: 1.5;
+}
+
+nav > ul {
+	list-style-type: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+nav > ul > li {
+	display: inline-block;
+}
+
+nav li:not(:last-child)::after {
+        content:"   ";
 }
