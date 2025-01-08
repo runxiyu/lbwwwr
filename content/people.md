@@ -34,7 +34,7 @@ works on all aspects of Libreboot, such as:
   that Libreboot uses.
 * Providing user support on IRC.
 
-# External projects
+## External projects
 
 ### Coreboot project
 
@@ -59,7 +59,7 @@ legacy x86 BIOS implementation.
 Libreboot uses U-Boot as the coreboot payload on supported ARM Chromebooks, and
 on AMD64 systems if configured to be used.
 
-# Contributors in alphabetical order
+## Contributors in alphabetical order
 
 ### Alexei Sorokin
 
