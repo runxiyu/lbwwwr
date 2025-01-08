@@ -1309,7 +1309,7 @@ USB input devices and networking devices, in the user's operating system).
 We currently configure the ME/BIOS region sizes manually, which is fine, but
 the way it's configured is very complicated.
 
-See: [Vendor file guide](../docs/install/ivy_has_common.html)
+See: [Vendor file guide](../install/ivy_has_common.html)
 
 The way the Libreboot build system works, the Intel ME and other firmware is
 automatically downloaded at build time. At release time, files such as these

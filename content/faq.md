@@ -99,7 +99,7 @@ just use the default one in coreboot which has this issue on some CCFL panels,
 but not LED panels.
 
 You can work around this in your distribution, by following the notes at [docs:
-backlight control](../docs/misc/#finetune-backlight-control-on-intel-gpus).
+backlight control](../misc/#finetune-backlight-control-on-intel-gpus).
 <!-- TODO -->
 
 ### GM45 thinkpad ethernet port doesn't autoconnect
@@ -256,7 +256,7 @@ that is in the flash chip.
 This also means that even if you remove the HDD or SSD, you'll still have a
 functioning bootloader installed which could be used to boot a live
 distribution installer from a USB flash drive. <!-- TODO See [How to install Linux on a
-libreboot system](../docs/linux/grub_boot_installer) -->
+libreboot system](../linux/grub_boot_installer) -->
 
 You should refer to the [GRUB guide](../grub/).
 
@@ -278,7 +278,7 @@ automatically switch to a GRUB configuration on the HDD or SSD, if it exists.
 You can also load a different GRUB configuration, from any kind of device that
 is supported in GRUB (such as a USB flash drive). For more information, see
 [Modifying the GRUB Configuration in libreboot
-Systems](../docs/linux/grub_cbfs)
+Systems](../linux/grub_cbfs)
 
 If you're using the SeaBIOS payload, it's even easier. It works just like you
 would expect. SeaBIOS implements a normal x86 BIOS interface.
