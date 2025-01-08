@@ -69,7 +69,7 @@ extractor. These can be found online. See
 <http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools>*
 
 This guide shows how to flash the chip:\
-[25xx NOR flashing guide](../install/spi.md)
+[25xx NOR flashing guide](../install/spi)
 
 Native graphics initialization {#graphics}
 ==============================

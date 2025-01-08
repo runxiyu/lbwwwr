@@ -80,7 +80,7 @@ an attacker exploiting any of these vulnerabilities may gain access to
 everything on the PC as it runs: all open files, all running
 applications, all keys pressed, and more.
 
-[Intel Boot Guard](https://mjg59.dreamwidth.org/33981.md) is an ME
+[Intel Boot Guard](https://mjg59.dreamwidth.org/33981) is an ME
 application introduced in Q2 2013 with ME firmware version 9.0 on 4th
 Generation Intel Core i3/i5/i7 (Haswell) CPUs. It allows a PC OEM to
 generate an asymmetric cryptographic keypair, install the public key in
@@ -123,10 +123,10 @@ privacy that can't be ignored.
 Before version 6.0 (that is, on systems from 2008/2009 and earlier), the
 ME can be disabled by setting a couple of values in the SPI flash
 memory. The ME firmware can then be removed entirely from the flash
-memory space. The libreboot project [does this](docs/install/ich9utils.md) on
+memory space. The libreboot project [does this](docs/install/ich9utils) on
 the Intel 4 Series systems that it supports, such as the [ThinkPad
-X200](../docs/install/x200.md) and [ThinkPad
-T400](../docs/install/t400.md). ME firmware versions 6.0 and
+X200](../docs/install/x200) and [ThinkPad
+T400](../docs/install/t400). ME firmware versions 6.0 and
 later, which are found on all systems with an Intel Core i3/i5/i7 CPU
 and a PCH, include "ME Ignition" firmware that performs some hardware
 initialization and power management. If the ME's boot ROM does not find

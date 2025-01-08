@@ -3,10 +3,10 @@ title: ThinkPad T420 external flashing
 x-toc-enable: true
 ---
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common.md), OR
+**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
 YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
 there, before flashing. For posterity,
-[here is the link again](ivy_has_common.md).**
+[here is the link again](ivy_has_common).**
 
 Read the [Ivybridge/Haswell common guide](/docs/install/ivy_has_common.html) if you want more information. Please note, for Thinkpad T420, splitting the rom is not required.
 The following instructions expect you to have these on hand:
@@ -22,7 +22,7 @@ Preparing a release Rom
 
 **Please follow this prior to flashing, or you may brick your machine.**
 
-Please [inject vendor files](ivy_has_common.md) prior to flashing. You can also
+Please [inject vendor files](ivy_has_common) prior to flashing. You can also
 use this guide to change the built-in MAC address for your Intel Gigabit
 Ethernet device; doing so is advisable, because otherwise you will have a
 default, generic MAC address.

@@ -54,7 +54,7 @@ This photo shows an SPI flasher used, with SOIC8 test clip:\
 
 Refer to the external flashing guide:
 
-[Externally rewrite 25xx NOR flash via SPI protocol](spi.md)
+[Externally rewrite 25xx NOR flash via SPI protocol](spi)
 
 NOTE: Do not use the 3.3v rail from your SPI programmer. Leave that disconnected.
 For 3.3v, plug your charger into the mainboard (but do not power on the mainboard)

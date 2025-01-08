@@ -95,7 +95,7 @@ For the MacBook2,1:
 It's believed that all MacBook2,1 and MacBook1,1 models work fine with 
 Libreboot. If there's a model not in the list or not confirmed working 
 here and you happen to have that model and that model works with Libreboot 
-then don't forget to [send a patch](../../git.md), confirming that it 
+then don't forget to [send a patch](../../git), confirming that it 
 actually works!
 
 Internal flashing
@@ -131,7 +131,7 @@ The chip is located under the motherboard. [How to remove the
 motherboard](https://www.ifixit.com/Guide/MacBook+Core+2+Duo+PRAM+Battery+Replacement/529).
 
 Refer to the following guide:\
-[Externally rewrite 25xx NOR flash via SPI protocol](../install/spi.md)
+[Externally rewrite 25xx NOR flash via SPI protocol](../install/spi)
 
 OSes using Linux on Apple EFI firmware
 ======================================

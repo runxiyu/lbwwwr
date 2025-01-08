@@ -256,7 +256,7 @@ that is in the flash chip.
 This also means that even if you remove the HDD or SSD, you'll still have a
 functioning bootloader installed which could be used to boot a live
 distribution installer from a USB flash drive. <!-- TODO See [How to install Linux on a
-libreboot system](../docs/linux/grub_boot_installer.md) -->
+libreboot system](../docs/linux/grub_boot_installer) -->
 
 You should refer to the [GRUB guide](../grub/).
 
@@ -278,7 +278,7 @@ automatically switch to a GRUB configuration on the HDD or SSD, if it exists.
 You can also load a different GRUB configuration, from any kind of device that
 is supported in GRUB (such as a USB flash drive). For more information, see
 [Modifying the GRUB Configuration in libreboot
-Systems](../docs/linux/grub_cbfs.md)
+Systems](../docs/linux/grub_cbfs)
 
 If you're using the SeaBIOS payload, it's even easier. It works just like you
 would expect. SeaBIOS implements a normal x86 BIOS interface.
@@ -360,7 +360,7 @@ align the pins properly. The connection is generally more sturdy. -->
 **No!** This SPI flasher will damage your chip, and the mainboard that it is
 connected to.
 
-Read the notes about CH341A on [docs/install/spi.md](docs/install/spi.md) to
+Read the notes about CH341A on [docs/install/spi.md](docs/install/spi) to
 learn more.
 
 ### I'm having issues with `/dev/mem`

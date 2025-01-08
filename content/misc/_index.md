@@ -56,7 +56,7 @@ Might want to run with --calibrate first
 
 If powertop doesn't work, another way (reduces battery life slightly)
 is to add *processor.max\_cstate=2* to the *linux* line in grub.cfg,
-using [this guide](../linux/grub_cbfs.md).
+using [this guide](../linux/grub_cbfs).
 
 X60/T60: Serial port - how to use (for dock owners)
 
@@ -94,7 +94,7 @@ Devuan, to enable a serial console using GeTTY:\
 
 Note: part of the tutorial above requires changing your grub.cfg. Just
 change the `linux` line to add instructions for enabling getty. See
-[../linux/grub\_cbfs.md](../linux/grub_cbfs.md).
+[../linux/grub\_cbfs.md](../linux/grub_cbfs).
 
 Finetune backlight control on intel gpu's
 =========================================

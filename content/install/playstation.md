@@ -41,7 +41,7 @@ Build from source
 Pre-compiled builds will be in the next Libreboot release, after
 version 20240612. For now, you must compile it from source, but the Libreboot
 build system provides automation for this. Please use the latest lbmk
-revision [from Git](../../git.md).
+revision [from Git](../../git).
 
 First, please make sure you have build dependencies. The build logic in lbmk
 has been tested on Debian 12 (x86\_64) and you can do this for example, as root:

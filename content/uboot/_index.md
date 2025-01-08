@@ -3,10 +3,10 @@ title: U-Boot payload (x86 and ARM)
 ---
 
 **NOTE: This documentation refers only to ARM64. For AMD64/i386 (Intel/AMD)
-U-Boot setups, please read [uboot-x86.md](uboot-x86.md).**
+U-Boot setups, please read [uboot-x86.md](uboot-x86).**
 
 Libreboot has experimental support for using U-Boot as a coreboot
-payload since the [20221214](../../news/libreboot20221214.md) release, on ARM64
+payload since the [20221214](../../news/libreboot20221214) release, on ARM64
 systems, and on x86 since late 2024.
 
 U-Boot integration in Libreboot is currently at a proof-of-concept
@@ -25,7 +25,7 @@ and the build dependencies are installed like so, from `lbmk/` as root:
 This installs everything needed for `./mk -b coreboot`, and part of the
 build process makes use of coreboot's own cross-compile toolchain.
 
-[QEMU x86/ARM64 virtual machines](../misc/emulation.md) are also
+[QEMU x86/ARM64 virtual machines](../misc/emulation) are also
 supported, which should be easy targets to start tinkering on if you
 want to contribute.
 

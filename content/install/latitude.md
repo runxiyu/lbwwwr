@@ -10,24 +10,24 @@ instructions on this page.
 Disable security before flashing
 ================================
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common.md), OR
+**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
 YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
 there, before flashing. For posterity,
-[here is the link again](ivy_has_common.md).**
+[here is the link again](ivy_has_common).**
 
-Please also [disable /dev/mem protection](devmem.md), otherwise flashprog
+Please also [disable /dev/mem protection](devmem), otherwise flashprog
 and dell-flash-unlock won't work. You can re-enable the protections after
 flashing.
 
 Please also disable SecureBoot, if you're using a UEFI-based Dell Latitude.
 Note that Libreboot does not currently implement UEFI on x86 platforms, but
-you can set up [Secure libreBoot](../linux/grub_hardening.md) after flashing.
+you can set up [Secure libreBoot](../linux/grub_hardening) after flashing.
 
 MAC address
 ===========
 
 Make sure to set your own MAC address in the ROM image before flashing.
-Please read the [nvmutil manual](nvmutil.md) which says how to do this.
+Please read the [nvmutil manual](nvmutil) which says how to do this.
 
 Thermal safety
 ==============
@@ -35,7 +35,7 @@ Thermal safety
 **Thermal safety**: this machine shuts down very quickly, when the machine
 exceeds 80c CPU temperature, which is far more conservative than on most
 laptops (non-Dell ones), so you should make sure that your thermals are
-excellent. More info available [here](../install/dell_thermal.md). This is a
+excellent. More info available [here](../install/dell_thermal). This is a
 known bug, but otherwise the machine will be mostly stable.
 
 Machine-specific notes
@@ -47,7 +47,7 @@ Latitude E6400
 Vendor files not required for Dell Latitude E6400 if you have the Intel GPU.
 
 If you have the Nvidia model, please use the `e6400nvidia_4mb` target, and
-make sure to run the [inject script](ivy_has_common.md) prior to flashing.
+make sure to run the [inject script](ivy_has_common) prior to flashing.
 
 E6400 nvidia issues
 -------------------
@@ -127,7 +127,7 @@ So:
 
 When you see flashprog say `VERIFIED` at the end, that means the flash was
 successful. If you don't see that, or you're unsure, please [contact the
-Libreboot project via IRC](../../contact.md).
+Libreboot project via IRC](../../contact).
 
 External flashing
 =================
@@ -149,7 +149,7 @@ flashing - so you need to set the drive strength high.
 Take stock of the above advice, which is also mentioned on the external SPI
 flashing guide.
 
-Please read the [external SPI flash guide](spi.md)
+Please read the [external SPI flash guide](spi)
 
 External flashing is usually not required, on these machines.
 

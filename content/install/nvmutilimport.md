@@ -9,7 +9,7 @@ Assimilation by Libreboot
 
 With no additional changes to nvmutil, the project became part of lbmk,
 which is the Libreboot build system. Please refer to Libreboot's imported
-version of the nvmutil documentation: [nvmutil.md](nvmutil.md)
+version of the nvmutil documentation: [nvmutil.md](nvmutil)
 
 This code and documentation import was performed on November 17th, 2022.
 

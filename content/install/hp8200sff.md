@@ -3,10 +3,10 @@ title: HP Elite 8200 SFF/MT and 6200 Pro Business
 x-toc-enable: true
 ---
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common.md), OR
+**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
 YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
 there, before flashing. For posterity,
-[here is the link again](ivy_has_common.md).**
+[here is the link again](ivy_has_common).**
 
 <div class="specs">
 <center>
@@ -57,7 +57,7 @@ Disable security before flashing
 Before internal flashing, you must first disable `/dev/mem` protections. Make
 sure to re-enable them after you're finished.
 
-See: [Disabling /dev/mem protection](../install/devmem.md)
+See: [Disabling /dev/mem protection](../install/devmem)
 
 Introduction
 ============
@@ -117,13 +117,13 @@ and you must re-insert it. Use the information on this guide to know how
 to do that:
 
 [Insert vendor files on Intel Sandybridge/Ivybridge/Haswell
-platforms](../install/ivy_has_common.md)
+platforms](../install/ivy_has_common)
 
 You may also wish to change the *default MAC address* if you're planning to
 use the onboard Intel Gigabit Ethernet. You can do this using the information
 in the same guide linked above, or read the nvmutil manual:
 
-[Modify MAC addresses with nvmutil](../install/nvmutil.md).
+[Modify MAC addresses with nvmutil](../install/nvmutil).
 
 Internal flashing from vendor BIOS
 ----------------------------------

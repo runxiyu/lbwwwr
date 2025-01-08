@@ -7,10 +7,10 @@ now, as of 27 January 2024, which is a fork of flashrom.
 The reason why was explained, in
 the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
 
-In addition to this manual, you should also refer to [porting.md](porting.md)
-and [testing.md](testing.md).
+In addition to this manual, you should also refer to [porting.md](porting)
+and [testing.md](testing).
 
-Please also read about the [lbmk coding style and design](style.md).
+Please also read about the [lbmk coding style and design](style).
 
 Automated coreboot build system
 ===============================
@@ -63,7 +63,7 @@ Don't be deceived by simplicity
 Libreboot's build system is powerful, and highly configurable, yet deceptively
 simple at the same time. Remember this rule, a rule that applies to *all*
 software projects: code equals bugs, so smaller codebases will yield fewer bugs.
-Libreboot is [regularly](../../news/audit.md) [audited](../../news/audit2.md).
+Libreboot is [regularly](../../news/audit) [audited](../../news/audit2).
 
 Many people will be shocked by how *small* Libreboot is, at its core. You will
 be surprised by just how much can be done with so little. Continue reading!
@@ -149,8 +149,8 @@ The coreboot software is nominally free, but occasionally requires an
 additional file or two from the vendor on a few systems. The libreboot
 project *allows* them, only when they are absolutely required.
 
-[Strict rules](../../news/policy.md) govern when this allowed, and
-the [freedom status page](../../freedom-status.md) provides additional details.
+[Strict rules](../../news/policy) govern when this allowed, and
+the [freedom status page](../../freedom-status) provides additional details.
 
 Please read the files under `config/vendor/` in lbmk, in addition to
 the file `include/vendor.sh`. These configuration files and this source code
@@ -338,7 +338,7 @@ archives.
 
 This provides source tarballs, and ROM images for example; however, ROM images
 containing non-redistributable vendor code are *scrubbed* such that these files must,
-in regular releases, be [re-added manually](../install/ivy_has_common.md) by
+in regular releases, be [re-added manually](../install/ivy_has_common) by
 the user.
 
 You can create release archives by doing:
@@ -409,7 +409,7 @@ src/deguard/
 ------------
 
 Mate Kukri's utility that disables the Intel Boot Guard on Intel MEv11-based
-PCH. More info available on the [deguard page](../install/deguard.md).
+PCH. More info available on the [deguard page](../install/deguard).
 
 On coreboot targets that have Intel Boot Guard, you can specify in
 target configuration, on the vendor file config, something like:
@@ -537,12 +537,12 @@ This is a bootloader provided on ARM chromebooks, within Libreboot. It also
 provides UEFI. Information about that can be found on these resources:
 
 * [U-Boot documentation](../u-boot/)
-* [Chromebook documentation](../install/chromebooks.md)
+* [Chromebook documentation](../install/chromebooks)
 
 This is currently the only payload on *ARM* systems, within Libreboot.
 
 U-Boot is also available on x86 machines, since the Libreboot 20241206 release.
-More information can be found on the [U-Boot x86 page](../uboot/uboot-x86.md);
+More information can be found on the [U-Boot x86 page](../uboot/uboot-x86);
 it is available as an alternative to the traditional SeaBIOS and GRUB payloads,
 and it can successfully boot UEFI applications on x86 Libreboot systems.
 
@@ -565,7 +565,7 @@ PCSX-Redux is a Sony Playstation (PS1/PSX) emulator, but Libreboot only uses
 one part from it: the Open BIOS. This is used by Libreboot to provide an
 open BIOS for the Sony Playstation!
 
-More information available on the [PlayStation page](../install/playstation.md).
+More information available on the [PlayStation page](../install/playstation).
 
 This is automatically compiled by the main build script, and the resulting
 BIOS image is provided in Libreboot release archives.
@@ -592,7 +592,7 @@ Alongside this, `libopencm3` is imported which is required for building it.
 * <https://github.com/libopencm3/libopencm3>
 
 These serprog programmers are quite desirable, owing to their low cost and ease
-of use. You can learn more on the [SPI flashing guide](../install/spi.md).
+of use. You can learn more on the [SPI flashing guide](../install/spi).
 
 Before moving onto configurations, we will now cover *utilities* provided by
 Libreboot itself (included within lbmk, rather than being downloaded like the
@@ -665,7 +665,7 @@ arbitrary ones.
 This directory contains the source code for `nvmutil`, which you can read
 about here:
 
-[nvmutil manual](../install/nvmutil.md)
+[nvmutil manual](../install/nvmutil)
 
 util/spkmodem\_recv/
 ---------------
@@ -1568,7 +1568,7 @@ Helper functions for downloading and injecting vendor files. How to use:
 	./mk -d coreboot TARGET
 
 Refer elsewhere in the documentation for how to handle vendor files, and/or
-read [the guide](../install/ivy_has_common.md).
+read [the guide](../install/ivy_has_common).
 
 script/
 =======

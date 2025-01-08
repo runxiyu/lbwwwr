@@ -3,10 +3,10 @@ title: Ivybridge internal flashing
 x-toc-enable: true
 ---
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common.md), OR
+**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
 YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
 there, before flashing. For posterity,
-[here is the link again](ivy_has_common.md).**
+[here is the link again](ivy_has_common).**
 
 Ch1p's guide
 ============
@@ -55,7 +55,7 @@ two pins on the HDA (audio) chip, and if you do it wrong you could short
 the wrong thing by mistake; consequences could be blown fuses and/or fire,
 or just a dead ThinkPad. Proceed at your own risk!
 
-If you prefer external flashing, see: [external flashing](x230_external.md)
+If you prefer external flashing, see: [external flashing](x230_external)
 
 Internal flashing from vendor firmware (ThinkPads only)
 ----------------------------------------

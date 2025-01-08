@@ -8,7 +8,7 @@ The reason why was explained, in
 the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
 
 NOTE: This page is largely Intel-centric, at present. It should be revised to
-cover more vendors. [Patches welcome!](../../git.md)
+cover more vendors. [Patches welcome!](../../git)
 
 This guide is intended for those with very little knowledge of firmware
 in general and coreboot in particular.

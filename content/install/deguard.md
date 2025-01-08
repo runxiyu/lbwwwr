@@ -76,7 +76,7 @@ bug which you can read more about here:
 Note that *Intel* refers to this as a means of a so-called *attacker* running
 so-called *malicious* code; while this may also be possible in the strictest
 sense, flash write protection is possible on these machines, which you can
-read about on the [GRUB hardening](../linux/grub_hardening.md) page. Intel made
+read about on the [GRUB hardening](../linux/grub_hardening) page. Intel made
 the Boot Guard without giving users control of it, so people have worked for
 years to try to hack around it, as a matter of user freedom. So remember: when
 Intel is talking about security, they mean *their* security, not yours. To them,

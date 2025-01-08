@@ -90,7 +90,7 @@ Set MAC address
 
 This platform uses an Intel Flash Descriptor, and defines an Intel GbE NVM
 region. As such, release/build ROMs will contain the same MAC address. To
-change the MAC address, please read [nvmutil documentation](../install/nvmutil.md).
+change the MAC address, please read [nvmutil documentation](../install/nvmutil).
 
 WARNING about CPU/GPU compatibility
 -------------------------------
@@ -106,7 +106,7 @@ Flash a ROM image (software)
 -----------------
 
 **Always make sure to dump a copy of the current flash first. ALSO: [make
-sure /dev/mem protection is disabled](devmem.md) for the flashing to work!**
+sure /dev/mem protection is disabled](devmem) for the flashing to work!**
 
 If you're already running Libreboot, and you don't have flash protection
 turned on, [internal flashing](../install/) is possible.
@@ -156,6 +156,6 @@ Flash a ROM image (hardware)
 -----------------
 
 For general information, please refer to [25xx NOR flash
-instructions](../install/spi.md) - that page refers to use of socketed flash.
+instructions](../install/spi) - that page refers to use of socketed flash.
 
 No photos yet available.

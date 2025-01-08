@@ -4,10 +4,10 @@ x-toc-enable: true
 ---
 
 <!-- TODO -->
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common.md), OR
+**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
 YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
 there, before flashing. For posterity,
-[here is the link again](ivy_has_common.md).**
+[here is the link again](ivy_has_common).**
 
 This guide will teach you how to use various tools for externally reprogramming
 a 25xx NOR flash via SPI protocol. This is the most common type of flash IC for
@@ -278,10 +278,10 @@ Software configuration
 General/Le potato
 -----------------
 
-The [generic guide](spi_generic.md) is intended to help those looking to use an
+The [generic guide](spi_generic) is intended to help those looking to use an
 SBC which is not listed in this guide.
 The guide will, however, use the libre computer 'Le Potato' as a reference board.
-If you have that board, you should refer to the [generic guide.](spi_generic.md)
+If you have that board, you should refer to the [generic guide.](spi_generic)
 
 BeagleBone Black (BBB)
 ----------------------
@@ -1012,7 +1012,7 @@ flows properly, otherwise the solder will ball up and you won't get a good
 joint.
 
 In case you're not comfortable with soldering, we have some excellent videos
-linked on the [FAQ page](../../faq.md) which you can watch.
+linked on the [FAQ page](../../faq) which you can watch.
 
 WSON8 IC:\
 ![](https://av.libreboot.org/rpi/wson8/0001.jpg)

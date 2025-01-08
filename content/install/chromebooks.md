@@ -15,7 +15,7 @@ and run it.
 
 Chromebooks are locked-down by default to only run ChromeOS. Most things
 you will want to do on these require you unlock it by enabling their
-[Developer Mode](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/developer_mode.md).
+[Developer Mode](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/developer_mode).
 On most devices, you would press the `Escape + Refresh + Power` key
 combination to restart into the Recovery Mode, then press `Ctrl + D` and
 finally confirm enabling Developer Mode with `Enter`.
@@ -67,13 +67,13 @@ you may be able to use `flashrom -p linux_mtd` on that system instead.
 
 If a ROM image you flash is broken, you may need to restore the stock
 firmware to fix the board to get internal flashing working. Refer to the
-[external flashing guide](spi.md), and check that the result of
+[external flashing guide](spi), and check that the result of
 `flashrom -r` matches what you get when you run it from the device.
 Chromebooks may have 1.8V as the supply voltage for the SPI NOR chip, be
 extra careful about that.
 
 On newer Chromebooks, there is a root-of-trust chip providing a
-[Closed Case Debugging](https://chromium.googlesource.com/chromiumos/platform/ec/+/cr50_stab/docs/case_closed_debugging_gsc.md)
+[Closed Case Debugging](https://chromium.googlesource.com/chromiumos/platform/ec/+/cr50_stab/docs/case_closed_debugging_gsc)
 mechanism that lets you flash externally using a special USB debugging
 cable. However, most boards that Libreboot supports do not have this.
 
@@ -82,7 +82,7 @@ cable. However, most boards that Libreboot supports do not have this.
 Chromebooks have the SPI flash chip partially write-protected by
 default, but thankfully this protection can be disabled by the device
 owner. How to do so depends on the board, refer to the
-[ChromiumOS documentation on Write Protection](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/write_protection.md)
+[ChromiumOS documentation on Write Protection](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/write_protection)
 for more info. You will usually need to do this only once for the
 board's lifetime, unless you manually enable it again.
 
@@ -93,7 +93,7 @@ by the fact that it bridges electrical contacts, but finding and
 removing it might require you to disassemble most of the board.
 
 Newer boards have a root-of-trust chip enforcing write-protection. The
-[Closed Case Debugging](https://chromium.googlesource.com/chromiumos/platform/ec/+/cr50_stab/docs/case_closed_debugging_gsc.md)
+[Closed Case Debugging](https://chromium.googlesource.com/chromiumos/platform/ec/+/cr50_stab/docs/case_closed_debugging_gsc)
 mechanism should be used to disable hardware write-protection. Opening
 the case and disconnecting the battery might also disable it.
 
@@ -132,8 +132,8 @@ images on x86 Chromebooks without injecting non-redistributable code
 first (like Intel ME firmware). This is not yet documented here.
 
 You can flash the ROM image both internally and externally. For the
-latter, see the [external flashing guide](spi.md) and the ChromiumOS
-[Closed Case Debugging](https://chromium.googlesource.com/chromiumos/platform/ec/+/cr50_stab/docs/case_closed_debugging_gsc.md)
+latter, see the [external flashing guide](spi) and the ChromiumOS
+[Closed Case Debugging](https://chromium.googlesource.com/chromiumos/platform/ec/+/cr50_stab/docs/case_closed_debugging_gsc)
 documentation if your board supports it.
 
 To flash the entire ROM image internally, run within ChromeOS:
@@ -156,13 +156,13 @@ three general methods for installing that vary depending on the distribution:
 
 ### Successful installations:
 
-* [ArchLinuxARM on RK3399-based Chromebooks](../uboot/uboot-archlinux.md).
-* [Debian Bookworm on Samsung Chromebook Plus XE513C24](../uboot/uboot-debian-bookworm.md).
+* [ArchLinuxARM on RK3399-based Chromebooks](../uboot/uboot-archlinux).
+* [Debian Bookworm on Samsung Chromebook Plus XE513C24](../uboot/uboot-debian-bookworm).
 * [Debian on Asus Chromebook C201](https://wiki.debian.org/InstallingDebianOn/Asus/C201).
 
 ### Unsuccessful installations:
 
-* [OpenBSD on Samsung Chromebook Plus XE513C24](../uboot/uboot-openbsd.md).
+* [OpenBSD on Samsung Chromebook Plus XE513C24](../uboot/uboot-openbsd).
 
 ### Other promising ARM-compatible distros:
 
@@ -171,7 +171,7 @@ three general methods for installing that vary depending on the distribution:
 ## See also
 
 * [ChromiumOS Documentation](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/)
-* [ChromiumOS Firmware Test Manual](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/firmware_test_manual.md)
+* [ChromiumOS Firmware Test Manual](https://chromium.googlesource.com/chromiumos/docs/+/HEAD/firmware_test_manual)
 * [ChromiumOS Flashrom Fork Information](https://www.chromium.org/chromium-os/packages/cros-flashrom/)
 * [MrChromebox's Unbricking Guide](https://wiki.mrchromebox.tech/Unbricking)
 * [MrChromebox's Write-Protection Notes](https://wiki.mrchromebox.tech/Firmware_Write_Protect)

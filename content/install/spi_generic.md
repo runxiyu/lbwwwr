@@ -8,14 +8,14 @@ now, as of 27 January 2024, which is a fork of flashrom.
 The reason why was explained, in
 the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common.md), OR
+**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
 YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
 there, before flashing. For posterity,
-[here is the link again](ivy_has_common.md).**
+[here is the link again](ivy_has_common).**
 
 There are a plethora of single board computers with which you can flash libreboot to a SOIC chip.
 Some users might be daunted by the price of a raspberry pi.
-This guide is intended to help users looking to use a programmer which is not listed in the [main guide.](spi.md)
+This guide is intended to help users looking to use a programmer which is not listed in the [main guide.](spi)
 As an example, this guide will use the [libre computer 'le potato.'](https://libre.computer/products/aml-s905x-cc/)
 You should note however, that this guide is intended to demonstrate how to set up any SBC with SPI programming capabilities for flashing libreboot.
 
@@ -40,7 +40,7 @@ In light of the above facts, it is a good general rule to use a distro aimed at 
 [Armbian](https://www.armbian.com/) is one such distro you might use.
 Note that not all armbian images support SPI.
 If your SBC supports [Raspbian](https://www.raspberrypi.com/software/) then using it will make your work much easier.
-As a bonus, you may refer to the [main guide](spi.md) if the SBC you have supports raspbian, should you get confused with this guide.
+As a bonus, you may refer to the [main guide](spi) if the SBC you have supports raspbian, should you get confused with this guide.
 
 Connecting to your Programmer
 =============================

@@ -53,7 +53,7 @@ need to re-flash externally. Refer instead to the generic instructions on
 this page: [../install/](../install/)
 
 Refer to the following guide:\
-[Externally rewrite 25xx NOR flash via SPI protocol](../install/spi.md)
+[Externally rewrite 25xx NOR flash via SPI protocol](../install/spi)
 
 PCI option ROMs
 ===============

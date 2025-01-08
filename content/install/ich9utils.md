@@ -10,8 +10,8 @@ can modify the ifd file with coreboot's ifdtool. You can use nvmutil to modify
 the GbE NVM MAC address**
 
 **If all you want to do is change the MAC address, you might use `nvmutil`
-instead. See: [nvmutil documentation](../install/nvmutil.md), or use
-the [inject script](ivy_has_common.md).**
+instead. See: [nvmutil documentation](../install/nvmutil), or use
+the [inject script](ivy_has_common).**
 
 The documentation below is *still valid*, if you actually want to use ich9utils.
 You can find it in older Libreboot releases, up to Libreboot 20230625. The only
@@ -38,7 +38,7 @@ fully disabled.
 
 ich9utils is handled by the `lbmk` (libreboot-make) build system, but the code
 itself is hosted in a separate repository. You can check the Git repositories
-linked on [../../git.md](../../git.md) if you wish to download and use it.
+linked on [../../git.md](../../git) if you wish to download and use it.
 
 It is very *uncommon*, on GM45/ICH9M systems, to have an Intel Flash Descriptor
 and GbE but *without* an Intel ME. On *most* of these systems (without libreboot,
@@ -77,7 +77,7 @@ Another project: <http://io.netgarage.org/me/>
 ich9utils
 =========
 
-You can find `ich9utils` on the [Git page](../../git.md) or you can download
+You can find `ich9utils` on the [Git page](../../git) or you can download
 `lbmk` from the same page at an under revision (around Libreboot 20230625 or
 so), and find it under `util/ich9utils/`.
 

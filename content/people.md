@@ -154,7 +154,7 @@ documentation.
 
 Caleb contributed heavily to the Libreboot build system, and even implemented
 the first version of Libreboot's [vendor inject
-script](docs/install/ivy_has_common.md), back when it was part of the erstwhile
+script](docs/install/ivy_has_common), back when it was part of the erstwhile
 osboot project, which formally merged with Libreboot in November 2022.
 
 Before Caleb came along, Libreboot didn't have any sort of structure in its
@@ -361,7 +361,7 @@ Sent some small fixes to the QEMU target, fixing a bug in the SMBIOS info.
 ### Lorenzo Aloe
 
 Provided hardware testing for the [Dell OptiPlex
-9020](docs/install/dell9020.md), also provided testing for proxmox with GPU
+9020](docs/install/dell9020), also provided testing for proxmox with GPU
 passthrough on Dell Precision T1650, confirming near-native performance; with
 this, you can boot operating systems virtually natively, performance-wise, on a
 Libreboot system in cases where that OS is not natively supported.
@@ -394,7 +394,7 @@ made:
 * Ported the Dell OptiPlex 9020 SFF and MT, and provided several fixes on it
   for the Libreboot project; several fixes that I (Leah) did were also based on
   advice that he gave me.
-* Wrote the [deguard](docs/install/deguard.md) utility for disabling Intel Boot
+* Wrote the [deguard](docs/install/deguard) utility for disabling Intel Boot
   Guard on MEv11; this is used for the Dell OptiPlex 3050 Micro and ThinkPad
   T480 ports.
 * Ported the Dell OptiPlex 3050 Micro and Lenovo ThinkPad T480/T480s to
@@ -427,8 +427,8 @@ old repository were imports of those tarballs.
 
 ### Nicholas Chin
 
-[Ported Dell Latitude E6400 to Libreboot](news/e6400.md) and also [Dell
-Latitude E6430](docs/install/latitude.md) &mdash; author of the
+[Ported Dell Latitude E6400 to Libreboot](news/e6400) and also [Dell
+Latitude E6430](docs/install/latitude) &mdash; author of the
 `dell-flash-unlock` (formerly `e6400-flash-unlock`) utility, which can unlock
 the flash on these boards, allowing internal flashing of Libreboot directly
 from host OS running under the original Dell firmware.

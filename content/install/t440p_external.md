@@ -17,12 +17,12 @@ now, as of 27 January 2024, which is a fork of flashrom.
 The reason why was explained, in
 the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common.md), OR
+**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
 YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
 there, before flashing. For posterity,
-[here is the link again](ivy_has_common.md).**
+[here is the link again](ivy_has_common).**
 
-Read the [Ivybridge/Haswell common guide](ivy_has_common.md) if you want more information.
+Read the [Ivybridge/Haswell common guide](ivy_has_common) if you want more information.
 All of the following instructions assume that you've cloned lbmk and are operating from the
 root of that project. To do so, run
 
@@ -36,7 +36,7 @@ Preparing a release Rom
 
 **Please follow this prior to flashing, or you may brick your machine.**
 
-Please [inject vendor files](ivy_has_common.md) prior to flashing. You can also
+Please [inject vendor files](ivy_has_common) prior to flashing. You can also
 use this guide to change the built-in MAC address for your Intel Gigabit
 Ethernet device; doing so is advisable, because otherwise you will have a
 default, generic MAC address.
@@ -111,7 +111,7 @@ images but on the newer build system from May 2024 onward; you must use the
 Libreboot 20240225 release if you want to inject MRC and so on, for these older
 targets.
 
-Libreboot's [binary blob reduction policy](../../news/policy.md) is very strict,
+Libreboot's [binary blob reduction policy](../../news/policy) is very strict,
 and states: if a blob can be avoided, it must be avoided. Therefore, the MRC
 is removed on Haswell and Libreboot will only use the libre raminit (called
 NRI, short for Native Ram Initialisation).

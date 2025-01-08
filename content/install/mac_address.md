@@ -96,7 +96,7 @@ Changing the MAC address on X200/T400/T500/W500
 On GM45 laptops with ICH9M southbridge and Intel PHY module, the MAC address
 is hardcoded in boot flash, which means it can be changed if you re-flash.
 
-See [ich9utils documentation](../install/ich9utils.md)
+See [ich9utils documentation](../install/ich9utils)
 
 If *all* you want to do is change the MAC address, you might try `nvmutil`
 instead. See notes below:
@@ -104,7 +104,7 @@ instead. See notes below:
 Changing the MAC address on ivybridge/sandybridge/haswell (e.g. X230/T440p)
 =========================================================
 
-See [nvmutil documentation](../install/nvmutil.md)
+See [nvmutil documentation](../install/nvmutil)
 
 This tool was originally written for changing the MAC address on Intel
 Sandybridge, Ivybridge and Haswell platforms, but it can be used on any

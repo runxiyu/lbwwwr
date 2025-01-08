@@ -39,12 +39,12 @@ fix bugs and generally think about the design of the project. Smaller is better.
 Code equals bugs, so less code yields fewer bugs. For a general idea of how
 audits are done in Libreboot, see:
 
-* [Libreboot build system audit 1](../news/audit.md)
-* [Libreboot build system audit 2](../news/audit2.md)
-* [Libreboot build system audit 3](../news/audit3.md)
-* [Libreboot build system audit 4](../news/audit4.md)
-* [Libreboot build system audit 5](../news/audit5.md)
-* [Libreboot build system audit 6](../news/audit6.md)
+* [Libreboot build system audit 1](../news/audit)
+* [Libreboot build system audit 2](../news/audit2)
+* [Libreboot build system audit 3](../news/audit3)
+* [Libreboot build system audit 4](../news/audit4)
+* [Libreboot build system audit 5](../news/audit5)
+* [Libreboot build system audit 6](../news/audit6)
 
 Auditing can often be pedantic, and seem petty. You might commit a patch that
 reduces the sloccount by only 1 line, maybe 3, but they all add up.
@@ -217,7 +217,7 @@ Many others have been added, of Intel 2nd and 3rd gen.
 Most/all of these should be easily flashable, with the `dell-flash-unlock`
 utility, and many could be ported using autoport as a guide. Nicholas is
 working on these. They are left here for reference. If you have one of these,
-please contact `nic3-14159` on the [Libreboot IRC channel](../contact.md).
+please contact `nic3-14159` on the [Libreboot IRC channel](../contact).
 
 Look at the page:
 <https://en.wikipedia.org/wiki/Dell_Latitude#Exx50_Models_(2015)>
@@ -486,7 +486,7 @@ Similar in concept to netboot.xyz, but this actually does use Linux. It can
 boot many distros. We could provide something similar to this in Libreboot.
 
 This was briefly documented on the Libreboot website,
-before [argon2 kdf support](../news/argon2.md) was merged in Libreboot GRUB.
+before [argon2 kdf support](../news/argon2) was merged in Libreboot GRUB.
 
 ## Seek QUBES endorsement
 

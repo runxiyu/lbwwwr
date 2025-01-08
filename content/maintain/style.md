@@ -4,7 +4,7 @@ title: lbmk coding style and design
 
 This document is extremely new, and may change rapidly.
 
-For context, please also read the main [lbmk maintenance manual](index.md).
+For context, please also read the main [lbmk maintenance manual](index).
 
 You should *read* the logic in lbmk yourself, to really know what is meant by
 some of the concepts explained here. This article will no doubt be incomplete,
@@ -31,7 +31,7 @@ Design
 Libreboot's build system design is very simple: put as much as possible
 under `config/`, and keep actual logic to a minimum.
 
-You can read about that design in the [lbmk maintenance manual](index.md).
+You can read about that design in the [lbmk maintenance manual](index).
 
 No Makefiles
 ------------
@@ -128,7 +128,7 @@ to the main `lbmk` script. In other words, all scripts under `script/` also
 assume this.
 
 This is actually one of the reasons for that design, as also alluded to in
-the main [lbmk maintenance manual](index.md).
+the main [lbmk maintenance manual](index).
 
 main should only be a simple skeleton
 -------------------------------------

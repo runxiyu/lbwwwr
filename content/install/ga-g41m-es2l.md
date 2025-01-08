@@ -125,7 +125,7 @@ Use this to find out:
 Flashing instructions {#clip}
 =====================
 
-Refer to [spi.md](spi.md) for how to set up an SPI programmer for
+Refer to [spi.md](spi) for how to set up an SPI programmer for
 external flashing. *You can only externally reprogram one of the chips
 at a time, and you need to disable the chip that you're not flashing,
 by connecting 3v3 to /CS of that chip, so you will actually need second test

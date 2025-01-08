@@ -6,7 +6,7 @@ x-toc-enable: true
 **PLEASE MAKE SURE you read and follow the instructions on this page, prior to
 flashing Libreboot, if required for your mainboard; failure to heed this
 warning can and will result in a soft-brick, which would then necessitate
-recovery via [external flashing](spi.md) &ndash; regardless, you are advised to
+recovery via [external flashing](spi) &ndash; regardless, you are advised to
 also read the external flashing guide just in caes, and have an external
 flasher handy in case you need it.**
 
@@ -30,7 +30,7 @@ do nicely.
 you need the compilers and various libraries.**
 
 **Please make sure to install [build dependencies](../build/)** before using this
-guide, and note that this guide assumes you use [lbmk.git](../../git.md).
+guide, and note that this guide assumes you use [lbmk.git](../../git).
 
 **Failure to adhere to this warning will result in vendor file insertion not
 working. The insertion must work correctly, prior to Libreboot installation,
@@ -40,9 +40,9 @@ Introduction
 ============
 
 On *some* boards, but certainly not all of them, certain files are required from
-the hardware vendor. Libreboot has strict [rules](../../news/policy.md)
+the hardware vendor. Libreboot has strict [rules](../../news/policy)
 governing this, and you can find more information on
-the [Freedom Status](../../freedom-status.md) page.
+the [Freedom Status](../../freedom-status) page.
 
 Libreboot can't directly distribute *all* of these files, so some of them are
 downloaded at build-time, and processed for insertion into the firmware images.
@@ -50,7 +50,7 @@ downloaded at build-time, and processed for insertion into the firmware images.
 re-added using the same automation that was applied during the build process.**
 
 Examples of these files can be found on
-the [Freedom Status](../../freedom-status.md) page.
+the [Freedom Status](../../freedom-status) page.
 
 **If in doubt, you should simply follow these instructions. If your board
 doesn't need vendor files, the tar archive won't be modified.**
@@ -185,7 +185,7 @@ such modification is skipped (some boards don't have Intel gigabit ethernet,
 and might have a different ethernet adapter instead).
 
 When vendor files are inserted and/or a MAC address is inserted, the tarball
-is re-generated. MAC address insertion is handled with [nvmutil](nvmutil.md);
+is re-generated. MAC address insertion is handled with [nvmutil](nvmutil);
 the steps there are applied automatically.
 
 Older release images, prior to 20241206 rev8, do not have `DO_NOT_FLASH` or
@@ -263,7 +263,7 @@ You'll note the small size of the Intel ME, e.g. 84KB on sandybridge platforms.
 This is because lbmk *automatically* neuters it, disabling it during
 early boot. This is done using `me_cleaner`, which lbmk imports. If the platform
 uses MEv11 with Intel Boot Guard, the boot guard is automatically disabled
-by processing the MEv11 image with Mate Kukri's [deguard](deguard.md) utility.
+by processing the MEv11 image with Mate Kukri's [deguard](deguard) utility.
 
 Errata
 ======
@@ -303,7 +303,7 @@ images but on the newer build system from May 2024 onward; you must use the
 Libreboot 20240225 release if you want to inject MRC and so on, for these older
 targets.
 
-Libreboot's [Binary Blob Reduction Policy](../../news/policy.md) is very strict,
+Libreboot's [Binary Blob Reduction Policy](../../news/policy) is very strict,
 and states: if it can be done with free software exclusively, then it should be
 done with free software exclusively. Therefore, the MRC is removed on Haswell
 and Libreboot will only use the libre raminit (called NRI, short for Native Ram

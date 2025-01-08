@@ -10,7 +10,7 @@ This is the reference documentation for `nvmutil`, but an automated script
 using nvmutil is available for ivy/sandybridge and haswell hardware, when
 inserting vendor files, which you can use to change the MAC address. See:
 
-[docs/install/ivy_has_common.md](ivy_has_common.md)
+[docs/install/ivy_has_common.md](ivy_has_common)
 
 You can use the documentation below, if you wish to use `nvmutil` manually.
 Continue reading...
@@ -65,7 +65,7 @@ This writes the MAC address on the GbE region of the image. You must do this
 on the tarball, from the ROM image release archives, and then extract the
 archive.
 
-These same commands also [download/insert certain vendor files](ivy_has_common.md)
+These same commands also [download/insert certain vendor files](ivy_has_common)
 if needed, on the given board.
 
 Without argument after the tarball, it behaves the same as `setmac`. If `setmac`
@@ -571,7 +571,7 @@ History
 =======
 
 A historical change log
-is included at [docs/install/nvmutilimport.md](nvmutilimport.md),
+is included at [docs/install/nvmutilimport.md](nvmutilimport),
 but this simply lists historical changes to nvmutil when it
 was a separate project. Future changes to nvmutil can be found by
 running `git log util/nvmutil` in `lbmk.git`. No more changes

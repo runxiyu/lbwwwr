@@ -89,7 +89,7 @@ This photo shows the flash chip, near the RAM, with numbers of pins written:
 
 Refer to the external flashing guide:
 
-[Externally rewrite 25xx NOR flash via SPI protocol](spi.md)
+[Externally rewrite 25xx NOR flash via SPI protocol](spi)
 
 NOTE: Do not use the 3.3v rail from your SPI programmer. Leave that disconnected.
 For 3.3v, plug your charger into the mainboard (but do not power on the mainboard)

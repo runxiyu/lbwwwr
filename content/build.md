@@ -106,7 +106,7 @@ dependencies installation command will provide them. We know Void Linux and
 Fedora don't have a MIPS compiler, for instance.
 
 If your distro doesn't have the MIPS compiler available,
-the [PlayStation](../install/playstation.md) page provides instructions for
+the [PlayStation](../install/playstation) page provides instructions for
 manual installation; please do this in addition to the normal dependencies.
 
 ## Build ROM images

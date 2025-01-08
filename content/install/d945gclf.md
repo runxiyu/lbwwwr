@@ -44,7 +44,7 @@ P*: Partially works with vendor firmware
 | **SeaBIOS with GRUB** | Doesn't work |
 </div>
 If you just want flashing instructions, go to
-[../install/d945gclf.md](../install/d945gclf.md)
+[../install/d945gclf.md](../install/d945gclf)
 
 D945GCLF2D also reported working by a user.
 
@@ -94,7 +94,7 @@ And SPI SOIC8 flash chip\
 Flashing instructions {#clip}
 =====================
 
-Refer to [spi.md](spi.md) for how to re-flash externally.
+Refer to [spi.md](spi) for how to re-flash externally.
 
 Here is an image of the flash chip:\
 ![](https://av.libreboot.org/d945gclf/d945gclf_spi.jpg)

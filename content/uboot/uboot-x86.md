@@ -14,7 +14,7 @@ Please read <https://www.u-boot.org/>, especially the full U-Boot documentation
 available there.
 
 **NOTE: This documentation refers only to x86. For ARM, please refer back to
-the [main U-Boot page](index.md).**
+the [main U-Boot page](index).**
 
 More documentation about this will be written at a later date, but just before
 the Libreboot 20241206 release in December 2024, U-Boot support was added as
@@ -122,7 +122,7 @@ storing EFI variables, and Libreboot disables SecureBoot by default. However,
 you can enable it. Information is available in U-Boot's official documentation.
 
 If you want real boot security, don't use UEFI. Libreboot's GRUB payload can
-be heavily hardened, by following the [GRUB hardening](../linux/grub_hardening.md)
+be heavily hardened, by following the [GRUB hardening](../linux/grub_hardening)
 guide; this means using the GRUB payload instead of U-Boot.
 
 UEFI SecureBoot with a Linux UKI could achieve similar results in a security

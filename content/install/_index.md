@@ -14,13 +14,13 @@ the `-r` option in flashprog instead `-w`, to read from the flash.**
 **SAFETY WARNING!**
 ====================================================================
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common.md), OR
+**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
 YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
 there, before flashing. For posterity,
-[here is the link again](ivy_has_common.md).**
+[here is the link again](ivy_has_common).**
 
 **If you're using release ROMs, some files may be missing inside them, and must
-be added. See: [Inserting Vendor Files](ivy_has_common.md).**
+be added. See: [Inserting Vendor Files](ivy_has_common).**
 
 If you're [building from source](../build/), you can ignore the above guidance.
 
@@ -28,7 +28,7 @@ Install Libreboot via external flashing
 =================
 
 Refer to the following article:\
-[Externally rewrite 25xx NOR flash via SPI protocol](spi.md)
+[Externally rewrite 25xx NOR flash via SPI protocol](spi)
 
 You are strongly advised to *have* an external flashing setup, and make sure
 it works, before attempting internal flashing. This, in addition to making
@@ -39,7 +39,7 @@ usually the case that only external dumping is available too.
 Need help?
 ==========
 
-Help is available on [Libreboot IRC](../../contact.md) and other channels.
+Help is available on [Libreboot IRC](../../contact) and other channels.
 
 If you want professional installation, Minifree Ltd sells [Libreboot
 pre-installed](https://minifree.org/) on select hardware, and it also provides
@@ -56,7 +56,7 @@ Before actually reading the installation guides, please ensure that your
 system is fully supported by Libreboot. More information about the Libreboot
 build system can be found in the [lbmk maintenance manual](../maintain/),
 and information about porting new systems in
-the [porting manual](../maintain/porting.md).
+the [porting manual](../maintain/porting).
 
 With x86 machines, you can use the SeaBIOS or GNU GRUB payloads. On ARM
 systems, you can use the U-Boot payload (coreboot still initialises hardware).
@@ -66,81 +66,81 @@ Libreboot currently supports the following systems:
 Games consoles
 --------------
 
--   [Sony Playstation](playstation.md) (PS1/PSX)
+-   [Sony Playstation](playstation) (PS1/PSX)
 
 Servers (AMD, x86)
 ------------------
 
--   [ASUS KFSN4-DRE motherboard](kfsn4-dre.md)
--   [ASUS KGPE-D16 motherboard](kgpe-d16.md)
+-   [ASUS KFSN4-DRE motherboard](kfsn4-dre)
+-   [ASUS KGPE-D16 motherboard](kgpe-d16)
 
 Desktops (AMD, Intel, x86)
 --------------------------
 
--   **[Dell OptiPlex 7020/9020 MT and SFF](dell9020.md) - Also [available to buy
+-   **[Dell OptiPlex 7020/9020 MT and SFF](dell9020) - Also [available to buy
     with Libreboot preinstalled](https://minifree.org/product/libreboot-9020/)** - Dell OptiPlex XE2 MT/SFF also known to work
--   [Acer G43T-AM3](acer_g43t-am3.md)
+-   [Acer G43T-AM3](acer_g43t-am3)
 -   Apple iMac 5,2
--   [ASUS KCMA-D8 motherboard](kcma-d8.md)
+-   [ASUS KCMA-D8 motherboard](kcma-d8)
 -   Dell OptiPlex 7010 **MT** (known to work, using the T1650 ROM, but more
     research is needed) - 9010 also known to work. No GPIO changes, so it should
     be safe to flash.
--   [Dell OptiPlex 780 variants e.g. MT, USFF](dell780.md)
--   [Dell OptiPlex 3050 Micro](dell3050.md)
--   [Dell OptiPlex 7010/9010 SFF](dell7010.md) **(for MT, please use the T1650 image)**
+-   [Dell OptiPlex 780 variants e.g. MT, USFF](dell780)
+-   [Dell OptiPlex 3050 Micro](dell3050)
+-   [Dell OptiPlex 7010/9010 SFF](dell7010) **(for MT, please use the T1650 image)**
 -   Dell Precision T1700 (use the same ROM as 9020 MT, but it won't have ECC support)
--   [Dell Precision T1650](t1650.md) **(the same ROM works on 7010/9010 MT variant)**
--   [Gigabyte GA-G41M-ES2L motherboard](ga-g41m-es2l.md)
--   [HP Elite 8200 SFF/MT](hp8200sff.md) (HP 6200 Pro Business probably works too)
--   [HP Elite 8300 USDT](hp8300usdt.md)
+-   [Dell Precision T1650](t1650) **(the same ROM works on 7010/9010 MT variant)**
+-   [Gigabyte GA-G41M-ES2L motherboard](ga-g41m-es2l)
+-   [HP Elite 8200 SFF/MT](hp8200sff) (HP 6200 Pro Business probably works too)
+-   [HP Elite 8300 USDT](hp8300usdt)
 -   Intel D510MO and D410PT motherboards
--   [Intel D945GCLF](d945gclf.md)
+-   [Intel D945GCLF](d945gclf)
 
 Laptops (Intel, x86)
 --------------------
 
--   [Lenovo ThinkPad T480 and ThinkPad T480s](t480.md)
+-   [Lenovo ThinkPad T480 and ThinkPad T480s](t480)
 -   **Lenovo ThinkPad T440p - Also [available
     to buy with Libreboot preinstalled](https://minifree.org/product/libreboot-t440p/)**
 -   **Lenovo ThinkPad W541 - Also [available to
     buy with Libreboot preinstalled](https://minifree.org/product/libreboot-w541/)** - NOTE: W540 also compatible (same mainboard, so flash the same ROM)
 -   Lenovo ThinkPad X230 - *Also* available on Minifree: <https://minifree.org/product/libreboot-x230/>
--   [Apple MacBook1,1 and MacBook2,1](macbook21.md)
+-   [Apple MacBook1,1 and MacBook2,1](macbook21)
 -   [Dell Latitude E4300, E6400, E6400 XFR and E6400 ATG, all with Nvidia or Intel
-    GPU](latitude.md)
--   [Dell Latitude E5420, E5520, E5530, E6420, E6430, E6520, E6530, E6230, E6330, E6220](latitude.md)
+    GPU](latitude)
+-   [Dell Latitude E5420, E5520, E5530, E6420, E6430, E6520, E6530, E6230, E6330, E6220](latitude)
     (Intel GPU variants only)
--   [HP EliteBook 2170p](hp2170p.md)
--   [HP EliteBook 2560p](hp2560p.md)
--   [HP EliteBook 2570p](hp2570p.md)
--   [HP EliteBook 820 G2](hp820g2.md)
--   [HP EliteBook 8460p](hp8460p.md)
--   [HP EliteBook 8470p](hp8470p.md)
--   [HP EliteBook 8560w](hp8560w.md)
--   [HP EliteBook Folio 9470m](hp9470m.md)
--   [Lenovo ThinkPad R400](r400.md)
+-   [HP EliteBook 2170p](hp2170p)
+-   [HP EliteBook 2560p](hp2560p)
+-   [HP EliteBook 2570p](hp2570p)
+-   [HP EliteBook 820 G2](hp820g2)
+-   [HP EliteBook 8460p](hp8460p)
+-   [HP EliteBook 8470p](hp8470p)
+-   [HP EliteBook 8560w](hp8560w)
+-   [HP EliteBook Folio 9470m](hp9470m)
+-   [Lenovo ThinkPad R400](r400)
 -   Lenovo ThinkPad R500
--   [Lenovo ThinkPad T400 / T400S](t400.md)
+-   [Lenovo ThinkPad T400 / T400S](t400)
 -   Lenovo Thinkpad T420 / T420S
 -   Lenovo ThinkPad T430 (**but not the T430S**)
--   [Lenovo ThinkPad T500 / W500](t500.md)
+-   [Lenovo ThinkPad T500 / W500](t500)
 -   Lenovo ThinkPad T520
 -   Lenovo ThinkPad T530
 -   Lenovo ThinkPad T60, X60, X60S, X60 Tablet (with Intel GPU)
--   [Lenovo ThinkPad X200 / X200S / X200 Tablet](x200.md)
+-   [Lenovo ThinkPad X200 / X200S / X200 Tablet](x200)
 -   Lenovo Thinkpad X220 / X200 Tablet
--   [Lenovo Thinkpad X230 / X230 Tablet](x230_external.md)
+-   [Lenovo Thinkpad X230 / X230 Tablet](x230_external)
 
 Laptops (ARM, with U-Boot payload)
 ----------------------------------
 
--   [ASUS Chromebook Flip C101 (gru-bob)](chromebooks.md)
--   [Samsung Chromebook Plus (v1) (gru-kevin)](chromebooks.md)
+-   [ASUS Chromebook Flip C101 (gru-bob)](chromebooks)
+-   [Samsung Chromebook Plus (v1) (gru-kevin)](chromebooks)
 
 Emulation
 ---------
 
--   [Qemu x86 and arm64](../misc/emulation.md)
+-   [Qemu x86 and arm64](../misc/emulation)
 
 **Disable security before flashing**
 ================================
@@ -148,7 +148,7 @@ Emulation
 **Before internal flashing, you must first disable `/dev/mem` protections. Make
 sure to re-enable them after you're finished.**
 
-**See: [Disabling /dev/mem protection](devmem.md)**
+**See: [Disabling /dev/mem protection](devmem)**
 
 ROM image file names
 ====================
@@ -188,7 +188,7 @@ all machine. We would like to have free EC firmware on more machines, but for
 now, we must rely on the vendor in a lot of cases. The EC is usually on a
 separate flash, so you wouldn't think about it unless you knew it was there;
 this is exactly why it's mentioned, so that you think about it,
-[because proprietary software is bad](../../news/policy.md).
+[because proprietary software is bad](../../news/policy).
 
 In many cases, the EC firmware must be updated on a separate IC to the main
 boot flash, and this can usually only be done with the vendor's own tool,
@@ -216,7 +216,7 @@ HP EliteBooks
 EC firmware is required in the main boot flash, but Libreboot's build system
 automatically downloads this from HP for each machine, and inserts it, so
 you don't have to worry. Just make sure that [vendor files are
-inserted](ivy_has_common.md) if using release images.
+inserted](ivy_has_common) if using release images.
 
 Other
 -----
@@ -234,8 +234,8 @@ flashing instructions. Internal flashing is when you flash the target machine
 from the target machine, inside an operating system running on it.
 
 Some boards require special steps, even if Libreboot is already running,
-for example if you [locked down the flash](../linux/grub_hardening.md), or
-as another example, [SureStart on HP EliteBook 820 G2](hp820g2.md)
+for example if you [locked down the flash](../linux/grub_hardening), or
+as another example, [SureStart on HP EliteBook 820 G2](hp820g2)
 
 Therefore, before following generic guides, make sure to check first whether
 your board has special instructions, otherwise use the generic guide at the
@@ -249,7 +249,7 @@ ones (e.g. ThinkPad X60, ThinkPad T60, MacBook2,1), an Intel Flash Descriptor is
 used. If the board has Intel gigabit ethernet, the MAC address is included in
 flash, and can (must) be changed prior to installation.
 
-You can use [nvmutil](nvmutil.md) to change the MAC address. You will perform
+You can use [nvmutil](nvmutil) to change the MAC address. You will perform
 this modification to the ROM image, before flashing it.
 
 Flash lockdown / boot security
@@ -260,10 +260,10 @@ This is referred to informally as *Secure libreBoot*.
 Full flash lockdown is possible, with cryptographic verification of your
 Linux kernel and other files, using special features in the GRUB payload.
 
-See: [GRUB hardening / Secure libreBoot](../linux/grub_hardening.md)
+See: [GRUB hardening / Secure libreBoot](../linux/grub_hardening)
 
 If you already did this, it's possible that you may no longer be able to
-flash internally. If that is the case, you must [flash externally](spi.md).
+flash internally. If that is the case, you must [flash externally](spi).
 
 Updating an existing installation
 ---------------------------------
@@ -286,7 +286,7 @@ followed by general internal flashing instructions where applicable.
 HP EliteBook 820 G2 (internal and external)
 -------------------
 
-See: [HP EliteBook 820 G2 flashing guide](hp820g2.md)
+See: [HP EliteBook 820 G2 flashing guide](hp820g2)
 
 The flashprog command is identical, except programmer selection, on external
 and internal flashing; internal is only possible if you already have Libreboot.
@@ -295,15 +295,15 @@ HP EliteBook 8560w (vendor BIOS)
 --------------------
 
 If you have the factory
-firmware: [HP 8560w external flashing guide](hp8560w.md)
+firmware: [HP 8560w external flashing guide](hp8560w)
 
 Dell Latitude laptops (vendor BIOS)
 ---------------------
 
-See: [Dell Latitude flashing guide](latitude.md)
+See: [Dell Latitude flashing guide](latitude)
 
 This applies to all supported Dell Latitude models. Remember to [update the
-MAC address with nvmutil](nvmutil.md), before flashing.
+MAC address with nvmutil](nvmutil), before flashing.
 
 ThinkPad X200/T400/T500/W500/R400/R500
 --------------------------------------
@@ -314,14 +314,14 @@ Libreboot, because the original firmware restricts writes to the flash.
 There machines all use SOIC8/SOIC16 flash ICs. Refer to pages specifically for
 each machine:
 
-* [ThinkPad X200](x200.md)
-* [ThinkPad T400](t400.md)
-* [ThinkPad R400](r400.md)
-* [ThinkPad T500/W500](t500.md) (R500 is similar)
+* [ThinkPad X200](x200)
+* [ThinkPad T400](t400)
+* [ThinkPad R400](r400)
+* [ThinkPad T500/W500](t500) (R500 is similar)
 
 NOTE: T400S, X200S and X200 Tablet require different steps, because these have
 WSON8 flash ICs on them, which will require some soldering. Please read
-the [external flashing guide](spi.md) in the section pertaining to WSON.
+the [external flashing guide](spi) in the section pertaining to WSON.
 
 You can find WSON8 probes online, that are similar to a SOIC8/SOIC16 clip. Your
 mileage may very, but WSON8 has the same pinout as SOIC8 so you might have some
@@ -330,7 +330,7 @@ luck with that.
 Intel D510MO/D410PT (vendor BIOS)
 -----------------------
 
-See: [External flashing guide](spi.md) - both boards are compatible with
+See: [External flashing guide](spi) - both boards are compatible with
 the same image.
 
 Gigabyte GA-G41M-ES2L (vendor BIOS)
@@ -339,28 +339,28 @@ Gigabyte GA-G41M-ES2L (vendor BIOS)
 Internal flashing is possible, from factory BIOS to Libreboot, but special
 steps are required.
 
-See: [Gigabyte GA-G41M-ES2L installation guide](ga-g41m-es2l.md)
+See: [Gigabyte GA-G41M-ES2L installation guide](ga-g41m-es2l)
 
 Acer G43T-AM3 (vendor BIOS)
 --------------------
 
-See: [Acer G43T-AM3](acer_g43t-am3.md)
+See: [Acer G43T-AM3](acer_g43t-am3)
 
 MacBook 1,1 / 2,1 / iMac 5,2 (vendor BIOS)
 -------------------------
 
-MacBook *1,1* requires [external flashing](spi.md). MacBook *2,1* can always
+MacBook *1,1* requires [external flashing](spi). MacBook *2,1* can always
 be flashed internally. iMac 5,2 can be flashed internally.
 
-Also check the [Macbook2,1 hardware page](macbook21.md)
+Also check the [Macbook2,1 hardware page](macbook21)
 
 ASUS KCMA-D8 / KGPE-D16 (vendor BIOS)
 --------------------------
 
-[You must flash it externally](spi.md) (DIP-8 section) - also look at
-the [KGPE-D16 hardware page](kgpe-d16.md).
+[You must flash it externally](spi) (DIP-8 section) - also look at
+the [KGPE-D16 hardware page](kgpe-d16).
 
-Further information is available on the [KCMA-D8 page](kcma-d8.md).
+Further information is available on the [KCMA-D8 page](kcma-d8).
 
 KGPE-D16 installation is essentially the same, with the same type of flash
 IC (DIP-8). Refer to the external flashing guide.
@@ -372,7 +372,7 @@ This board uses LPC flash in a PLCC32 socket. This coreboot page shows an
 example of the push pin as a proof of concept:
 <http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools>
 
-See: [ASUS KFSN4-DRE guide](kfsn4-dre.md)
+See: [ASUS KFSN4-DRE guide](kfsn4-dre)
 
 Hot-swap the flash IC with another one while it's running, and flash it
 internally.
@@ -380,19 +380,19 @@ internally.
 Intel D945GCLF (vendor BIOS)
 ---------------------------------
 
-See: [Intel D945GCLF flashing guide](d945gclf.md)
+See: [Intel D945GCLF flashing guide](d945gclf)
 
 Dell OptiPlex 3050 Micro (vendor BIOS)
 ---------------------
 
-Refer to the [3050 Micro page](dell3050.md). Internal flashing also possible.
+Refer to the [3050 Micro page](dell3050). Internal flashing also possible.
 This has the Intel Boot Guard, but Libreboot uses the *deguard* utility to
 disable the Boot Guard on this Intel 7th gen board.
 
 Dell OptiPlex 7010/9010 SFF (vendor BIOS)
 ---------------------
 
-Refer to the [7010/9020 SFF page](dell7010.md). Internal flashing also possible.
+Refer to the [7010/9020 SFF page](dell7010). Internal flashing also possible.
 NOTE: If you have the *MT* variant, read the sections below instead (the SFF
 ROM is only for SFF).
 
@@ -408,14 +408,14 @@ variant, specifically. Do not flash T1650 images on the 7010/9010 *SFF*.
 Dell Precision T1650 desktop
 ------------------------------------
 
-Refer to the [T1650 hardware page](t1650.md). External flashing
+Refer to the [T1650 hardware page](t1650). External flashing
 required, or you can set the Service Mode jumper and flash internally (from
 vendor firmware, to Libreboot).
 
 Dell OptiPlex 7020/9020/XE2 SFF/MT / Precision T1700
 ------------------------------------
 
-Refer to the [7020/9020 hardware page](dell9020.md). Internal
+Refer to the [7020/9020 hardware page](dell9020). Internal
 flashing (from vendor firmware to Libreboot) is possible if you set the Service
 Mode jumper.
 
@@ -423,56 +423,56 @@ HP EliteBook laptops (vendor BIOS)
 --------------------
 
 Refer to the [hardware page]() for info about HP laptops, and
-read the [external flashing guide](spi.md).
+read the [external flashing guide](spi).
 
 Links to specific HP laptop pages:
 
-* [HP EliteBook 2170p](hp2170p.md)
-* [HP EliteBook 2560p](hp2560p.md)
-* [HP EliteBook 2570p](hp2570p.md)
-* [HP EliteBook 820 G2](hp820g2.md)
-* [HP EliteBook 8460p](hp8460p.md)
-* [HP EliteBook 8470p](hp8470p.md)
-* [HP EliteBook Folio 9470m](hp9470m.md)
+* [HP EliteBook 2170p](hp2170p)
+* [HP EliteBook 2560p](hp2560p)
+* [HP EliteBook 2570p](hp2570p)
+* [HP EliteBook 820 G2](hp820g2)
+* [HP EliteBook 8460p](hp8460p)
+* [HP EliteBook 8470p](hp8470p)
+* [HP EliteBook Folio 9470m](hp9470m)
 
 These pages provide more info about external flashing. You must remember
-to [insert vendor files](ivy_has_common.md), if you're using release ROMs.
+to [insert vendor files](ivy_has_common), if you're using release ROMs.
 
 HP Elite 8200 SFF (vendor BIOS)
 -------------------------
 
-See: [HP Elite 8200 SFF install guide](hp8200sff.md)
+See: [HP Elite 8200 SFF install guide](hp8200sff)
 
 HP Elite 8300 USDT (vendor BIOS)
 ----------------------------
 
-See: [HP Elite 8200 USDT install guide](hp8300usdt.md)
+See: [HP Elite 8200 USDT install guide](hp8300usdt)
 
 ThinkPad X220/X220T/T420/T420s/T520
 -----------------------------------
 
-T420/T520: [T420 flash instructions](t420_external.md)
+T420/T520: [T420 flash instructions](t420_external)
 
 T420s/T520 are similar, in terms of assembly/disassembly.
 
 Now, as for X220/X220:
 
 X220/X220 Tablet is essentially the same as the X230, but cannot be flashed
-internally; you must use [an external flasher](spi.md).
+internally; you must use [an external flasher](spi).
 
-Otherwise, look at [X230 disassembly](x230_external.md). Note that the X220
+Otherwise, look at [X230 disassembly](x230_external). Note that the X220
 has a single 8MB flash, instead of 8MB and 4MB.
 
 ThinkPad X230/T430/T530/W530/X230T
 ----------------------------------
 
 Internal flashing from vendor BIOS to Libreboot is possible, but not
-recommended. See: [IvyBridge ThinkPad internal flashing](ivy_internal.md).
+recommended. See: [IvyBridge ThinkPad internal flashing](ivy_internal).
 
 External flashing recommended, but only documented for X230.
-See: [ThinkPad X230 install guide](x230_external.md).
+See: [ThinkPad X230 install guide](x230_external).
 
-Otherwise, refer to [external SPI flashing](spi.md).
+Otherwise, refer to [external SPI flashing](spi).
 
 ThinkPad T60/X60/X60Tablet/X60S
 -------------------------------
@@ -481,9 +481,9 @@ Only the Intel GPU is compatible. Do not flash the ATI GPU models.
 
 External flashing guides:
 
-* [ThinkPad X60](x60_unbrick.md)
-* [ThinkPad X60 Tablet](x60tablet_unbrick.md)
-* [ThinkPad T60](t60_unbrick.md)
+* [ThinkPad X60](x60_unbrick)
+* [ThinkPad X60 Tablet](x60tablet_unbrick)
+* [ThinkPad T60](t60_unbrick)
 
 These machines can also be flashed internally, by exploiting a bug
 in the original Lenovo BIOS. If there's a BIOS password at boot, you should
@@ -573,42 +573,42 @@ ThinkPad T480/T480S (vendor BIOS)
 
 See:
 
-* [ThinkPad T480/T480S](t480.md)
+* [ThinkPad T480/T480S](t480)
 
 Thinkpad T440p/W541 (vendor BIOS)
 ---------------------
 
 Guides:
 
-* [ThinkPad T440p flashing guide](t440p_external.md)
-* [ThinkPad W541 flashing guide](w541_external.md)
+* [ThinkPad T440p flashing guide](t440p_external)
+* [ThinkPad W541 flashing guide](w541_external)
 
 HP EliteBook laptops (vendor BIOS)
 -------------------------
 
 Each machine has it's own guide:
 
-* [HP EliteBook 2170p](hp2170p.md)
-* [HP EliteBook 2560p](hp2560p.md)
-* [HP EliteBook 2570p](hp2570p.md)
-* [HP EliteBook 820 G2](hp820g2.md)
-* [HP EliteBook 8460p](hp8460p.md)
-* [HP EliteBook 8470p](hp8470p.md)
-* [HP EliteBook 8560w](hp8560w.md)
-* [HP EliteBook Folio 9470m](hp9470m.md)
+* [HP EliteBook 2170p](hp2170p)
+* [HP EliteBook 2560p](hp2560p)
+* [HP EliteBook 2570p](hp2570p)
+* [HP EliteBook 820 G2](hp820g2)
+* [HP EliteBook 8460p](hp8460p)
+* [HP EliteBook 8470p](hp8470p)
+* [HP EliteBook 8560w](hp8560w)
+* [HP EliteBook Folio 9470m](hp9470m)
 
 HP Elite desktops (vendor BIOS)
 -------------------------
 
 Each machine has it's own guide:
 
-* [HP Elite 8200 SFF/MT](hp8200sff.md) (HP 6200 Pro Business probably works too)
-* [HP Elite 8300 USDT](hp8300usdt.md)
+* [HP Elite 8200 SFF/MT](hp8200sff) (HP 6200 Pro Business probably works too)
+* [HP Elite 8300 USDT](hp8300usdt)
 
 ARM-based Chromebooks
 ---------------------
 
-See: [Chromebook flashing instructions](chromebooks.md)
+See: [Chromebook flashing instructions](chromebooks)
 
 NOTE: The generic flashing instructions (later on this page) apply only to
 the x86 machines, because the Chromebooks still use flashrom with
@@ -621,7 +621,7 @@ QEMU (arm64 and x86)
 Libreboot can be used on QEMU (virtual machine), which is useful for debugging
 payloads and generally trying out Libreboot, without requiring real hardware.
 
-See: [Libreboot QEMU guide](../misc/emulation.md)
+See: [Libreboot QEMU guide](../misc/emulation)
 
 Install via host CPU (internal flashing)
 ========================================
@@ -633,7 +633,7 @@ pertaining to your mainboard. Internal flashing means that you boot Linux or
 BSD on the target machine, and run `flashprog` there, flashing the machine
 directly.
 
-**If you can't flash internally, you must [flash externally](spi.md).**
+**If you can't flash internally, you must [flash externally](spi).**
 
 Internal flashing is often unavailable with the factory firmware, but it is
 usually possible when Libreboot is running (barring special circumstances).
@@ -641,7 +641,7 @@ usually possible when Libreboot is running (barring special circumstances).
 Run flashprog on host CPU
 ------------------------
 
-**Always remember to [insert vendor files](ivy_has_common.md), when using
+**Always remember to [insert vendor files](ivy_has_common), when using
 release images. Otherwise, these files are added automatically at build
 time, when building from source (but they are not present in release images).**
 
@@ -688,16 +688,16 @@ Removed boards
 These boards were in Libreboot, but have been removed with the intention of
 re-adding them at a later date. They were removed due to issues. List:
 
--   [Acer Chromebook 13 (CB5-311, C810) (nyan-big)](chromebooks.md)
--   [ASUS Chromebit CS10 (veyron-mickey)](chromebooks.md)
--   [ASUS Chromebook C201PA (veyron-speedy)](c201.md)
--   [ASUS Chromebook Flip C100PA (veyron-minnie)](chromebooks.md)
--   [Hisense Chromebook C11 and more (veyron-jerry)](chromebooks.md)
--   [HP Chromebook 11 G1 (daisy-spring)](chromebooks.md)
--   [HP Chromebook 14 G3 (nyan-blaze)](chromebooks.md)
--   [Samsung Chromebook 2 11" (peach-pit)](chromebooks.md)
--   [Samsung Chromebook 2 13" (peach-pi)](chromebooks.md)
--   [Samsung Chromebook XE303 (daisy-snow)](chromebooks.md)
+-   [Acer Chromebook 13 (CB5-311, C810) (nyan-big)](chromebooks)
+-   [ASUS Chromebit CS10 (veyron-mickey)](chromebooks)
+-   [ASUS Chromebook C201PA (veyron-speedy)](c201)
+-   [ASUS Chromebook Flip C100PA (veyron-minnie)](chromebooks)
+-   [Hisense Chromebook C11 and more (veyron-jerry)](chromebooks)
+-   [HP Chromebook 11 G1 (daisy-spring)](chromebooks)
+-   [HP Chromebook 14 G3 (nyan-blaze)](chromebooks)
+-   [Samsung Chromebook 2 11" (peach-pit)](chromebooks)
+-   [Samsung Chromebook 2 13" (peach-pi)](chromebooks)
+-   [Samsung Chromebook XE303 (daisy-snow)](chromebooks)
 -   Lenovo ThinkPad X301 (still in lbmk, but with `release="n"`)
 
 NOTES about removed boards
