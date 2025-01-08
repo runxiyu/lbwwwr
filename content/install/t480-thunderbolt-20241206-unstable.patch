@@ -1,0 +1,136 @@
+From 67b0219a665462ae71f6ba5104edc55ad6245ca7 Mon Sep 17 00:00:00 2001
+From: Mate Kukri <km@mkukri.xyz>
+Date: Thu, 5 Dec 2024 20:42:40 +0000
+Subject: [PATCH] thunderbolt fix-ish
+
+it shows up, but resume is no dice.
+
+Change-Id: I2d91a1d290b35e7ea3a1193b4be7b4ba936e4a15
+---
+ src/mainboard/lenovo/sklkbl_thinkpad/Kconfig        |  1 +
+ src/mainboard/lenovo/sklkbl_thinkpad/dsdt.asl       | 13 +++++++++++++
+ .../lenovo/sklkbl_thinkpad/variants/t480/gpio.c     |  8 ++++----
+ .../sklkbl_thinkpad/variants/t480/overridetree.cb   |  4 ++++
+ .../lenovo/sklkbl_thinkpad/variants/t480s/gpio.c    |  8 ++++----
+ .../sklkbl_thinkpad/variants/t480s/overridetree.cb  |  4 ++++
+ 6 files changed, 30 insertions(+), 8 deletions(-)
+
+diff --git a/src/mainboard/lenovo/sklkbl_thinkpad/Kconfig b/src/mainboard/lenovo/sklkbl_thinkpad/Kconfig
+index 21076315ab..0766c03716 100644
+--- a/src/mainboard/lenovo/sklkbl_thinkpad/Kconfig
++++ b/src/mainboard/lenovo/sklkbl_thinkpad/Kconfig
+@@ -19,6 +19,7 @@ config BOARD_LENOVO_SKLKBL_THINKPAD_COMMON
+ 	select SOC_INTEL_COMMON_BLOCK_HDA_VERB
+ 	select SPD_READ_BY_WORD
+ 	select SYSTEM_TYPE_LAPTOP
++	select DRIVERS_INTEL_DTBT
+ 
+ config BOARD_LENOVO_E460
+ 	bool
+diff --git a/src/mainboard/lenovo/sklkbl_thinkpad/dsdt.asl b/src/mainboard/lenovo/sklkbl_thinkpad/dsdt.asl
+index 237500775f..849540d32d 100644
+--- a/src/mainboard/lenovo/sklkbl_thinkpad/dsdt.asl
++++ b/src/mainboard/lenovo/sklkbl_thinkpad/dsdt.asl
+@@ -35,4 +35,17 @@ DefinitionBlock(
+ 	}
+ 
+ 	#include <southbridge/intel/common/acpi/sleepstates.asl>
++
++	Scope (\_SB)
++	{
++		External (\TBTS, MethodObj)
++
++		Method (MPTS, 1, Serialized)
++		{
++			If (CondRefOf (\TBTS))
++			{
++				\TBTS()
++			}
++		}
++	}
+ }
+diff --git a/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480/gpio.c b/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480/gpio.c
+index f7c29e1f39..edfa09fbb7 100644
+--- a/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480/gpio.c
++++ b/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480/gpio.c
+@@ -86,7 +86,7 @@ static const struct pad_config gpio_table[] = {
+ 	PAD_NC(GPP_C18, NONE),
+ 	PAD_NC(GPP_C19, NONE),
+ 	PAD_CFG_GPO(GPP_C20, 0, DEEP),					/* EPRIVACY_ON */
+-	PAD_CFG_GPO(GPP_C21, 0, DEEP),					/* TBT_FORCE_PWR */
++	PAD_CFG_GPO(GPP_C21, 1, DEEP),					/* TBT_FORCE_PWR */
+ 	PAD_CFG_GPI_SCI(GPP_C22, NONE, DEEP, EDGE_SINGLE, INVERT),	/* -EC_SCI */
+ 	PAD_CFG_GPI_SCI(GPP_C23, NONE, DEEP, EDGE_SINGLE, INVERT),	/* -EC_WAKE */
+ 
+@@ -191,9 +191,9 @@ static const struct pad_config gpio_table[] = {
+ 	PAD_NC(GPP_G1, NONE),
+ 	PAD_NC(GPP_G2, NONE),
+ 	PAD_NC(GPP_G3, NONE),
+-	PAD_CFG_GPO(GPP_G4, 0, DEEP),					/* TBT_RTD3_PWR_EN */
+-	PAD_CFG_GPO(GPP_G5, 0, DEEP),					/* TBT_FORCE_USB_PWR */
+-	PAD_CFG_GPO(GPP_G6, 0, DEEP),					/* -TBT_PERST */
++	PAD_CFG_GPO(GPP_G4, 1, DEEP),					/* TBT_RTD3_PWR_EN */
++	PAD_CFG_GPO(GPP_G5, 1, DEEP),					/* TBT_FORCE_USB_PWR (TBT_RTD3_USB_PWR_EN) */
++	PAD_CFG_GPO(GPP_G6, 1, DEEP),					/* -TBT_PERST */
+ 	PAD_CFG_GPI_SCI(GPP_G7, NONE, DEEP, LEVEL, INVERT),		/* -TBT_PCIE_WAKE */
+ };
+ 
+diff --git a/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480/overridetree.cb b/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480/overridetree.cb
+index 2f0b20d91a..6d8725ad5a 100644
+--- a/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480/overridetree.cb
++++ b/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480/overridetree.cb
+@@ -106,6 +106,10 @@ chip soc/intel/skylake
+ 			register "PcieRpAdvancedErrorReporting[8]"	= "1"
+ 			register "PcieRpLtrEnable[8]"			= "1"
+ 			register "PcieRpHotPlug[8]"			= "1"
++
++			chip drivers/intel/dtbt
++				device pci 0.0 on end
++			end
+ 		end
+ 
+ 		# M.2 2280 caddy - x2
+diff --git a/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480s/gpio.c b/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480s/gpio.c
+index a98dd2bc4e..732917ebfa 100644
+--- a/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480s/gpio.c
++++ b/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480s/gpio.c
+@@ -82,7 +82,7 @@ static const struct pad_config gpio_table[] = {
+ 	PAD_NC(GPP_C18, NONE),
+ 	PAD_NC(GPP_C19, NONE),
+ 	PAD_CFG_GPO(GPP_C20, 0, DEEP),					/* EPRIVACY_ON */
+-	PAD_CFG_GPO(GPP_C21, 0, DEEP),					/* TBT_FORCE_PWR */
++	PAD_CFG_GPO(GPP_C21, 1, DEEP),					/* TBT_FORCE_PWR */
+ 	PAD_CFG_GPI_SCI(GPP_C22, NONE, DEEP, EDGE_SINGLE, INVERT),	/* -EC_SCI */
+ 	PAD_CFG_GPI_SCI(GPP_C23, NONE, DEEP, EDGE_SINGLE, INVERT),	/* -EC_WAKE */
+ 
+@@ -187,9 +187,9 @@ static const struct pad_config gpio_table[] = {
+ 	PAD_NC(GPP_G1, NONE),
+ 	PAD_NC(GPP_G2, NONE),
+ 	PAD_NC(GPP_G3, NONE),
+-	PAD_CFG_GPO(GPP_G4, 0, DEEP),					/* TBT_RTD3_PWR_EN */
+-	PAD_CFG_GPO(GPP_G5, 0, DEEP),					/* TBT_FORCE_USB_PWR */
+-	PAD_CFG_GPO(GPP_G6, 0, DEEP),					/* -TBT_PERST */
++	PAD_CFG_GPO(GPP_G4, 1, DEEP),					/* TBT_RTD3_PWR_EN */
++	PAD_CFG_GPO(GPP_G5, 1, DEEP),					/* TBT_FORCE_USB_PWR (TBT_RTD3_USB_PWR_EN) */
++	PAD_CFG_GPO(GPP_G6, 1, DEEP),					/* -TBT_PERST */
+ 	PAD_CFG_GPI_SCI(GPP_G7, NONE, DEEP, LEVEL, INVERT),		/* -TBT_PCIE_WAKE */
+ };
+ 
+diff --git a/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480s/overridetree.cb b/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480s/overridetree.cb
+index cea5e485d2..9b952215c5 100644
+--- a/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480s/overridetree.cb
++++ b/src/mainboard/lenovo/sklkbl_thinkpad/variants/t480s/overridetree.cb
+@@ -106,6 +106,10 @@ chip soc/intel/skylake
+ 			register "PcieRpAdvancedErrorReporting[4]"	= "1"
+ 			register "PcieRpLtrEnable[4]"			= "1"
+ 			register "PcieRpHotPlug[4]"			= "1"
++
++			chip drivers/intel/dtbt
++				device pci 0.0 on end
++			end
+ 		end
+ 
+ 		# M.2 2280 SSD - x2
+-- 
+2.39.5
+

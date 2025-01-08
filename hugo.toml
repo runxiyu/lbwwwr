@@ -1,0 +1,9 @@
+baseURL = 'https://libreboot.runxiyu.org/'
+languageCode = 'en-us'
+title = 'Unofficial Libreboot Documentation'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+ordered = true

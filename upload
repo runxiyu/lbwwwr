@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Bash because $BASH_SOURCE is really useful.
+#
+
+set -x
+
+cd "${BASH_SOURCE[0]%/*}"
+
+hugo && rsync --chmod=u=rwX,go=rX --delete-after -rv public/ runxiyu.org:/var/www/libreboot/

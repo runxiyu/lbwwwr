@@ -1,0 +1,121 @@
+html {
+	font-family: system-ui, sans-serif;
+	--bg: hsl(32, 98%, 92%);
+	--fg: #1E1F21;
+	--boxbg: hsl(32, 60%, 88%);
+	--border: rgb(180, 180, 180);
+	--border-radius: .32rem;
+	--dim-text-color: #333;
+	--link-color: #24527d;
+	--text-decoration-color: #CCC;
+	color: var(--fg);
+	background-color: var(--bg);
+}
+@media(prefers-color-scheme:dark) {
+	html {
+		--bg: #1E1F21;
+		--fg: #EEEFF1;
+		--boxbg: #2E2F31;
+		--border: rgb(80, 80, 80);
+		--dim-text-color: #999;
+		--link-color: #5ca7ed;
+		--text-decoration-color: #575745;
+	}
+}
+
+body {
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+body:not(.wide) {
+	max-width: 50rem;
+}
+
+h1 {
+	text-align: center;
+}
+
+a:link, a:visited {
+	text-decoration-color: var(--text-decoration-color);
+	color: var(--link-color);
+}
+
+pre, code {
+	font-family: "DejaVu Sans Mono", "Menlo", monospace;
+}
+
+
+table {
+	margin-top: 0.4em;
+	font-size: 90%;
+	margin-bottom: 0.4em;
+}
+table.wide {
+	width: 100%;
+}
+th[scope~="row"] {
+	text-align: left;
+}
+th[scope~="col"] {
+}
+td {
+	text-align: left;
+	height: 1.25rem;
+	/* border: 1px solid var(--border); */
+	padding: 3px 5px;
+}
+table.fat td {
+	padding: 6px 5px;
+}
+td.th-like, th {
+	background-color: var(--boxbg) !important;
+	/* border: 1px solid var(--border); */
+	font-weight: bold;
+	padding: 3px 5px;
+}
+th.min, td.min {
+	width: 0;
+	min-width: fit-content;
+	white-space: nowrap;
+}
+
+/* The insanity of rounded table corners */
+table {
+	overflow: hidden;
+	border: var(--border) solid 1px;
+	border-spacing: 0;
+	border-radius: var(--border-radius);
+	border-collapse: separate;
+}
+table>tr:not(:last-child)>td,
+table>tr:not(:last-child)>th,
+table>thead,
+table>thead>tr>th,
+table>thead>tr>td,
+table>tbody,
+table>tbody>tr:not(:last-child)>th,
+table>tbody>tr:not(:last-child)>td {
+	border-bottom: var(--border) solid 1px;
+}
+table td:not(:last-child),
+table th:not(:last-child) {
+	border-right: var(--border) solid 1px;
+}
+
+
+
+/* Workaround for Firefox bug 217769 */
+tbody:empty {
+	display: none;
+}
+table > tbody:after {
+	content: "";
+}
+
+
+img:not(.no-auto-width) {
+	width: 66%;
+	margin: 0 auto;
+	display: block;
+}
