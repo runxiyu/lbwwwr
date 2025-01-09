@@ -12,11 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
 			.catch(error => console.error(`Failed to fetch ${url}:`, error));
 	}
 
-	function replace_dom(html, url) {
+	function replace_dom(html, url, update_history = true) {
 		const parser = new DOMParser();
 		const doc = parser.parseFromString(html, 'text/html');
 		document.documentElement.innerHTML = doc.documentElement.innerHTML;
-		history.pushState({ url: url }, '', url);
+		if (update_history) {
+			history.pushState({ url: url }, '', url);
+		}
 		window.scrollTo(0, 0);
 		attach_event_listeners();
 	}
@@ -35,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (event.state && event.state.url) {
 			const url = event.state.url;
 			if (cache.has(url)) {
-				replace_dom(cache.get(url), url);
+				replace_dom(cache.get(url), url, false);
 			} else {
-				fetch_page(url).then(html => replace_dom(html, url));
+				fetch_page(url).then(html => replace_dom(html, url, false));
 			}
 		}
 	});
