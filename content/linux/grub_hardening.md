@@ -48,7 +48,7 @@ Example:
 	password_pbkdf2 root grub.pbkdf2.sha512.10000.711F186347156BC105CD83A2ED7AF1EB971AA2B1EB2640172F34B0DEFFC97E654AF48E5F0C3B7622502B76458DA494270CC0EA6504411D676E6752FD1651E749.8DD11178EB8D1F633308FD8FCC64D0B243F949B9B99CCEADE2ECA11657A757D22025986B0FA116F1D5191E0A22677674C994EDBFADE62240E9D161688266A711
 
 GRUB will also ask for a username in addition to the password; the "root" user
-is specified above, but you can cahnge it to whatever you want.
+is specified above, but you can change it to whatever you want.
 
 ## Unset superusers
 

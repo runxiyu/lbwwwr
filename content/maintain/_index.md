@@ -219,7 +219,7 @@ into copies of these images in files under `bin/`. However, modern lbmk
 now only puts coreboot images in `bin/`, with payloads included.
 
 If you still have `elf/` coreboot images in your lbmk tree, please do not
-use them (and you may aswell delete them).
+use them (and you may as well delete them).
 
 cache/
 ---------------
@@ -296,7 +296,7 @@ relative to the *source directory*; these files would be copied, after a build
 operation, to `elf/PROJECT` for single-tree projects,
 or `elf/PROJECT/TREE` for multi-tree projects.
 
-It is technically possible to re-use these files elsewhere. For example, you
+It is technically possible to reuse these files elsewhere. For example, you
 may wish to only compile GRUB with lbmk, and then use the `grub.elf` file from
 lbmk in your own custom coreboot ROM (that you didn't build with lbmk). However,
 this use is not officially supported by the Libreboot project; these files are
@@ -396,7 +396,7 @@ makes extensive use of coreboot, on supported mainboards.
 Coreboot trees go here. Libreboot's build system does not simply use one tree,
 or multiple branches in the same tree; entirely separate directories are
 created, for each revision of coreboot used, each able to have its own patches.
-These can then be re-use appropriately, per mainboard. For example:
+These can then be reuse appropriately, per mainboard. For example:
 
 * `src/coreboot/default` is used by most mainboards.
 * `src/coreboot/cros` is used by cros devices.
@@ -691,7 +691,7 @@ coding style][https://man.openbsd.org/style.9] is much easier to read.
 
 This code has been modified to make use of the `pledge()` system call, when used
 on [OpenBSD](https://www.openbsd.org/); the original version from GRUB did not
-do this. Other improvemnts include:
+do this. Other improvements include:
 
 * Superior error handling (the program actually exits with non-zero status now,
   under fault conditions, whereas the original code did *not* handle errors).
@@ -816,7 +816,7 @@ not handled, because lbmk simply assumes use of the aforementioned tree names.
 
 The `tree` value refers to `config/coreboot/TREE`; in other words, a given
 target could specify a name other than its own as the tree; it would then
-re-use code from that tree, rather than providing its own.
+reuse code from that tree, rather than providing its own.
 
 The `rev` entry defines which coreboot revision to use, from the
 coreboot Git repository. *At present, lbmk only supports use of the official
@@ -864,7 +864,7 @@ GRUB payloads tries to automatically find other `grub.cfg` files supplied by
 your Linux distribution. On some machines, setting it to `ata` or `ahci`
 can improve boot speed by reducing delays; for example, trying to scan `ata0`
 on a ThinkPad X60 with the optical drive may cause GRUB to hang, so on that
-machine it is advisable to set this option to `ahci` (becuse the default HDD
+machine it is advisable to set this option to `ahci` (because the default HDD
 slot is AHCI).
 
 The `release` variable can be set to n, which makes the `./mk release`

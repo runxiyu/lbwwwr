@@ -677,4 +677,4 @@ directly in coreboot; libgfxinit is a 3rdparty submodule of coreboot).
 
 ### Vladislav Shapovalov
 
-Translated several pages of the Libreboot website into Ukranian language.
+Translated several pages of the Libreboot website into Ukrainian language.

@@ -422,7 +422,7 @@ You should refer to:
 - The page on [firmware outside of Libreboot's scope](../other_firmware/)
 
 No device we support is "100% free", as they all include firmware outside of
-Libreboot's scope, such as disk/USB contollers and the embedded controller
+Libreboot's scope, such as disk/USB controllers and the embedded controller
 firmware.
 
 ### What are the prospects for libre hardware?
@@ -454,7 +454,7 @@ exist, for example, the work done by Sam Zeloof and the Libre Silicon project:
     if you haven't used that knowledge ever since.
 * Impedance intro
     * [Similiarities of Wave Behavior](https://yewtu.be/watch?v=DovunOxlY1k)
-    * [Reflections in tranmission line](https://yewtu.be/watch?v=y8GMH7vMAsQ)
+    * [Reflections in transmission line](https://yewtu.be/watch?v=y8GMH7vMAsQ)
     * Stubs:
         * [Wikipedia article on stubs](https://en.wikipedia.org/wiki/Stub_(electronics))
         * [Polar Instruments article on stubs](http://www.polarinstruments.com/support/si/AP8166.html)  

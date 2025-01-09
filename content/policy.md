@@ -42,7 +42,7 @@ The following policy describes how Libreboot handles these blobs.
 * Methods to neuter the Intel Management Engine and the AMD Platform Security
   Processor must be provided if available.
 * On configurations with two graphics devices where only one has libre init
-  code, it is acceptable for Libreboot to support both devices, and accomodate
+  code, it is acceptable for Libreboot to support both devices, and accommodate
   the required vendor code on the device that lacks libre init code.
 * Notwithstanding any other provision of this list, [CPU microcode
   updates](microcode/) are permitted.

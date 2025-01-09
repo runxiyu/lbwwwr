@@ -151,7 +151,7 @@ test with dell-flash-unlock.
 See: <https://review.coreboot.org/c/coreboot/+/79746>
 
 Haswell latitude, works with `dell-flash-unlock`, uses MEC5055 EC. Documentation
-is included with that patch. It should be possible to re-use the existing
+is included with that patch. It should be possible to reuse the existing
 MRC extraction logic. It will have to be backported to the branch used for
 libremrc in lbmk.
 
@@ -330,7 +330,7 @@ For UEFI purposes, U-Boot seems more mature, and it offers other features
 like SPL. As already stated, this is the preferred UEFI implementation for
 Libreboot, but uefistub is listed too because it's interesting.
 
-Probably useless, since U-Boot is more complete. We may aswell use U-Boot, but
+Probably useless, since U-Boot is more complete. We may as well use U-Boot, but
 uefistub will remain mentioned here for the time being. The context for
 uefistub is linuxboot-only setups; this is where uefistub can truly shine,
 specifically on ARM64 devices.
@@ -397,7 +397,7 @@ Look at the [lbmk documentation](../maintain/) for context. The most
 logical way to implement Linux payloads in Libreboot's build system, lbmk,
 might be:
 
-* Re-use the current crossgcc handling in `script/update/trees`, which is used
+* Reuse the current crossgcc handling in `script/update/trees`, which is used
   for coreboot and u-boot. Coreboot's cross compiler isn't very useful for
   general applications e.g. utilities, but it could compile the Linux kernel
   easily.
@@ -422,7 +422,7 @@ might be:
 
 BONUS: the musl-cross-make logic could also be used to provide static linked
 utilities, so as to provide compiled utilities in Libreboot releases, reliably.
-We currenty only provide source code for utilities, which is not always
+We currently only provide source code for utilities, which is not always
 convenient for users, especially for utilities needed alongside vendor scripts.
 
 If done in the way described above, the current code size in the Libreboot
@@ -452,7 +452,7 @@ it as a vmlinuz and initramfs file.
 
 ### ARM implementation
 
-We already standardise on U-Boot, for ARM machines. It's debateable whether
+We already standardise on U-Boot, for ARM machines. It's debatable whether
 Linuxboot is even desirable here, U-Boot is quite competent, but the SPL mode
 in U-Boot could be used to provide the Linux payload setup, OR:
 
@@ -529,7 +529,7 @@ TODO: Keep the current behaviour, for performance reasons, but offer a mode
 where instead a new menu appears, with menuentries generated, where each one
 just switches to one of the detected configurations.
 
-This would enable Libreboot to work more seemlessly on dualboot setups, where
+This would enable Libreboot to work more seamlessly on dualboot setups, where
 it is currently assumed that the user would modify `grub.cfg` in the flash.
 
 This pertains to the GRUB *payload* provided in the flash, by Libreboot. It is
@@ -908,7 +908,7 @@ documentation whenever possible.
 
 ## Static compiled utils in releases
 
-We curerntly only provide binaries of the firmware itself, for each mainboard,
+We currently only provide binaries of the firmware itself, for each mainboard,
 but we do not provide utilities compiled. We provide only source code, and the
 user is expected to compile utilities from source.
 
@@ -1026,7 +1026,7 @@ We currently do this on each mainboard:
 
 This is often literally 3 different ROM images, for all of the above. It is
 possible to have a libgfxinit setup where SeaBIOS is the payload, so that VGA
-ROMs can be executed aswell, but this has several issues, covered elsewhere on
+ROMs can be executed as well, but this has several issues, covered elsewhere on
 this page.
 
 It would be nice if all of this could be runtime options instead. By "runtime",
@@ -1085,7 +1085,7 @@ older revisions on some machines, e.g. AMD AGESA platforms.
 
 See: <https://review.coreboot.org/c/coreboot/+/63587>
 
-We currently re-use the same ROM image for macbook21 on the imac52, but it is
+We currently reuse the same ROM image for macbook21 on the imac52, but it is
 now believed that the C-state config there is not suitable on imac52. See patch.
 
 TODO: test on imac52 and macbook21. If confirmed (again, see patch, the problem
@@ -1216,9 +1216,9 @@ minimise the amount of complexity needed in lbmk, to handle that use-case.
 NOTE: the `-z` option in ./update trees is not yet implemented. Again, the
 above just a concept.
 
-## Re-use build artifacts
+## Reuse build artifacts
 
-Libreboot's build system, lbmk, does not re-use artifacts well. It largely
+Libreboot's build system, lbmk, does not reuse artifacts well. It largely
 assumes that you are building everything from scratch, which is great for
 release builds and is very simple, but sometimes that can be annoying during
 development. This pretty much goes hand in hand with the other TODO item on
@@ -1236,7 +1236,7 @@ This might be useful for:
 A lot of the time in lbmk, we are building multiple variants of the same
 mainboard, for different setups. We could skip a lot of the re-building.
 This pretty much goes hand in hand with the other entry on this TODO page,
-about spliting up the various stages in coreboot, and handling CBFS generation
+about splitting up the various stages in coreboot, and handling CBFS generation
 within lbmk.
 
 ### Notes about Git
@@ -1373,7 +1373,7 @@ on Libreboot 20231101.
 
 ## Optimise crossgcc space
 
-Re-use crossgcc from other coreboot trees, in other coreboot trees. We currently
+Reuse crossgcc from other coreboot trees, in other coreboot trees. We currently
 build several versions of it, but we probably only need one, maybe two. Audit
 this, across various coreboot trees. Specific coreboot trees (older ones) could
 just be patched if re-using crossgcc from a newer tree.
@@ -1523,7 +1523,7 @@ is absolutely necessary when someonething could just as easily be done in code.
 See other section on this page about write protection.
 
 Setting PR registers for write protection is a valid way to write protect on
-Dell E6400, and it would not be affected by the flash-unlock utilitiy.
+Dell E6400, and it would not be affected by the flash-unlock utility.
 
 ### SMM methods
 

@@ -210,7 +210,7 @@ not rely on dumping the factory.rom image (whereas, ich9deblob does).
 Simply speaking, `ich9deblob` takes an original dump of the boot flash, where
 that boot flash contains a descriptor that defines the existence of Intel ME,
 and modifies it. The Intel Flash Descriptor is modified to disable the ME
-region. It disables the ME itself aswell. The GbE region is moved to the
+region. It disables the ME itself as well. The GbE region is moved to the
 location just after the descriptor. The BIOS region is specified as being
 after the descriptor+GbE regions, filling the rest of the boot flash.
 
@@ -253,7 +253,7 @@ GbE defined), do this:
 	dd if=deblobbed_4kdescriptor.bin of=libreboot.rom bs=4k count=1 conv=notrunc
 
 (it's very unlikely that you would ever see this. Descriptor without GbE is
-very rare, probably non-existant, but theoretically possible and this functionality
+very rare, probably non-existent, but theoretically possible and this functionality
 is implemented based on Intel datasheets)
 
 The utility will also generate 4 additional files:

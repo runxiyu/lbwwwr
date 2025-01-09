@@ -20,7 +20,7 @@ nicely.
 
 ## System requirements
 
-System requirements are documented in the maintainence manual.
+System requirements are documented in the maintenance manual.
 
 ## Environment variables
 
@@ -89,7 +89,7 @@ For better reliability, you should, after running the dependencies script,
 remove `gnat` and install `gnat-14` instead, which is available on this day
 of 3 December 2025, but currently marked experimental. When you install
 GNAT 14, GNAT 13 is removed but `gnat` (in `PATH`) still won't resolve to
-anything. Libreboot *still* accomodates this, detecting and matching the GCC
+anything. Libreboot *still* accommodates this, detecting and matching the GCC
 and GNAT versions, which would in this instance match version 14 between them,
 so that `gnat` and `gcc` are both in PATH at build time, resolving to v14.x.
 When we tested with this configuration, the KGPE-D16 images also compiled.
@@ -140,7 +140,7 @@ You can do, for example
 
 ## Modifying configurations
 
-You should check the maintainance manual for specifics, but:
+You should check the maintenance manual for specifics, but:
 ```
 ./mk -m coreboot x200_8mb
 ```

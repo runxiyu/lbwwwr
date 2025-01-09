@@ -23,7 +23,7 @@ of reliability):
     and comparing with some known codenames (if not available FRU ID sticker)
     listed below.
 -   sometimes by looking at heatsink grills: on
-    discrete GPU laptops these will look orange and on intergrated ones
+    discrete GPU laptops these will look orange and on integrated ones
     they will appear silver.
 
 List of models and codenames

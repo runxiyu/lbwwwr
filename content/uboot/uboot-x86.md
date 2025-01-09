@@ -65,7 +65,7 @@ Boot Linux/BSD installer (USB)
 Just stick your formatted USB stick in. U-Boot should detect it. Sometimes some
 USB flash drives are broken, because many of them violate specifications and
 U-Boot doesn't properly hack around that like Linux does (buggy USB mass storage
-implementation) - also, xhci suppport is still a bit unstable, on machines that
+implementation) - also, xhci support is still a bit unstable, on machines that
 don't have EHCI controllers (e.g. Haswell setups and beyond).
 
 If your USB drive is detected at boot, a menu might appear, showing it and you

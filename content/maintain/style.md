@@ -93,7 +93,7 @@ main()
 foo()
 {
 	printf "I'm a function that does stuff.\n"
-	bar || $err "foo: an error occured"
+	bar || $err "foo: an error occurred"
 	do_something_else
 }
 
@@ -260,7 +260,7 @@ See: RFC 3676
 
 Excessively long code lines are really annoying to read.
 
-Use tab-based indendation
+Use tab-based indentation
 =========================
 
 A new line should begin with tab indentation, in a function.

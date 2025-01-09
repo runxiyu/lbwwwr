@@ -32,7 +32,7 @@ as:
 * Intel flash descriptor: always the first 4KiB of the flash. Binary-encoded
   configuration data for the machine, and the regions (such as this, or
   others below) is defined in here. In some ways, you might think of this as
-  analagous to the Master Boot Record on a hard drive.
+  analogous to the Master Boot Record on a hard drive.
 
 * Intel GbE NVM (gigabit ethernet non-volatile memory): binary-encoded
   configuration data, for the onboard Intel gigabit ethernet device, if one is

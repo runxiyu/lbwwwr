@@ -17,7 +17,7 @@ Basically, what you need to do is:
   laptop came with, if you bought it on ebay for example). Arctic MX-6 is good.
 * Check that the fan works reliably
 
-Also: the `intel_pstate` driver can be used to artifically cap CPU speed. See:
+Also: the `intel_pstate` driver can be used to artificially cap CPU speed. See:
 
 <https://www.kernel.org/doc/html/v4.12/admin-guide/pm/intel_pstate.html>
 

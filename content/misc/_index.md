@@ -84,7 +84,7 @@ There are also others like Minicom but Screen works nicely.
 
 By doing this before booting the X60/T60, you will see console output
 from libreboot. You will also see GRUB displaying on the serial output,
-and you will be able to see MemTest86+ on the serial output aswell. You
+and you will be able to see MemTest86+ on the serial output as well. You
 can also configure your distro so that a terminal (TTY) is accessible
 from the serial console.
 

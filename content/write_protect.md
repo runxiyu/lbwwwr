@@ -32,7 +32,7 @@ stored in `grub.cfg`.
 You'll have to play around with this yourself. These options are not enabled
 by default, because Libreboot images are supposed to allow writes by default,
 when booted. You have to enable such security yourself, because the design of
-Libreboot is to be as easy to use as possible by defalut, which include updates,
+Libreboot is to be as easy to use as possible by default, which include updates,
 thus implying read-write flash permissions.
 
 This example was for `x200_8mb`, but other boards may look different in config.

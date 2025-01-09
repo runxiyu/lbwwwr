@@ -179,7 +179,7 @@ ALSO: If vendorfiles are not needed, or if an error occurs, modification of
 the tarball is avoided and it's left alone, UNLESS the following condition is
 met:
 
-If no errors occured, but no vendor files are needed, you can still inject a
+If no errors occurred, but no vendor files are needed, you can still inject a
 new MAC address, where there is a GbE region. If there isn't a GbE region,
 such modification is skipped (some boards don't have Intel gigabit ethernet,
 and might have a different ethernet adapter instead).

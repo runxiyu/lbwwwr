@@ -99,7 +99,7 @@ already set up, and the drive can initiate DMA. The document goes on to say
 received DMA Setup request."* - in other words, the host is supposed to
 validate; but maybe there's a bug there. The document goes on to say *"The
 specific implementation of the buffer identifier and buffer/address validation
-is not specified"* - so noone will actually bother. *"the receiver of the FIS"*
+is not specified"* - so no one will actually bother. *"the receiver of the FIS"*
 &mdash; in the case we're considering, that's the host controller hardware in
 the chipset and/or the kernel driver (most likely the kernel driver). All SATA
 devices have flash-upgradeable firmware, which can usually be updated by

@@ -206,7 +206,7 @@ else, hold Alt/Control and select the correct boot device ;
 firmware can get confused, because Apple never intended to boot other 
 EFI OSes other than OS X, as such there's a chance that your MacBook can 
 become [soft-bricked](https://apple.stackexchange.com/questions/408104/late-2006-macbook-doesnt-turn-on-fan-spinning-but-no-chime/409754). 
-If that is the case then dissassemble it and remove 
+If that is the case then disassemble it and remove 
 the CMOS/PRAM battery, wait a few minutes, and put it back in.
 
 *If you want to install Libreboot with the SeaBIOS payload then be sure 
