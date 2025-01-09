@@ -1,30 +1,17 @@
 html {
 	font-family: system-ui, sans-serif;
-	--bg: hsl(32, 98%, 92%);
-	--fg: #1E1F21;
-	--boxbg: hsl(32, 60%, 88%);
-	--border: rgb(180, 180, 180);
 	--border-radius: .32rem;
-	--dim-text-color: #333;
-	--link-color: #24527d;
-	--text-decoration-color: #CCC;
-	--header-fg: black;
-	--header-bg: #f2f2f2;
+	--bg: #280b22;
+	--fg: #EEEFF1;
+	--boxbg: #2E2F31;
+	--border: rgb(80, 80, 80);
+	--dim-text-color: #999;
+	--link-color: #fcc;
+	--text-decoration-color: #575745;
+	--header-fg: #f8f9fa;
+	--header-bg: #381b32;
 	color: var(--fg);
 	background-color: var(--bg);
-}
-@media(prefers-color-scheme:dark) {
-	html {
-		--bg: #1E1F21;
-		--fg: #EEEFF1;
-		--boxbg: #2E2F31;
-		--border: rgb(80, 80, 80);
-		--dim-text-color: #999;
-		--link-color: #5ca7ed;
-		--text-decoration-color: #575745;
-		--header-fg: #f8f9fa;
-		--header-bg: #30363b;
-	}
 }
 
 main {
@@ -180,6 +167,21 @@ nav#main-nav-bar li:not(:last-child)::after {
 
 code {
 	background-color: var(--boxbg);
+	border-radius: 2px;
+	padding: 2px;
+}
+
+pre {
+	background-color: var(--boxbg);
+	border-radius: var(--border-radius);
+	padding: 0.5rem;
+	overflow-x: scroll;
+}
+
+pre > code {
+	background-color: inherit;
+	border-radius: 0px;
+	padding: 0px;
 }
 
 footer {
