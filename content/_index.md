@@ -2,8 +2,8 @@
 title: Home
 ---
 
-The *Libreboot* project provides mostly [free, libre, and open
-source](https://writefreesoftware.org/) boot firmware based on coreboot,
+The *Libreboot* project provides [mostly](freedom_status/) [free, libre, and
+open source](https://writefreesoftware.org/) boot firmware based on coreboot,
 replacing proprietary BIOS/UEFI firmware for supported motherboards. It
 initialises the hardware (e.g. memory controller, CPU, peripherals) and starts
 a bootloader for your operating system. [Linux](docs/linux/) and

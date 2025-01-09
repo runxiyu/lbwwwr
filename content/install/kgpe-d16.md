@@ -211,5 +211,5 @@ The information here is adapted, from the ASUS website.
 
 ### Note:
 
--   \* DDR3 1600 can only be supported with AMD Opteron 6300/6200 series
+-   DDR3 1600 can only be supported with AMD Opteron 6300/6200 series
     processor

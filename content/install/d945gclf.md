@@ -2,6 +2,10 @@
 title: Intel D945GCLF Desktop Board 
 ---
 
+d945gclf: Doesn't boot at all, according to last report. D510MO is still in
+lbmk but still was reported problematic; other boards should be fine (see list
+above).
+
 ![Intel D945GCLF desktop board](https://av.libreboot.org/d945gclf/d945gclf.jpg)
 
 | Type                   | Value                 |

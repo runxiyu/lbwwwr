@@ -2,8 +2,28 @@
 title: Chromebook flashing instructions
 ---
 
+## Board support
+
 **Libreboot currently officially supports the `nyan` and `gru` chromebooks.
 `daisy`, `peach`, and `veyron` were temporarily removed.**
+
+**WARNING: veyron speedy boards (e.g. C201) have non-functional video init as
+of 19 February 2023, and no fix is yet available on that date. See:
+<https://notabug.org/libreboot/lbmk/issues/136> - the last tested revision
+from 2021.01 is known to work, for u-boot on this board. See:\
+<https://wiki.postmarketos.org/wiki/ASUS_Chromebook_C201_(google-veyron-speedy)>
+(alpernebbi on IRC is looking into this, to bisect uboot and update the latest
+revisions) - for now, ROM images deleted from the Libreboot 20221214
+and 20230319 releases.**
+
+**WARNING: daisy- and peach- boards require a BL1 bootloader firmware, but the
+one from coreboot 3rdparty is a fake/placeholder file. We need logic in the
+Libreboot build system for properly fetching/extracting these, plus docs to
+cover it. For now, assume that these are broken - ROM images are excluded,
+for now, and have been deleted from the Libreboot 20221214 and 20230319
+releases. - see: <https://review.coreboot.org/plugins/gitiles/blobs/+/4c0dcf96ae73ba31bf9aa689768a5ecd47bac19e>
+and <https://review.coreboot.org/plugins/gitiles/blobs/+/b36cc7e08f7337f76997b25ee7344ab8824e268d>**
+
 
 ## Google's flashrom
 

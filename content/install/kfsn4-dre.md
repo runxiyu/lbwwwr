@@ -48,6 +48,11 @@ P*: Partially works with vendor firmware
 | **SeaBIOS with GRUB** | Partially works |
 </div>
 
+This board uses LPC flash in a PLCC32 socket. This coreboot page shows an
+example of the push pin as a proof of concept:
+<http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools>
+
+
 This is a server board using AMD hardware (Fam10h). It can also be used
 for building a high-powered workstation. Powered by libreboot.
 
