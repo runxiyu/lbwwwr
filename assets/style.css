@@ -181,3 +181,9 @@ nav#main-nav-bar li:not(:last-child)::after {
 code {
 	background-color: var(--boxbg);
 }
+
+footer {
+	text-align: center;
+	opacity: 50%;
+	margin: 0.5rem;
+}
