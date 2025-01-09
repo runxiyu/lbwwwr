@@ -178,6 +178,6 @@ nav#main-nav-bar li:not(:last-child)::after {
 /* Footer, just copyright stuff */
 footer {
 	text-align: center;
-	opacity: 50%;
+	opacity: 70%;
 	margin: 0.5rem;
 }
