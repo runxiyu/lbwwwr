@@ -56,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function attach_event_listeners() {
 		document.querySelectorAll('a').forEach(anchor => {
+			if (anchor.getAttribute('href').startsWith('#')) {
+				return;
+			}
+
 			let hoverTimeout;
 			anchor.addEventListener('mouseover', function() {
 				const url = anchor.href;
