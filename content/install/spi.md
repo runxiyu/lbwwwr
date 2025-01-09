@@ -432,27 +432,6 @@ See
 <https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-pads-control>
 for more information about the drive strength control on the Pi.
 
-Caution about RPi
------------------
-
-Basically, the Raspbian project, now called Raspberry Pi OS, put in their repo
-an update that added a new "trusted" repository, which just so happened to be
-a Microsoft software repository. They seem to have done this for VS Code, but
-the problem here is that it gave Microsoft free reign to define whatever
-dependencies they liked (as per apt-get rules), and every time you updated,
-you would be pinging Microsoft servers. Do you think that is strange?
-
-Microsoft shouldn't have *any* access to your Linux system! This was the
-commit that Raspbian added to their distro, which added this what should rightly
-be called a security vulnerability, intentionally:
-
-* <https://github.com/RPi-Distro/raspberrypi-sys-mods/commit/655cad5aee6457b94fc2336b1ff3c1104ccb4351>
-
-They then removed it, after a public backlash, via the following commits:
-
-* <https://github.com/RPi-Distro/raspberrypi-sys-mods/commit/ed96790e6de281bc393b575c38aa8071ce39b555>
-* <https://github.com/RPi-Distro/raspberrypi-sys-mods/commit/4d1afece91008f3787495b520ac03b53fef754c6>
-
 Libre firmware on RPi
 ---------------------
 
