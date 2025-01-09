@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		const parser = new DOMParser();
 		const doc = parser.parseFromString(html, 'text/html');
 		document.documentElement.innerHTML = doc.documentElement.innerHTML;
-		document.dispatchEvent(new Event('DOMContentLoaded')); // Make sure event listeners are still attached
-		window.scrollTo(0, 0);
 		history.pushState({ url: url }, '', url);
+		window.scrollTo(0, 0);
+		attach_event_listeners();
 	}
 
 	function handle_anchor_click(event) {
@@ -42,20 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	});
 
-	document.querySelectorAll('a').forEach(anchor => {
-		let hoverTimeout;
-		anchor.addEventListener('mouseover', function() {
-			const url = anchor.href;
-			if (url && !cache.has(url)) {
-				hoverTimeout = setTimeout(() => fetch_page(url), 100);
-			}
-		});
+	function attach_event_listeners() {
+		document.querySelectorAll('a').forEach(anchor => {
+			let hoverTimeout;
+			anchor.addEventListener('mouseover', function() {
+				const url = anchor.href;
+				if (url && !cache.has(url)) {
+					hoverTimeout = setTimeout(() => fetch_page(url), 100);
+				}
+			});
 
-		anchor.addEventListener('mouseout', function() {
-			clearTimeout(hoverTimeout);
-		});
+			anchor.addEventListener('mouseout', function() {
+				clearTimeout(hoverTimeout);
+			});
 
-		anchor.addEventListener('click', handle_anchor_click);
-		anchor.addEventListener('touchstart', handle_anchor_click);
-	});
+			anchor.addEventListener('click', handle_anchor_click);
+			anchor.addEventListener('touchstart', handle_anchor_click);
+		});
+	}
+
+	attach_event_listeners();
 });
