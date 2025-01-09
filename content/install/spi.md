@@ -421,33 +421,22 @@ strength using
 
 	pigs padg 0
 
-WARNING: If the chipset is very strongly trying to drive a pin to a value
+**Warning:** If the chipset is very strongly trying to drive a pin to a value
 opposite that of the Pi, more than 16mA pass through the Pi's GPIO pins, which
 may damage them as they are only designed for 16mA. The drive strength is NOT a
 current limit. That said, this is a risk to the Pi regardless of the drive
 strength. Resistors between the chipset and the flash should protect against
 this, though not all boards have these.
 
-See
-<https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-pads-control>
-for more information about the drive strength control on the Pi.
+Read more about
+[the drive strength control on the Pi](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#gpio-pads-control).
 
-Libre firmware on RPi
----------------------
-
-The boot firmware on older Raspberry Pi models can be replaced, with entirely
-libre firmware. This may be a useful additional step, for some users. See:
-
-<https://github.com/librerpi/>
-
-Website:
-
-<https://librerpi.github.io/>
+Also, the boot firmware on older Raspberry Pi models can be replaced too. It's
+not handled by Libreboot, but the [librepi project](https://librerpi.github.io)
+attempts to do this.
 
 Install flashprog
-----------------
-
-If you're using a BBB or RPi, you will do this while SSH'd into those.
+-----------------
 
 Flashrom is the software that you will use, for dumping, erasing and rewriting
 the contents of your NOR flash.
