@@ -150,22 +150,30 @@ body, html {
 	padding: 0;
 }
 
-nav {
+nav#main-nav-bar {
 	margin-top: 0.5rem;
 	line-height: 1.5;
 }
 
-nav > ul {
+nav#main-nav-bar > ul {
 	list-style-type: none;
 	text-align: center;
 	margin: 0;
 	padding: 0;
 }
 
-nav > ul > li {
+nav#main-nav-bar > ul > li {
 	display: inline-block;
 }
 
-nav li:not(:last-child)::after {
+nav#main-nav-bar li:not(:last-child)::after {
         content:"   ";
+}
+
+#table-of-contents {
+	border: solid 1px var(--border);
+	border-radius: var(--border-radius);
+	background-color: var(--box);
+	padding: 0rem 1rem;
+	display: inline-block;
 }

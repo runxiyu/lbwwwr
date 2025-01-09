@@ -6,4 +6,4 @@ title = 'Unofficial Libreboot Documentation'
 unsafe = true
 
 [markup.tableOfContents]
-ordered = true
+ordered = false
