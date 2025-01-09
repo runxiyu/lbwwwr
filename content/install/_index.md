@@ -30,6 +30,21 @@ vendor ROM files](../insert_vendor_files/).
 If you are building from source, the build system should insert them
 automatically for you.
 
+### Updating EC firmware
+
+It is a good idea to attempt to [update the EC firmware](../ecupdate/) before
+installing.
+
+### Intel GbE MAC addresses
+
+On all IFD-bsed Intel platforms except X4X (e.g. Gigabyte GA-G41M-ES2L) and
+i945 ones (e.g. ThinkPad X60, ThinkPad T60, MacBook2,1), an Intel Flash
+Descriptor is used. If the board has Intel gigabit ethernet, the MAC address is
+included in flash, and must be changed prior to installation.
+
+You must use [nvmutil](nvmutil) to change the MAC address to modify the ROM
+image before flashing it.
+
 ## Prepare to flash externally
 
 Some boards require external flashing. Regardless, you are strongly advised to
