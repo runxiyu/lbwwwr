@@ -275,13 +275,13 @@ directly.
 Software configuration
 ======================
 
-General/Le potato
+Le potato / other
 -----------------
 
-The [generic guide](spi_generic) is intended to help those looking to use an
-SBC which is not listed in this guide.
-The guide will, however, use the libre computer 'Le Potato' as a reference board.
-If you have that board, you should refer to the [generic guide.](spi_generic)
+The [generic guide](spi_generic), referenced after the Le Potato, is intended
+to help those looking to use an SBC which is not listed in this guide.
+
+Of course, if you have the Le Potato itself, use this guide.
 
 BeagleBone Black (BBB)
 ----------------------
@@ -358,8 +358,6 @@ TODO: document other SPI flashers
 
 Rasberry Pi (RPi)
 -----------------
-
-SSH into your Raspberry Pi. You will run `flashprog` from your Raspberry Pi.
 
 You must configure `spidev` on your Raspberry Pi. This is a special driver in
 the Linux kernel; technically, the driver name is `spi-bcm2835`.
