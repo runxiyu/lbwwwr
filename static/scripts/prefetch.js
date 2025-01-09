@@ -19,7 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		if (update_history) {
 			history.pushState({ url: url }, '', url);
 		}
-		window.scrollTo(0, 0);
+
+		const fragment = url.split('#')[1];
+		if (fragment) {
+			const element = document.getElementById(fragment);
+			if (element) {
+				element.scrollIntoView();
+			}
+		} else {
+			window.scrollTo(0, 0);
+		}
+
 		attach_event_listeners();
 	}
 
