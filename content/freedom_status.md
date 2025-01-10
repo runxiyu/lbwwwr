@@ -133,9 +133,10 @@ libreboot is to be configurable, allowing the user to do whatever they like.
 
 ### Memory controller initialization
 
-Libreboot has fully libre raminit available for all Intel memory controllers on
-supported platforms. This includes Haswell (ThinkPad T440p and W541) as of
-Libreboot 20230319 or higher.
+Libreboot has fully libre raminit available for all Intel memory controllers up
+to and including Haswell (ThinkPad T440p and W541).
+
+However on Broadwell, Intel MRC is used; on Skylake/newer, FSP-M is used.
 
 ## ARM platforms (chromebooks)
 
