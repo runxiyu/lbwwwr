@@ -56,3 +56,10 @@ post](https://mjg59.dreamwidth.org/66429.html) by Matthew Garret.
 
 If the console doesn't work, ensure that you've followed the "GRUB and VGA
 modes" section in the [main GRUB guide](../).
+
+## Credits
+
+The work is based on that done by Patrick Steinhardt, importing PHC's Argon2
+implementation. This was later added to GRUB 2.06 on the Arch Linux AUR by
+Ax333l, and Nicholas Johnson later rebased it for GRUB 2.12 to use in
+Libreboot's GRUB payload.
