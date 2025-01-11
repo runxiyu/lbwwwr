@@ -105,7 +105,7 @@ hardware).
 -   [Lenovo ThinkPad R400](r400)
 -   Lenovo ThinkPad R500
 -   [Lenovo ThinkPad T400 / T400S](t400)
--   [Lenovo ThinkPad T480 and ThinkPad T480s](t480)
+-   [Lenovo ThinkPad T480 and T480S](t480)
 -   [Lenovo Thinkpad T420 / T420S / T520](t420_external)
 -   Lenovo ThinkPad T430 (not T430S)
 -   [Lenovo ThinkPad T500 / W500](t500) (May work for R500 too)
