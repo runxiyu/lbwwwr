@@ -33,6 +33,18 @@ h1 {
 	text-align: center;
 }
 
+/* Trying to make headings more obvious */
+h2 {
+	font-size: 180%;
+}
+h3 {
+	font-size: 150%;
+}
+h4 {
+	font-size: 120%;
+	font-style: italic;
+}
+
 /* Links; we use a lighter decoration color because that makes it more readable
  * while not impacting accessibility */
 a:link, a:visited {

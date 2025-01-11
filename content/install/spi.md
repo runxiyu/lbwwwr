@@ -294,6 +294,8 @@ Pinout is the same as SOIC8 above.
 
 ## Step 3: Connecting wires
 
+**This section is still work in progress.**
+
 ### Precautions
 
 * Do not connect the power source until your chip is otherwise properly wired.
