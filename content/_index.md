@@ -60,6 +60,6 @@ technical knowledge.
 The official documentation is at [libreboot.org](https://libreboot.org).
 
 The one you're reading right now is [Runxi Yu](https://runxiyu.org)'s unofficial
-attempt to document Libreboot with what they personally think would be more
-accessible language. This version of the documentation is not supported by the
+attempt to document Libreboot with language that they personally consider to be
+more accessible. This version of the documentation is not supported by the
 upstream project.
