@@ -2,8 +2,6 @@
 title: Other Coreboot Distributions
 ---
 
-## Introduction
-
 Libreboot is a coreboot distribution. Libreboot's build system automatically
 downloads, patches, and builds all the various upstream sources such as
 coreboot, GRUB, SeaBIOS, U-Boot and so on. This automation is used to provide
@@ -50,6 +48,17 @@ with regular security updates.
 
 Libreboot largely avoids supporting Chromebooks, precisely because Chultrabook
 and MrChromebox are perfectly viable options on these machines.
+
+One of Chultrabook's maintainers, Elly, did [this
+talk](https://www.youtube.com/watch?v=7HFIQi835wY) at 37C3 conference,
+demonstrating Chultrabook: &mdash; and also did this more general talk about
+coreboot [at 38C3](https://www.youtube.com/watch?v=LD9tOcf4OkA). It's very good
+reference material if you want to know more about coreboot, and coreboot
+distros more generally.
+
+Elly also did [this interview](https://www.youtube.com/watch?v=4Am_1MzJ6ZA)
+with Brodie Robertson, about coreboot, and explains the concept of a coreboot
+distro in more detail in one part of the interview:
 
 ## [Dasharo](https://docs.dasharo.com)
 
@@ -111,12 +120,6 @@ the same machines, but Libreboot's design does mean that there are a few
 additional steps for installation.
 
 If you just want the simplest, most barebones setup, Skulls is a great choice.
-
-The reason Skulls is simpler is that they include certain vendor files such as
-`me.bin` pre-inserted into images; while risky indeed, this does in fact make
-installation easier for users. Libreboot takes a more conservative approach,
-excluding such files on release images and instead providing you with an
-automated script to insert these.
 
 Libreboot also provides U-Boot and GRUB, and has other ambitions. Libreboot
 aims to provide ease of use while also providing great power and flexibility.

@@ -17,7 +17,6 @@ as S3 suspend/resume.
 - [Another video about reverse engineering microcode](https://yewtu.be/watch?v=I6dQfnb3y0I)
 - [Git repo for that project](https://github.com/RUB-SysSec/Microcode)
 
-
 ## But I really want to remove microcode!
 
 On most boards:

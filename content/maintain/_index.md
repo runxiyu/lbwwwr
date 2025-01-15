@@ -38,6 +38,16 @@ check itself when running *any* command; if another command had to be executed
 first, it will do so automatically. Therefore, you can run any part of lbmk
 on its own, and the entire design is modular.
 
+Use Free Software when possible
+===============================
+
+The coreboot software is nominally free, but occasionally requires an
+additional file or two from the vendor on a few systems. The libreboot
+project *allows* them, only when they are absolutely required.
+
+[Strict rules](../../news/policy.md) govern when this allowed, and
+the [freedom status page](../../freedom-status.md) provides additional details.
+
 Best practises for learning lbmk
 ================================
 
@@ -141,22 +151,6 @@ We *actually* recommend 100GB, because Libreboot will also have a Linux distro
 in flash on a future release. On our testing, disk I/O does not seem to be a
 major bottleneck, so any HDD or SSD will do, but we obviously recommend a
 fast NVMe (PCI-E) SSD if you can.
-
-Use Free Software when possible
-===============================
-
-The coreboot software is nominally free, but occasionally requires an
-additional file or two from the vendor on a few systems. The libreboot
-project *allows* them, only when they are absolutely required.
-
-[Strict rules](../../news/policy) govern when this allowed, and
-the [freedom status page](../../freedom-status) provides additional details.
-
-Please read the files under `config/vendor/` in lbmk, in addition to
-the file `include/vendor.sh`. These configuration files and this source code
-within lbmk, implement the download and patching logic that enables such files
-to be included on final build images, ready for installation on the target
-machine.
 
 **Before *configuration* info, you will first be shown a brief overview of every
 project that Libreboot imports, such as coreboot.**
