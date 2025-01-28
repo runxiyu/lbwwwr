@@ -18,7 +18,7 @@ a 25xx NOR flash via the SPI protocol. This is the most common type of flash IC
 for computers that coreboot runs on: every system currently supported by
 Libreboot uses this type of boot flash except [ASUS KFSN4-DRE](../kfsn4-dre/).
 
-We will be using [flashprog](https://flashprog.org/Flashrom) which
+We will be using [flashprog](https://flashprog.org) which
 can dump, erase, and rewrite these flash chips.
 
 Libreboot currently documents how to use these SPI programmers:
@@ -165,7 +165,7 @@ alias FLASHCMD='./flashprog -p linux_spi:dev=/dev/spidev0.0,spispeed=32768'
 
 #### RPi Drive Strength
 
-Flashrom on the RPi may not be able to detect the SPI flash chip on some
+Flashprog on the RPi may not be able to detect the SPI flash chip on some
 systems, even if your wiring and clip are set up perfectly. This may be due to
 the drive strength of the Raspberry Pi GPIOs, which is 8mA by default. Drive
 strength is essentially the maximum current the pin can output while also

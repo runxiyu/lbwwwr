@@ -8,3 +8,11 @@
 - Update the chromebook pages
 - Update the deguard page
 - Update hp820g2
+- Update MAC addresses and nvmutil and nvmutilimport
+- Update SPI
+- Update CH341a
+- Update T480
+- Update GRUB hardening pages secure libreboot
+- Linux hardening
+- LB History and news stuff
+- Check news/libreboot20230319.md from commit 70b5922
