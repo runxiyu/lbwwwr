@@ -1,20 +1,21 @@
 /* Global definitions */
 html {
 	--border-radius-small: .32rem;
-	--background-color: #280b22;
-	--foreground-color: #EEEFF1;
-	--box-background-color: #42253c;
-	--border-color: rgb(80, 80, 80);
-	--dim-text-color: #999;
-	--link-color: #fcc;
-	--text-decoration-color: #6f5c5c;
-	--header-foreground-color: #f8f9fa;
-	--header-background-color: #381b32;
+	--background-color: #fbf8ff;
+	--foreground-color: #2e1e38;
+	--box-background-color: #f0e7f6;
+	--border-color: rgb(220, 220, 220);
+	--dim-text-color: #8c7a94;
+	--link-color: #7c3e66;
+	--text-decoration-color: #b8b8b8;
+	--header-foreground-color: #3c2d4f;
+	--header-background-color: #e8dff0;
 	font-family: system-ui, sans-serif;
 	color: var(--foreground-color);
 	background-color: var(--background-color);
 	line-height: 1.3;
 }
+
 
 body {
 	margin: 0;
