@@ -32,10 +32,10 @@ The latest amendment is [Libreboot 20241206 revision 8](releases/20241206rev8/).
 Libreboot provides [coreboot](https://coreboot.org/) for machine
 initialisation, which then jumps to a payload in the boot flash; coreboot works
 with many payloads, but Libreboot specifically provides SeaBIOS, GNU GRUB and
-U-Boot as options. The payload is the program in flash that provides the early
-user interface, for booting an operating system. This *payload* infrastructure
-means you can run whatever you want from the boot flash (e.g. you may customize
-the payload to boot Linux from flash, if you so desire).
+U-Boot as options, depending on the board. The payload is the program in flash
+that provides the early user interface, for booting an operating system. This
+*payload* infrastructure means you can run whatever you want from the boot
+flash. More payloads (e.g. Linux kexec) are planned for future releases.
 
 ## Not a fork of coreboot
 

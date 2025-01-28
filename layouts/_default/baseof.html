@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="keywords" content="libreboot, coreboot, canoeboot, opensource, libre, free software, bios, uefi" />
 		<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 		{{ $style := resources.Get "style.css" | resources.Minify | resources.Fingerprint }}
        		<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
