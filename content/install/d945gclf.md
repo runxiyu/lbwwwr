@@ -56,7 +56,7 @@ Introduction
 ============
 
 This board is a mini-itx desktop board for 2008. It uses an atom 230,
-which is a singe core CPU but it is hyperthreaded so it appears to have
+which is a single core CPU but it is hyperthreaded so it appears to have
 2 thread to the OS. The flash chip is very small, 512KiB, so grub2 does
 not fit, which is why libreboot has to use seabios on this target. Full
 disk encryption like on other supported targets will not be possible, so

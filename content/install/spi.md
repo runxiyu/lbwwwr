@@ -142,7 +142,7 @@ No EEPROM/flash device found.
 Note: flashprog can never write if the flash chip isn't found automatically.
 ```
 
-### Rasberry Pi
+### Raspberry Pi
 
 All commands will be run from you Raspberry Pi.
 
@@ -537,7 +537,7 @@ Some advice:
 If you go for a SOIC8, mounted it to the SOP to DIP adapter (208mil 1.27mm one)
 and solder 2.54mm headers to it. You could put the 2.54mm pins in a breadboard,
 then solder the chip to the adapter PCB and mount that to the pins on the
-breadboard, to keep it aligned, and solder that. Whith the PCB on the pins, and
+breadboard, to keep it aligned, and solder that. With the PCB on the pins, and
 the pins in the breadboard, push the pins inwards a little bit.
 
 This is for a new SOIC8 chip, but you can get sockets similar to the one in the
@@ -630,7 +630,7 @@ WSON8 has the same pinout as SOIC8, but it's a ball mounted QFN (quad flat
 pack, no leads). There are no clips for it. Sometimes referred to as QFN8
 
 On all currently supported libreboot hardware, boards that have WSON8 can also
-have a SOIC8 because the pads are long enough to accomodate either type of
+have a SOIC8 because the pads are long enough to accommodate either type of
 chip.
 
 A good choice of soldering iron would be a T12-D08 or T12-K tip, on a T12

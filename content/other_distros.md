@@ -124,7 +124,7 @@ If you just want the simplest, most barebones setup, Skulls is a great choice.
 Libreboot also provides U-Boot and GRUB, and has other ambitions. Libreboot
 aims to provide ease of use while also providing great power and flexibility.
 So Libreboot is aimed specifically at power users, while also trying to
-accomodate non-technical users; Skulls largely targets the latter.
+accommodate non-technical users; Skulls largely targets the latter.
 
 ## [System76 Open Firmware](https://github.com/system76/firmware-open)
 

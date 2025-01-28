@@ -14,7 +14,7 @@ files:
 When you build GRUB from source, you can use the `grub-mklayout` program to
 create a special keymap file for GRUB.
 
-Te compile GRUB, in lbmk, do this:
+To compile GRUB, in lbmk, do this:
 
 	./mk -b grub default
 

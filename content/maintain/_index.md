@@ -145,7 +145,7 @@ Disk space
 About 20GB bare minimum, if only compiling for 1 board. The sources take up a
 lot of space. However, Libreboot is always expanding as it's developed.
 
-At least 50GB of free disk space is therefor recommended.
+At least 50GB of free disk space is therefore recommended.
 
 We *actually* recommend 100GB, because Libreboot will also have a Linux distro
 in flash on a future release. On our testing, disk I/O does not seem to be a
