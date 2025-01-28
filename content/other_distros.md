@@ -1,5 +1,5 @@
 ---
-title: Other Coreboot Distributions
+title: Other Libre Firmware Projects
 ---
 
 Libreboot is a coreboot distribution. Libreboot's build system automatically
@@ -13,11 +13,14 @@ Libreboot was the first coreboot distro founded in December 2013.
 
 Although Libreboot tries to support a wide range of hardware, there are certain
 limitations. For example, Libreboot mostly does not target Chromebooks. If
-Libreboot isn't for you, you might find some of the others to be preferable.
+Libreboot isn't for you, you mind find the following to be useful.
 
-The following list is alphabetical.
+## Other coreboot distros
 
-## [Canoeboot](https://canoeboot.org)
+Note that coreboot also maintains [a list of
+distros](https://coreboot.org/users.html).
+
+### [Canoeboot](https://canoeboot.org)
 
 Canoeboot is a special fork of Libreboot, maintained by the same developer,
 Leah Rowe. It provides a *purely* free software coreboot distribution, due to
@@ -32,7 +35,7 @@ if you want to use much newer hardware, Libreboot is a worthy choice. Since
 Canoeboot only supports much older hardware, and uses Libreboot's *old* policy,
 you could consider Canoeboot to be *legacy Libreboot*
 
-## [Chultrabook](https://docs.chrultrabook.com) and [MrChromeBox](https://docs.mrchromebox.tech/)
+### [Chultrabook](https://docs.chrultrabook.com) and [MrChromeBox](https://docs.mrchromebox.tech/)
 
 Provides a tailored EDK2(UEFI) payload on supported Chromebooks. You can use
 this to replace ChromeOS with a regular Linux distro or BSD system (or even
@@ -60,7 +63,7 @@ Elly also did [this interview](https://www.youtube.com/watch?v=4Am_1MzJ6ZA)
 with Brodie Robertson, about coreboot, and explains the concept of a coreboot
 distro in more detail in one part of the interview:
 
-## [Dasharo](https://docs.dasharo.com)
+### [Dasharo](https://docs.dasharo.com)
 
 Supports many machines, with a choice of EDK2(UEFI) or Heads(Linuxboot)
 payload in the flash. Some older machines may provide a SeaBIOS payload
@@ -76,7 +79,7 @@ coreboot images for each supported motherboard, with an emphasis on stability.
 It's a very different approach than Libreboot's; Libreboot provides a more
 generalised design in its build system and infrastructure.
 
-## [Heads](https://osresearch.net)
+### [Heads](https://osresearch.net)
 
 Heads provides a LinuxBoot payload using U-Root, and has many advanced features
 such as TPM-based MeasuredBoot. With combined use of a FIDO key, you can easily
@@ -112,7 +115,7 @@ versa, but they target different kinds of users and use-case scenarios, with
 Libreboot targeting a more general audience (while providing security hardening
 options), whereas Heads specifically targets security-conscious users.
 
-## [Skulls](https://github.com/merge/skulls)
+### [Skulls](https://github.com/merge/skulls)
 
 Skulls provides simple coreboot images with SeaBIOS payload, on a handful of
 ThinkPads. Libreboot also provides similar SeaBIOS configurations, on all of
@@ -126,7 +129,7 @@ aims to provide ease of use while also providing great power and flexibility.
 So Libreboot is aimed specifically at power users, while also trying to
 accommodate non-technical users; Skulls largely targets the latter.
 
-## [System76 Open Firmware](https://github.com/system76/firmware-open)
+### [System76 Open Firmware](https://github.com/system76/firmware-open)
 
 System76 provides their own special coreboot fork, that they tailor for
 specific machines that they sell; they also provide free EC firmware. Jeremy
@@ -135,3 +138,55 @@ upstreamed into the regular coreboot project.
 
 System76 provides the coreboot firmware, along with EDK2 UEFI payload. It can
 boot Linux distros, BSD systems and even Windows perfectly.
+
+## Non-coreboot free firmware
+
+### fwupd
+
+fwupd is essentially a centralised repository of firmware images, that
+can be used to provide updates for your mainboard. Many Linux distros make use
+of this to provide UEFI firmware updates for example.
+
+### [LinuxBoot](https://linuxboot.org)
+
+LinuxBoot can be provided as a UEFI DXE, or as a U-Boot SPL, coreboot payload
+or Slim Bootloader Stage 1B, to provide a Linux kernel at boot time, which
+kexecs into another Linux kernel.
+
+The benefit of using *Linux* to *boot Linux* is that then the bootloader part
+of your firmware doesn't need to rewrite every driver, because Linux already
+provides excellent drivers, and it also affords you many advanced
+configuration possibility such as hardened encryption setups with things
+like Measured Boot, and it could also be used to boot over a network.
+
+### [OpenBMC](https://github.com/openbmc/docs)
+
+Linux distro for management controllers (BMCs) used on servers,
+rack switches and RAID appliances. This provides a remote management
+feature, most useful (for example) on colocated server hosting.
+
+### [Oreboot](https://github.com/oreboot/oreboot)
+
+Oreboot is a special fork of coreboot, re-written in the Rust programming
+language, focusing specifically on the *LinuxBoot* payload configuration.
+
+### [Trusted Firmware](https://opensourcefirmware.foundation/projects/)
+
+Trusted Firmware provides boot firmware for ARMv8-A, ARMv9-A
+and ARMv8-M. Specifically tailored for use on embedded systems, and parts of
+it are also used by the coreboot project on some boards.
+
+### [Das U-Boot](https://www.u-boot.org)
+
+U-Boot runs on a large number of embedded systems, with support for a variety
+of architectures such as ARM, x86, RISC-V and others. U-Boot provides its own
+small kernel and operating system, with drivers and applications designed to
+boot your operating system using various methods. It has an advanced *shell*,
+with excellent networking and file system support - most notably, we use it
+in Libreboot as a UEFI payload for *coreboot*, but U-Boot can also provide its
+own boot initialisation independently of coreboot.
+
+One of the nice features of U-Boot is its *licensing* (GPLv2 for the most part)
+and similar coding style to Linux; the licensing and technical design means
+that it's much easier to port existing Linux drivers, when something needs to
+be done in the U-boot project.
