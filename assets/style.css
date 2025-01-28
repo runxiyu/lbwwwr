@@ -1,4 +1,4 @@
-/* Global definitions */
+/* Global Definitions */
 html {
 	--border-radius-small: .32rem;
 	--background-color: #fbf8ff;
@@ -16,52 +16,51 @@ html {
 	line-height: 1.3;
 }
 
-
 body {
 	margin: 0;
 	padding: 0;
 }
 
-/* The main container should not be too wide */
+/* Layout */
 main {
 	margin: 0 auto;
 	padding: 0 1rem;
 	max-width: 60em;
 }
 
-/* Titles should be centered */
+/* Typography */
 h1 {
 	text-align: center;
 }
 
-/* Trying to make headings more obvious */
 h2 {
 	font-size: 180%;
 }
+
 h3 {
 	font-size: 150%;
 }
+
 h4 {
 	font-size: 120%;
 	font-style: italic;
 }
 
-/* Links; we use a lighter decoration color because that makes it more readable
- * while not impacting accessibility */
 a:link, a:visited {
 	text-decoration-color: var(--text-decoration-color);
 	color: var(--link-color);
 }
 
-/* Code blocks and preformatted text should have a background */
 pre, code {
 	font-family: "Inconsolata", "DejaVu Sans Mono", "Menlo", monospace;
 }
+
 code {
 	background-color: var(--box-background-color);
 	border-radius: 2px;
 	padding: 2px;
 }
+
 pre {
 	background-color: var(--box-background-color);
 	border-radius: var(--border-radius-small);
@@ -75,18 +74,18 @@ pre > code {
 	padding: 0px;
 }
 
-
 /* Tables */
 table {
 	margin-top: 0.4em;
-	font-size: 90%;
 	margin-bottom: 0.4em;
+	font-size: 90%;
 	overflow: hidden;
 	border: var(--border-color) solid 1px;
 	border-spacing: 0;
 	border-radius: var(--border-radius-small);
 	border-collapse: separate;
 }
+
 table.wide {
 	width: 100%;
 }
@@ -96,40 +95,43 @@ th[scope~="row"], td {
 	height: 1.25rem;
 	padding: 3px 5px;
 }
+
 table.fat td {
 	padding: 6px 5px;
 }
+
 td.th-like, th {
 	background-color: var(--box-background-color) !important;
 	font-weight: bold;
 	padding: 3px 5px;
 }
+
 th.min, td.min {
 	width: 0;
 	min-width: fit-content;
 	white-space: nowrap;
 }
 
-/* Rounded table corners */
-table>tr:not(:last-child)>td,
-table>tr:not(:last-child)>th,
-table>thead,
-table>thead>tr>th,
-table>thead>tr>td,
-table>tbody,
-table>tbody>tr:not(:last-child)>th,
-table>tbody>tr:not(:last-child)>td {
+table > tr:not(:last-child) > td,
+table > tr:not(:last-child) > th,
+table > thead,
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody,
+table > tbody > tr:not(:last-child) > th,
+table > tbody > tr:not(:last-child) > td {
 	border-bottom: var(--border-color) solid 1px;
 }
+
 table td:not(:last-child),
 table th:not(:last-child) {
 	border-right: var(--border-color) solid 1px;
 }
 
-/* Workaround for Firefox bug 217769 */
 tbody:empty {
 	display: none;
 }
+
 table > tbody:after {
 	content: "";
 }
@@ -141,7 +143,7 @@ img:not(.no-auto-width) {
 	display: block;
 }
 
-/* Global header and navigation bar thing  */
+/* Header */
 header {
 	color: var(--header-foreground-color);
 	background-color: var(--header-background-color);
@@ -149,46 +151,54 @@ header {
 	padding: 1rem;
 	text-align: center;
 }
+
 header a {
 	text-decoration: none !important;
 	color: var(--header-foreground-color) !important;
 }
+
 #site-title {
 	font-weight: bold;
 	font-size: 130%;
 }
+
 nav#main-nav-bar {
 	margin-top: 0.5rem;
 	line-height: 1.5;
 }
+
 nav#main-nav-bar > ul {
 	list-style-type: none;
 	text-align: center;
 	margin: 0;
 	padding: 0;
 }
+
 nav#main-nav-bar > ul > li {
 	display: inline-block;
 }
+
 nav#main-nav-bar li:not(:last-child)::after {
 	content: "   ";
 }
 
-/* Table of contents */
+/* Table of Contents */
 #table-of-contents {
 	border-radius: var(--border-radius-small);
 	background-color: var(--box-background-color);
 	padding: 0.5rem;
 	display: inline-block;
 }
+
 #table-of-contents > h2 {
 	margin-top: 0rem;
 }
+
 #table-of-contents > nav > ul {
 	margin-bottom: 0rem;
 }
 
-/* Footer, just copyright stuff */
+/* Footer */
 footer {
 	text-align: center;
 	opacity: 70%;
