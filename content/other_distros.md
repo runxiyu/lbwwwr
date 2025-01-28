@@ -72,7 +72,7 @@ Several coreboot ports (e.g. MSI Z690-A PRO) were implemented directly by the
 Dasharo project, and later upstreamed into the regular coreboot project.
 
 Dasharo has a special emphasis on commercial application, providing tailored
-coreboot images for each supported mainboard, with an emphasis on stability.
+coreboot images for each supported motherboard, with an emphasis on stability.
 It's a very different approach than Libreboot's; Libreboot provides a more
 generalised design in its build system and infrastructure.
 

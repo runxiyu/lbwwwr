@@ -6,7 +6,7 @@ title: External Flashing via SPI
 
 ## Internal vs external flashing
 
-Note that this guide is about external flashing (i.e. usually opening up your mainboard
+Note that this guide is about external flashing (i.e. usually opening up your motherboard
 and connecting an external device to your ROM to flash it). Most boards, after
 Libreboot has been installed (with write protection disabled), may be
 [internally flashed](../generic_internal/).
@@ -328,10 +328,10 @@ directly to the Southbridge chipset.
 ### ISP programming and VCC diode
 
 ISP means in-system programming. It's when you flash a chip that is already
-mounted to the mainboard of your computer that you wish to install libreboot
+mounted to the motherboard of your computer that you wish to install libreboot
 on.
 
-It may be beneficial to modify the mainboard so that the SPI flash is powered
+It may be beneficial to modify the motherboard so that the SPI flash is powered
 (on the VCC pin) through a diode, but please note: a diode will cause a voltage
 drop. The tolerated range for a chip expecting 3.3V VCC is usually around 2.7V
 to 3.6V DC, and the drop may cause the voltage to fall outside that. If you do
@@ -351,7 +351,7 @@ other components on that board, which share the same power rail. Further,
 ensure that the pull-up resistors for WP/HOLD are *only* connected to the side
 of the diode that has continuity with the VCC pin (this is important because if
 they're not, they won't be held high while doing ISP flashing, even if they're
-still held high when the mainboard is fully powered on).
+still held high when the motherboard is fully powered on).
 
 Furthermore: ensure that the SPI flash is operating at the appropriate supply
 voltage (2.7V to 3.6V for a 3.3V chip) when fully powered on, after installing
@@ -362,7 +362,7 @@ the SOIC8/WSON8 if it uses that, and replace with an IC socket (for SOIC8,
 WSON8 or DIP8, whatever you want), because then you could easily just insert
 the flash into a breadboard when flashing.
 
-TODO: Make a page on libreboot.org, showing how to do this on all mainboards
+TODO: Make a page on libreboot.org, showing how to do this on all motherboards
 supported by libreboot.
 
 ### GPIO pins on BeagleBone Black (BBB)
@@ -413,7 +413,7 @@ use pull-up resistors on those (see notes below), and decoupling capacitor on
 pin 8 (VCC).
 
 NOTE: On X60/T60 thinkpads, don't connect pin 8. Instead, plug in your the PSU
-to the charging port on your mainboard, but do not power on the mainboard. This
+to the charging port on your motherboard, but do not power on the mainboard. This
 will provide a stable 3.3V voltage, with adequate current levels. On those
 laptops, this is necessary because the flash shares a common 3.3V DC rail with
 many other ICs that all draw quite a lot of current.
@@ -459,10 +459,10 @@ pin 2 (VCC).
 ### Pull-up resistors and decoupling capacitors
 
 **Do this for chips mounted to a breadboard. Ignore this section if you're
-flashing a chip that is already soldered to a mainboard.**
+flashing a chip that is already soldered to a motherboard.**
 
 This section is only relevant if you're flashing a new chip that is not yet
-mounted to a mainboard. You need pull-up resistors on the WP and HOLD pins,
+mounted to a motherboard. You need pull-up resistors on the WP and HOLD pins,
 and decoupling capacitors on the VCC pin. If the chip is already mounted to a
 board, whether soldered or in a socket, these capacitors and resistors will
 probably already exist on the board and you can just flash it without pulling
@@ -479,11 +479,11 @@ The best way is as follows:
 SOIC8/WSON8/DIP8: pin 3 and 7 must be held to a high logic state, which means
 that each pin has its own pull-up resistor to VCC (from the voltage plane that
 pin 8 connects to); anything from 1Kohm to 10Kohm will do. When you're flashing
-a chip that's already on a laptop/desktop/server mainboard, pin 3 and 7 are
+a chip that's already on a laptop/desktop/server motherboard, pin 3 and 7 are
 likely already held high, so you don't need to bother.
 
 SOIC8/WSON8/DIP8: pin 8, which is VCC, will already have decoupling capacitors on it
-if the chip is on a mainboard, but lone chip flashing means that these capacitors
+if the chip is on a motherboard, but lone chip flashing means that these capacitors
 do not exist. A capacitor passes AC but blocks DC. Due to electromagnetic
 indunctance, and RF noise from high-speed switching ICs, a DC voltage line isn't
 actually straight (when viewed on an oscilloscope), but actually has low voltage
@@ -504,11 +504,11 @@ WP/HOLD are not pin 3/7 like above, but instead pins 1 and 9, so wire your
 pull-up resistors on those. VCC on SOIC16 is pin 2, so wire your decoupling
 capacitors up on that.
 
-### SOIC8/WSON8/DIP8/SOIC16 not mounted to a mainboard
+### SOIC8/WSON8/DIP8/SOIC16 not mounted to a motherboard
 
 If your system has lower capacity SPI flash, you can upgrade. On *most* systems,
 SPI flash is memory mapped and the maximum (in practise) that you can use is a
-16MiB chip. For example, KGPE-D16 and KCMA-D8 mainboards in libreboot have
+16MiB chip. For example, KGPE-D16 and KCMA-D8 motherboards in libreboot have
 2MiB flash by default, but you can easily upgrade these. Another example is the
 ThinkPad X200S, X200 Tablet and T400S, all of which have WSON8 where the best
 course of action is to replace it with a SOIC8 flash chip.
@@ -545,7 +545,7 @@ video, but for WSON8. Sometimes they are called DFN8 or QFN8 sockets. Get one
 that is 1.27mm pitch.
 
 If you're flashing/dumping a lone WSON8, get a WSON8/QFN8/DFN8 socket (1.27mm
-pitch) and mount it to a breadboard for flashing. If your mainboard's landing
+pitch) and mount it to a breadboard for flashing. If your motherboard's landing
 pads for the flash IC can take a SOIC8, we recommend that you use a SOIC8
 instead because a test clip is possible later on when you wish to re-flash it,
 however you may be dealing with a board where replacing existing WSON8 with
@@ -576,7 +576,7 @@ and good 60/40 or 63/37 leaded solder (don't use lead-free):
 ![](https://av.libreboot.org/dip8/adapter.jpg)
 ![](https://av.libreboot.org/dip8/sop8todip8.jpg)
 
-### SOIC8/SOIC16 soldered to a mainboard
+### SOIC8/SOIC16 soldered to a motherboard
 
 This is an example of *in-system programming* or *ISP* for short.
 
@@ -584,16 +584,16 @@ SOIC8:\
 Pomona 5250 is a SOIC8 test clip. There are others available, but this is the
 best one. Use that. Use the SOIC8 diagram (see above) to wire up your Raspberry
 Pi.
-Your mainboard likely already pulls WP/HOLD (pins 3 and 7) high, so don't
+Your motherboard likely already pulls WP/HOLD (pins 3 and 7) high, so don't
 connect these. VCC on SOIC8's pin 8 probably already has decoupling
-capacitors on the mainboard, so just hook that up without using a capacitor.
+capacitors on the motherboard, so just hook that up without using a capacitor.
 
 SOIC16:\
 Pomona 5252 is a SOIC16 test clip. There are others available, but this is the
 best one. Use that. Use the SOIC16 diagram (see above) to wire up your Raspberry
 Pi. WP/HOLD pins are pins 1 and 9, and likely already held high, so no pull-up
 resistors needed. You do not need a decoupling capacitor for pin 2 (VCC) either
-because the mainboard will already have one.
+because the motherboard will already have one.
 
 Here is an example of a test clip connected for SOIC16:\
 ![](https://av.libreboot.org/rpi/0002.jpg)
@@ -601,9 +601,9 @@ Here is an example of a test clip connected for SOIC16:\
 And here is an example photo for SOIC8:\
 ![](https://av.libreboot.org/x60/th_bbb_flashing.jpg)
 
-### DIP8 soldered to the mainboard
+### DIP8 soldered to the motherboard
 
-It is extremely cursed for DIP8 to be soldered directly to the mainboard. It is
+It is extremely cursed for DIP8 to be soldered directly to the motherboard. It is
 usually mounted to a socket.
 
 The pins are large enough that you can just use test hooks to wire up your chip
@@ -786,7 +786,7 @@ which is a method not officially supported by Libreboot's build system.
 
 ### Writing
 
-You will need to find the proper Libreboot ROM file for you mainboard. Usually,
+You will need to find the proper Libreboot ROM file for you motherboard. Usually,
 they are named like `payload_board_graphicsfirmware_graphicsmode_keyboardlayout.rom`.
 
 Do not flash files that have `DO_NOT_FLASH` in their name; if you encounter any

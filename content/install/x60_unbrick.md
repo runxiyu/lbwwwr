@@ -79,10 +79,10 @@ Refer to the following guide:\
 [Externally rewrite 25xx NOR flash via SPI protocol](spi)
 
 NOTE: Do not use the 3.3v rail from your raspberry pi. Leave that disconnected.
-For 3.3v, plug your charger into the mainboard (but do not power on the mainboard)
+For 3.3v, plug your charger into the motherboard (but do not power on the mainboard)
 when the clip is connected. Before removing the clip, disconnect the charger.
 This will provide adequate 3.3v DC at correct current levels. The SPI flash on an
-X60 shares a common 3.3V rail with many other components on the mainboard,
+X60 shares a common 3.3V rail with many other components on the motherboard,
 which all draw a lot of current, more than your programmer can provide.
 
 When you're finished flashing, remove the programmer and put it away somewhere.

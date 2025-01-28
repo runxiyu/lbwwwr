@@ -94,10 +94,10 @@ Refer to the external flashing guide:
 [Externally rewrite 25xx NOR flash via SPI protocol](spi)
 
 NOTE: Do not use the 3.3v rail from your SPI programmer. Leave that disconnected.
-For 3.3v, plug your charger into the mainboard (but do not power on the mainboard)
+For 3.3v, plug your charger into the motherboard (but do not power on the mainboard)
 when the clip is connected. Before removing the clip, disconnect the charger.
 This will provide adequate 3.3v DC at correct current levels. The SPI flash on an
-X60 shares a common 3.3V rail with many other components on the mainboard,
+X60 shares a common 3.3V rail with many other components on the motherboard,
 which all draw a lot of current, more than your flasher can provide.
 
 Example command:

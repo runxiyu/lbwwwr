@@ -645,7 +645,7 @@ lot about hardware. Swift Geek also did some upstream development on GRUB.
 Swift Geek has provided technical advice on numerous occasions, to Leah Rowe,
 and helped her to improve her soldering skills in addition to teaching her some
 repair skills, to the point where she can now repair most faults on ThinkPad
-mainboards (while looking at the schematics and boardview).
+motherboards (while looking at the schematics and boardview).
 
 Swiftgeek left the project in March 2021. I, Leah Rowe, wish him all the best
 in his endeavours, and I'm very grateful to his numerous contributions over the

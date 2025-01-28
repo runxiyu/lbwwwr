@@ -63,7 +63,7 @@ Internal flashing from vendor firmware (ThinkPads only)
 IVYBRIDGE ONLY:
 
 Refer to this coreboot guide:
-<https://doc.coreboot.org/mainboard/lenovo/ivb_internal_flashing.html?highlight=x230>
+<https://doc.coreboot.org/motherboard/lenovo/ivb_internal_flashing.html?highlight=x230>
 
 With this guide, you can exploit a vulnerability in Lenovo firmware, to flash
 just the BIOS region without disassembling your machine.

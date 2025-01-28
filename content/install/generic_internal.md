@@ -5,7 +5,7 @@ title: Generic Internal Flashing Instructions
 **This mainly applies to the x86 machines.** Chromebook users should refer to
 the [Chromebook](../chromebook/) page.
 
-Please check your mainboard's page for special notes first.
+Please check your motherboard's page for special notes first.
 
 Internal flashing means that you boot Linux or BSD on the target machine, and
 run `flashprog` there, flashing the machine directly.

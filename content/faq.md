@@ -35,7 +35,7 @@ Reported by a user on Debian 11 (on a ThinkPad T440p) and a user on Void Linux
 modprobe: ERROR: could not insert 'thinkpad_acpi': "No such device"
 ```
 
-It is suspected that at least these mainboards are affected:
+It is suspected that at least these motherboards are affected:
 
 * [ThinkPad W541](../install/w541_external/)
 * [ThinkPad T440p](../install/t440p_external/)
@@ -303,7 +303,7 @@ There are many images on the [SPI guide](../install/spi/).
 ### How do I pad a ROM before flashing?
 
 It is advisable to simply use a larger ROM image. This section was written
-mostly for ASUS KCMA-D8 and KGPE-D16 mainboards, where previously we only
+mostly for ASUS KCMA-D8 and KGPE-D16 motherboards, where previously we only
 provided 2MiB ROM images in libreboot, but we now provide 16MiB ROM images.
 Other sizes are not provided because in practise, someone upgrading one of
 these chips will just use a 16MiB one. Larger sizes are available, but 16MiB
@@ -357,7 +357,7 @@ align the pins properly. The connection is generally more sturdy. -->
 
 ### Can I use CH341A?
 
-**No!** This SPI flasher will damage your chip, and the mainboard that it is
+**No!** This SPI flasher will damage your chip, and the motherboard that it is
 connected to.
 
 Read the notes about CH341A on [docs/install/spi.md](docs/install/spi) to

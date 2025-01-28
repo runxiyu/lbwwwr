@@ -34,8 +34,8 @@ maintainer or multiple maintainers; more is better.
 Please read the following sections to understand the specifics of
 maintaining a board.
 
-NOTE: If there are already testers for a given mainboard, *you* can still
-provide testing for the same mainboard if that's what you have. The more the
+NOTE: If there are already testers for a given motherboard, *you* can still
+provide testing for the same motherboard if that's what you have. The more the
 merrier!
 
 Be Contactable

@@ -94,7 +94,7 @@ The *coreboot* project proper has technical details on why this works if
 you are interested. It also has external flashing instructions if you need
 to recover from an unbootable BIOS:
 
-<https://doc.coreboot.org/mainboard/hp/compaq_8200_sff.html>
+<https://doc.coreboot.org/motherboard/hp/compaq_8200_sff.html>
 
 You can build the images for it in Libreboot like so:
 

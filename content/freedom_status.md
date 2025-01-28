@@ -1,5 +1,5 @@
 ---
-title: Software and hardware freedom status for each mainboard supported by Libreboot
+title: Software and hardware freedom status for each motherboard supported by Libreboot
 ---
 
 This page documents how Libreboot's [binary blob reduction policy](,,/policy/)
@@ -13,7 +13,7 @@ architecture](https://doc.coreboot.org/getting_started/architecture.html).
 
 ### Descriptor vs descriptorless setup
 
-Libreboot supports several mainboards using Intel platforms. Of these, there
+Libreboot supports several motherboards using Intel platforms. Of these, there
 are essentially two class of machine (for the purposes of this article):
 
 * Descriptorless configuration
@@ -120,7 +120,7 @@ documentation for this, but it has been tested. Example: Dual Intel/Nvidia
 graphics on some Ivy Bridge or Haswell ThinkPads.
 
 For add-on GPUs, SeaBIOS can typically scan a VGA ROM present on the card and
-execute it. This has been tested on certain desktop mainboards that Libreboot
+execute it. This has been tested on certain desktop motherboards that Libreboot
 supports, and works just fine; Libreboot does not need to handle these files at
 all.
 
@@ -141,7 +141,7 @@ However on Broadwell, Intel MRC is used; on Skylake/newer, FSP-M is used.
 ## ARM platforms (chromebooks)
 
 Mostly free software, except for the requirement on `daisy` and `peach`
-mainboards to include BL1 bootloader files from the vendor. These are:
+motherboards to include BL1 bootloader files from the vendor. These are:
 
 * HP Chromebook 11 G1 (`daisy-spring`)
 * Samsung Chromebook XE303 (`daisy-snow`)

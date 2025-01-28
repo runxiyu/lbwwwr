@@ -78,9 +78,9 @@ lack `_truncate` in the file name.
 100% FREE
 =========
 
-This mainboard is entirely free software in the main boot flash. It is using
+This motherboard is entirely free software in the main boot flash. It is using
 the Intel X4X / ICH10 platform, same as on the already supported
-Gigabyte GA-G41M-ES2L mainboard.
+Gigabyte GA-G41M-ES2L motherboard.
 
 Installation
 ============

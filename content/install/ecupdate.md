@@ -16,7 +16,7 @@ See the [BIOS update without optical disk ThinkWiki
 page](http://www.thinkwiki.org/wiki/BIOS_update_without_optical_disk).
 
 Otherwise, check the Lenovo website to find the update utility for your
-mainboard.
+motherboard.
 
 ## HP EliteBooks
 

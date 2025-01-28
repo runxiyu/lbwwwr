@@ -77,7 +77,7 @@ while setting others (or all of them) arbitrarily.
 
 The `restore` option restores the original one. The command works by using a
 reference GbE image file present in Libreboot's build system, for the given
-mainboard.
+motherboard.
 
 How to download newer versions
 ==============================

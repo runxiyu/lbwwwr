@@ -88,8 +88,8 @@ the CPU, and prevent the CPU from executing boot firmware that isn't
 signed with their private key. This means that ***coreboot and libreboot
 are impossible to port*** to such PCs, without the OEM's private
 signing key. Note that systems assembled from separately purchased
-mainboard and CPU parts are unaffected, since the vendor of the
-mainboard (on which the boot firmware is stored) can't possibly affect
+motherboard and CPU parts are unaffected, since the vendor of the
+motherboard (on which the boot firmware is stored) can't possibly affect
 the public key stored on the CPU.
 
 ME firmware versions 4.0 and later (Intel 4 Series and later chipsets)

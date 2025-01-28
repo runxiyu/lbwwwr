@@ -112,7 +112,7 @@ Don't use it. It uses proprietary firmware and adds a backdoor (remote
 out-of-band management chip, similar to the [Intel Management
 Engine](../../faq.md#intelme). Fortunately, the firmware is
 unsigned (possible to replace) and physically separate from the
-mainboard since it's on the add-on module, which you don't have to
+motherboard since it's on the add-on module, which you don't have to
 install.
 
 Flash chips {#flashchips}
@@ -139,7 +139,7 @@ Only text-mode is known to work, but linux(kernel) can initialize the
 framebuffer display (if it has KMS - kernel mode setting).
 
 NOTE: This section relates to the onboard ASpeed GPU. You *can* use an add-on
-PCI-E GPU in one of the available slots on the mainboard. Nvidia GTX 780 cards
+PCI-E GPU in one of the available slots on the motherboard. Nvidia GTX 780 cards
 are what libreboot recommends; it has excellent support in Nouveau (free Linux
 kernel / mesa driver for Nvidia cards) and generally works well; however, the
 performance won't be as high in Nouveau, compared to the non-free Nvidia driver

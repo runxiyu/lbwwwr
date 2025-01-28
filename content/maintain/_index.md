@@ -120,7 +120,7 @@ entire release archives, e.g. quad-core Haswell CPU or better.
 NOTE: x86 boards require an *x86_64* host CPU with appropriate host toolchains
 and libraries. We don't yet cross-compile x86 payloads.
 
-NOTE2: ARM64 mainboards *are* cross compiled, so you can build for AArch64
+NOTE2: ARM64 motherboards *are* cross compiled, so you can build for AArch64
 machines quite easily, from x86 or ARM64 machines.
 
 NOTE3: *32-bit* x86 (i686) machines can be used to compile Libreboot, but
@@ -385,14 +385,14 @@ src/coreboot/
 Please also visit: <https://coreboot.org/>
 
 Coreboot is the main boot firmware, providing hardware initialisation. Libreboot
-makes extensive use of coreboot, on supported mainboards.
+makes extensive use of coreboot, on supported motherboards.
 
 Coreboot trees go here. Libreboot's build system does not simply use one tree,
 or multiple branches in the same tree; entirely separate directories are
 created, for each revision of coreboot used, each able to have its own patches.
-These can then be reuse appropriately, per mainboard. For example:
+These can then be reuse appropriately, per motherboard. For example:
 
-* `src/coreboot/default` is used by most mainboards.
+* `src/coreboot/default` is used by most motherboards.
 * `src/coreboot/cros` is used by cros devices.
 
 This may be less efficient on disk usage, but it simplifies the logic greatly.
@@ -1177,7 +1177,7 @@ which SeaBIOS revision (from Git) is to be used, when compiling SeaBIOS images.
 config/u-boot/
 ---------------
 
-This directory contains configuration, patches and so on, for each mainboard
+This directory contains configuration, patches and so on, for each motherboard
 that can use U-Boot as a payload in the `lbmk` build system. U-Boot doesn't yet
 have reliable generic configurations that can work across all coreboot boards
 (per-architecture), so these are used to build it per-board.
@@ -1190,7 +1190,7 @@ a location under `elf/u-boot/`.
 
 ### config/u-boot/TREENAME/
 
-Each `TREENAME` directory defines configuration for a corresponding mainboard.
+Each `TREENAME` directory defines configuration for a corresponding motherboard.
 It doesn't actually have to be for a board; it can also be used to just define
 a U-Boot revision, with patches and so on. To enable use as a payload in ROM
 images, this must have the same name as its `config/coreboot/TREENAME/`
@@ -1433,7 +1433,7 @@ include/mrc.sh
 This was previously a separate script. The download logic was removed, and
 now the logic under `include/vendor.sh` is used for downloads. This file now
 only contains those functions used for extraction of MRC files from Google
-Chromebook images, currently only used for Haswell mainboards.
+Chromebook images, currently only used for Haswell motherboards.
 
 This is an include, used by `include/vendor.sh`, but it's here in
 this file because the vendor download script is GPLv3-only, while the MRC

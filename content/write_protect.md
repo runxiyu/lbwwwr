@@ -56,7 +56,7 @@ The simplest way is to just do this:
 
 If you did the step before, to compile `cbfstool`, you can find ifdtool in
 the `elf/` directory, e.g. `elf/ifdtool/default/ifdtool`. Use the ifdtool
-version matching the coreboot tree for your mainboard.
+version matching the coreboot tree for your motherboard.
 
 Note that this only works for Intel-based systems that use an Intel Flash
 Descriptor, which is actually most Intel systems that Libreboot supports.

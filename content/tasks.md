@@ -70,14 +70,14 @@ is not exhaustive, it just lists boards that are interesting to us at this time:
 * HP EliteBook Folio 9480m
 * HP EliteBook 8770w
 * HP EliteBook 840 G2 (not in coreboot yet, but should be similar to 820 G2)
-* HP Z220 CMI and SFF mainboards
-* MSI PRO Z690-A mainboard (supported by Dasharo, not sure about coreboot) -
-  also, Dasharo supports several more mainboards that aren't in coreboot
+* HP Z220 CMI and SFF motherboards
+* MSI PRO Z690-A motherboard (supported by Dasharo, not sure about coreboot) -
+  also, Dasharo supports several more motherboards that aren't in coreboot
   proper.
 * KGPE-D16 and KCMA-D8: use the Dasharo fork of coreboot, instead
   of coreboot `4.11_branch`, because Dasharo's version is much more up to
   date and more reliable with raminit. D8 isn't supported by Dasharo, but it's
-  not much different code-wise to the D16 mainboard, so differences
+  not much different code-wise to the D16 motherboard, so differences
   in coreboot `4.11_branch` could be adapted to provide a Dasharo port.
 
 ### ThinkPad T430s and T431s
@@ -109,7 +109,7 @@ Not yet supported, but interesting for the project. Separated thus:
 
 already supported by coreboot:
 
-* [ASUS P5Q mainboard](https://doc.coreboot.org/mainboard/asus/p5q.html) (ICH10 / i82801jx),
+* [ASUS P5Q motherboard](https://doc.coreboot.org/mainboard/asus/p5q.html) (ICH10 / i82801jx),
   known variants, e.g.: Pro, C, L-Pro, SE
 * Scan coreboot code for ICH9/ICH10 systems, or boards with x4x/gm45 based
   northbridges. Many of these can boot blobless.
@@ -282,7 +282,7 @@ being maintained anymore, so they were dropped. Some of those boards are
 still quite decent today. Various efforts here and there have revived some
 of them, e.g. the Dasharo project.
 
-Also referenced there: Biostar A68N-5200 mainboard. Check
+Also referenced there: Biostar A68N-5200 motherboard. Check
 coreboot `4.18_branch` for these boards. Coreboot started removing the
 AGESA boards after release 4.11.
 
@@ -490,7 +490,7 @@ before [argon2 kdf support](../news/argon2) was merged in Libreboot GRUB.
 
 ## Seek QUBES endorsement
 
-Libreboot is compatible with Qubes, on several supported mainboards. This could
+Libreboot is compatible with Qubes, on several supported motherboards. This could
 be audited, to provide a complete list. Qubes has a page on their website which
 lists compatible devices.
 
@@ -591,7 +591,7 @@ This is the preferred method and should be the default (enabled by default),
 because it can be done from GRUB. So, it could be provided on GRUB setups.
 
 We could make it so that all menuentries in the default Libreboot GRUB menu
-enable this, when possible on a given mainboard. The GRUB *shell* would not
+enable this, when possible on a given motherboard. The GRUB *shell* would not
 enable it, and special menuentries that don't enable it could be provided (or
 an entirely separate GRUB config, e.g. `grub_unprotected.cfg`).
 
@@ -821,11 +821,11 @@ or it isn't a VGA ROM. We currently extract an nvidia ROM for certain models
 of Dell Latitude E6400, but the logic is more or less hardcoded.
 
 The script at `script/vendor/download` auto-downloads vendor firmwares needed
-on certain mainboards, during build time. Libreboot's build system
+on certain motherboards, during build time. Libreboot's build system
 uses the script at `script/vendor/inject` to add or remove such files after
 the fact, on release ROMs, because those firmwares are *deleted* at release
 time. This work began mostly after mid-2022, and has since been expanded to
-cover many types of firmwares, used on various mainboards.
+cover many types of firmwares, used on various motherboards.
 
 ## Investigate 16MB flash setups
 
@@ -908,7 +908,7 @@ documentation whenever possible.
 
 ## Static compiled utils in releases
 
-We currently only provide binaries of the firmware itself, for each mainboard,
+We currently only provide binaries of the firmware itself, for each motherboard,
 but we do not provide utilities compiled. We provide only source code, and the
 user is expected to compile utilities from source.
 
@@ -920,7 +920,7 @@ the linuxboot builds.
 
 At present, lbmk does what it needs to do, and downloads repositories only as
 required, upon each stage of the boot process. For example, it may download
-gnulib when downloading GRUb, after having maybe built 5 mainboards all with
+gnulib when downloading GRUb, after having maybe built 5 motherboards all with
 only SeaBIOS, having built SeaBIOS before those 5 - it doesn't build SeaBIOS
 and GRUB before the 5.
 
@@ -1016,9 +1016,9 @@ fewer bytes of code within it.
 
 From an lbmk perspective, the upsides are largely ignored because we want to
 build hundreds and hundreds of ROM images, fast. That means reducing the amount
-of time spent to compile for each mainboard.
+of time spent to compile for each motherboard.
 
-We currently do this on each mainboard:
+We currently do this on each motherboard:
 
 * libgfxinit with text mode startup, if possible
 * libgfxinit with coreboot framebuffer, if possible
@@ -1234,7 +1234,7 @@ This might be useful for:
 ### Partial coreboot re-builds
 
 A lot of the time in lbmk, we are building multiple variants of the same
-mainboard, for different setups. We could skip a lot of the re-building.
+motherboard, for different setups. We could skip a lot of the re-building.
 This pretty much goes hand in hand with the other entry on this TODO page,
 about splitting up the various stages in coreboot, and handling CBFS generation
 within lbmk.
@@ -1553,8 +1553,8 @@ It allows the host CPU to access all of VRAM at once, without 32-bit legacy
 code. The above repository is a proof of concept that shows it working, though
 the work there is not directly applicable to us.
 
-This feature is only supported commercially on much newer mainboards, and is
-unavailable on many older mainboards, but it can be added if the firmware is
+This feature is only supported commercially on much newer motherboards, and is
+unavailable on many older motherboards, but it can be added if the firmware is
 updated. This is one of the benefits of the *freedom* coreboot gives you. We
 could enable this on all the older desktop machines, where otherwise their
 factory firmware does not and will not enable it (and the above link is for

@@ -1,5 +1,5 @@
 ---
-title: Porting guide for new mainboards
+title: Porting guide for new motherboards
 ---
 
 **NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
@@ -74,7 +74,7 @@ You can then easily modify the existing coreboot configs for you board via lbmk.
 This script will provide a curses interface through which you can easily modify the
 necessary variables and settings.
 The most important thing to change is `Mainboard.`
-You must make sure that the mainboard definition in this config matches `board.`
+You must make sure that the motherboard definition in this config matches `board.`
 For example, you would want to change lenovo/t420 to lenovo/t420s.
 Selecting `exit` in the curses interface will prompt you to ask if you want to save your
 changes, make sure to answer yes.
