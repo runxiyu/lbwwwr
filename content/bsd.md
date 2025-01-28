@@ -2,30 +2,36 @@
 title: BSD Operating Systems
 ---
 
-This guide pertains to x86 hosts with the GRUB or SeaBIOS payload , and does
-not cover supported CrOS/ARM Chromebooks. For ARM targets, you should refer to
-U-Boot documentation.
+This guide pertains to x86 Libreboot hosts. For ARM targets e.g. CrOS/ARM
+Chromebooks, you should refer to U-Boot documentation.
 
-Libreboot is capable of booting many BSD systems. This section mostly documents
-the peculiarities of libreboot as it pertains to BSD; you can otherwise refer
-to the official documentation for whatever BSD system you would like to use.
+This guide documents some pitfalls when using BSD systems with Libreboot.
+For instructions on how to install and use BSD systems, refer to your BSD
+system's documentation/handbook.
 
-## Use SeaBIOS
+## Use SeaBIOS text mode payloads
 
-GRUB can technically boot BSD kernels but it's unreliable and poorly
-maintained. Although GRUB-on-BIOS can chainload BSD bootloaders, it cannot do
-so on bare metal (i.e., as a coreboot payload).
+When flashing Libreboot, choose images with SeaBIOS, preferably ones with `txtmode` (since `corebootfb` is not guaranteed to work correctly).
 
-Therefore you should boot in text mode with SeaBIOS (as opposed to corebootfb),
-and follow the official installation guide for your BSD system. SeaBIOS
-chainloaded from GRUB should work too.
+GRUB can theoretically boot BSD kernels but it's unreliable and poorly
+maintained. However, you may use GRUB to chainload SeaBIOS to boot BSDs.
 
-## OpenBSD and corebootfb
+It may be possible to use U-Boot x86, but this is largely untested and
+undocumented.
 
-It's still recommended to use SeaBIOS in text mode, but OpenBSD can work with
+## Kernel mode setting
+
+Your BSD system must support kernel mode setting for your graphics device, if
+you want to use a graphical environment (such as Wayland or X11).
+
+## corebootfb
+
+It is still recommended to use SeaBIOS in text mode, but: OpenBSD can work with
 SeaBIOS booting in a coreboot framebuffer with SeaVGABIOS when on a MBR
 partitioning table. In Libreboot ROM images, this would be SeaBIOS images with
 `corebootfb` in the file name.
+
+FreeBSD corebootfb is broken.
 
 ## Graphical usage
 
@@ -51,7 +57,9 @@ based on KMS drivers that the BSD projects ported over from the Linux kernel.
 With this, you can use X11/Wayland.
 
 For example: on FreeBSD, you can install `graphics/drm-kmod` as a package or
-from ports, and (for Intel GPUs) do `sysrc kld_list+="i915kms"`. Make sure
+from ports (if the package causes glitches, try building from ports, as
+occasionally the package will try to install modules for incompatible kernel
+versions), and (for Intel GPUs) do `sysrc kld_list+="i915kms"`. Make sure
 `/etc/rc.conf` has `kld_list="i915kms"`. On FreeBSD it is also recommended that
 you switch to KMS on the console/TTY; add `kern.vty=vt` `/boot/loader.conf` so
 that you can still use the console after terminating Xorg.
