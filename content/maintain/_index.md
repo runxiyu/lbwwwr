@@ -1,12 +1,6 @@
 ---
 title: lbmk maintenance manual
 ---
-
-**NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
-now, as of 27 January 2024, which is a fork of flashrom.
-The reason why was explained, in
-the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
-
 In addition to this manual, you should also refer to [porting.md](porting)
 and [testing.md](testing).
 

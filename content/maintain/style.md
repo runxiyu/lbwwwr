@@ -2,65 +2,47 @@
 title: lbmk coding style and design
 ---
 
-This document is extremely new, and may change rapidly.
-
-For context, please also read the main [lbmk maintenance manual](index).
+For context, please also read the main [lbmk maintenance manual](../).
 
 You should *read* the logic in lbmk yourself, to really know what is meant by
 some of the concepts explained here. This article will no doubt be incomplete,
 and several practises may persist in spite of it; nonetheless, this article
 shall serve as a reference for lbmk development.
 
-NO BASHISMS
-===========
+## Plain POSIX sh
 
-Libreboot's build system was previously written in Bash, and actually used
-Bash-specific behaviour. This was later *corrected*, thanks largely to work
-done by Ferass El Hafidi.
+We do not allow the use of Bashism.
 
-Here is an *excellent* introduction to posix `sh` scripting:
-<https://pubs.opengroup.org/onlinepubs/009604499/utilities/xcu_chap02.html>
+Please read the [POSIX introduction to shell
+scripting](https://pubs.opengroup.org/onlinepubs/009604499/utilities/xcu_chap02.html)
+and [Ghost in the Shell](https://vermaden.wordpress.com/ghost-in-the-shell/).
 
-and an even more excellent introduction:
-<https://vermaden.wordpress.com/ghost-in-the-shell/>
-(seriously, it's good. Read it!)
+## Principles
 
-Design
-======
+Keep most board-specific things in `config/`. The logic in the scripts should
+be as simple as possible.
 
-Libreboot's build system design is very simple: put as much as possible
-under `config/`, and keep actual logic to a minimum.
-
-You can read about that design in the [lbmk maintenance manual](index).
-
-No Makefiles
-------------
+## No Makefiles
 
 We have Makefiles in some C programs, under `util/`, and projects that we import
 may use Makefiles, but lbmk itself does not contain any Makefiles. Instead, we
 do everything in shell scripts.
 
 This approach has certain drawbacks, but for the most part it ensures that the
-code is more readable. It's easier to implement a cleaner coding style, which
-the next sections will cover.
+code is more readable.
 
-Coding style
-============
+## Coding style
 
-Read <https://man.openbsd.org/style.9> and go read a few userland program source
-trees in OpenBSD's main CVS tree. This is the style that inspires the lbmk
-coding style; OpenBSD's style pertains to C programming, and it has been adapted
-for shell scripts in the Libreboot build system, lbmk.
+We generally follow [OpenBSD kernel style](https://man.openbsd.org/style.9). It
+was designed for C but we hereby adapt it for shell scripts too.
 
-You should read the OpenBSD style and go read OpenBSD utils, especially userland
-programs like `cat` or `ls` in the OpenBSD `src` tree.
+We prefer this style because it is extremely readable and forces you to write
+better code.
 
-Libreboot scripts, and also C programs like `nvmutil`, are heavily inspired by
-this style. We insist on its use, because this style is extremely readable and
-forces you to write better code.
+## main on top
 
-main on top
------------
+<!-- TODO: This section is probably outdated as there are no longer multiple
+scripts -->
 
 In every lbmk script, it is our intention that there be a `main()` function.
 All logic should be inside a function, and `main()` should be the function that
@@ -70,13 +52,13 @@ executes first; at the bottom of each script, insert this line:
 
 This will execute `main()`, passing any arguments (from the user's shell) to it.
 
-Top-down logic
---------------
+## Top-down logic
 
-*Every* function called from main should always be *below* the calling function.
-Therefore, if multiple functions call a given function, that function should be
-below the final one that called it. Here is an example (please also pay
-attention to how the functions are formatted, e.g. where `{` and `}` go:
+*Every* function should be *below* the calling function. Therefore, if multiple
+functions call a given function, that function should be below the final one
+that called it.
+
+## Example
 
 ```
 #!/usr/bin/env sh
