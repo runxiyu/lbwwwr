@@ -2,7 +2,7 @@
 title: Software and hardware freedom status for each motherboard supported by Libreboot
 ---
 
-This page documents how Libreboot's [binary blob reduction policy](,,/policy/)
+This page documents how Libreboot's [binary blob reduction policy](../policy/)
 is applied in practice, i.e. the free software status of each board.
 
 It may be useful to understand [coreboot's

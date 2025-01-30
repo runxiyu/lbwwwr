@@ -3,7 +3,6 @@
   intel pitfalls page. They're somewhat redundant so they should probably be
   merged.
 - The boards really need shortcodes.
-- Refactor the internal flashing page
 - Update the chromebook pages
 - Update the deguard page
 - Update hp820g2
@@ -16,6 +15,5 @@
 - LB History and news stuff
 - Check news/libreboot20230319.md from commit 70b5922
 - Alt tags on images
-- Check whether GNU is attributed for GRUB
 - Add meta descriptions for each page
 - Note about OSFF, SFC, SPI

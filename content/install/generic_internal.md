@@ -2,58 +2,79 @@
 title: Generic Internal Flashing Instructions
 ---
 
-**This mainly applies to the x86 machines.** Chromebook users should refer to
-the [Chromebook](../chromebook/) page.
-
-Please check your motherboard's page for special notes first.
+This applies to the x86 machines. Chromebook users should refer to the
+[Chromebook](../chromebook/) page.
 
 Internal flashing means that you boot Linux or BSD on the target machine, and
-run `flashprog` there, flashing the machine directly.
+run `flashprog` there, flashing the machine directly. This is usually only
+possible if you are already running Libreboot and you have not enabled flash
+write protection. If you can't flash internally, you must [flash externally
+with SPI](../spi).
 
-**If you can't flash internally, you must [flash externally with SPI](../spi).**
+All commands presented below shall be run as root (e.g. via `sudo`).
 
-Internal flashing is often unavailable with the factory firmware, but it is
-*usually* possible when Libreboot is running (barring special circumstances).
+## Do these first
 
-## Inserting vendor files
+* [Check your motherboard's page](../install/#which-boards-are-supported-by-libreboot) 
+  for special notes.
+* Always remember to [insert vendor files](../insert_vendor_files/) when using
+  release tarballs.
+* [Disable `/dev/mem` protections](../devmem/) first.
 
-Always remember to [insert vendor files](../insert_vendor_files/) when using
-release tarballs.
+## Finding the correct ROM image
 
-### Flash chip size
+Find the corresponding ROMs for your motherboard and chosen payload.
+If they come in multiple sizes (e.g. `8mb` and `12mb`, use `flashprog
+-p internal` to determine the size of your chip and use the
+corresponding one.)
 
-Use this to find out:
+<!-- TODO: Document what to do for boards with multiple chips. -->
 
-	flashprog -p internal
+## Dumping the current flash contents to a file
 
-In the output will be information pertaining to your boot flash.
+You should usually back up your flash contents first so you could
+restore it later if needed:
 
-### Howto: read/write/erase the boot flash
+```
+flashprog -p internal:laptop -r dump_before_flashing.bin
+```
 
-How to read the current chip contents:
+It is also a good idea to make multiple dumps and compare them, just
+to make sure that you have a reliable connection to your flash chip.
+Assuming a POSIX-compatible shell:
 
-	sudo flashprog -p internal:laptop=force_I_want_a_brick,boardmismatch=force -r dump.bin
+```
+for i in $(seq 3)
+do
+	flashprog -p internal:laptop -r dump_before_flashing_"$i".bin
+done
+sha512sum dump_before_flashing_?.bin
+```
 
-You should still make several dumps, even if you're flashing internally, to
-ensure that you get the same checksums. Check each dump using `sha1sum`
+If any of the checksums are mismatched, you have an unreliable connection
+to your flash chip and should **not** flash.
 
-How to erase and rewrite the chip contents:
+## Writing a ROM file to the flash
 
-	sudo flashprog -p internal:laptop=force_I_want_a_brick,boardmismatch=force -w libreboot.rom
+```
+flashprog -p internal:laptop -w the_file_you_want_to_flash.rom 
+```
 
-NOTE: `force_I_want_a_brick` is not scary. Do not be scared! This merely disables
-the safety checks in flashprog. Flashrom and coreboot change a lot, over the years,
-and sometimes it's necessary to use this option. If you're scared, then just
-follow the above instructions, but remove that option. So, just use `-p internal`.
-If that doesn't work, next try `-p internal:boardmismatch=force`. If that doesn't
-work, try `-p internal:boardmismatch=force,laptop=force_I_want_a_brick`. So long
-as you *ensure* you're using the correct ROM for your machine, it will be safe
-to run flashprog. These extra options just disable the safetyl checks in flashprog.
-There is nothing to worry about.
+## Troubleshooting: flashprog safety checks
 
-If successful, it will either say `VERIFIED` or it will say that the chip
-contents are identical to the requested image.
+**Please first ensure that you are using the correct ROM file for your
+machine and that you have correctly [inserted vendor
+files](../insert_vendor_files/) if your board requires so.** If you are
+indeed sure, then:
 
-NOTE: there are exceptions where the above is not possible. Read about them in
-the sections below:
+```
+flashprog -p internal:laptop=force_I_want_a_brick,boardmismatch=force -w the_file_you_want_to_flash.rom
+```
 
+Sometimes this is necessary because flashprog and coreboot change a lot
+and there are falase alarms in their safety checks.
+
+## Having other issues?
+
+If your ROM has been written incompletely/unsuccessfully, **do not
+reboot**. You may try to join our community channels for help.

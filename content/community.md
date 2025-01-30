@@ -6,7 +6,7 @@ To contribute to development, see the [Contributing](../contrib) page instead.
 
 ## Asking for support
 
-- IRC: [`#libreboot`](https://web.libera.chat/#libreboot) on
+- IRC (recommended): [`#libreboot`](https://web.libera.chat/#libreboot) on
   [Libera.Chat](https://libera.chat)
 - Mailing list:
   [`~libreboot/libreboot@lists.sr.ht`](https://lists.sr.ht/~libreboot/libreboot)
