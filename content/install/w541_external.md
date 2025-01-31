@@ -14,11 +14,6 @@ now, as of 27 January 2024, which is a fork of flashrom.
 The reason why was explained, in
 the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
-YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
-there, before flashing. For posterity,
-[here is the link again](ivy_has_common).**
-
 Read the [Ivybridge/Haswell common guide](/docs/install/ivy_has_common.html) if you want more information.
 All of the following instructions assume that you've cloned lbmk and are operating from the
 root of that project. To do so, run

@@ -3,11 +3,6 @@ title: Ivybridge internal flashing
 x-toc-enable: true
 ---
 
-**[PLEASE READ THESE INSTRUCTIONS BEFORE INSTALLING](ivy_has_common), OR
-YOU MAY BRICK YOUR MACHINE!! - Please click the link and follow the instructions
-there, before flashing. For posterity,
-[here is the link again](ivy_has_common).**
-
 Ch1p's guide
 ============
 
