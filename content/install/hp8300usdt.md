@@ -134,10 +134,11 @@ Also make sure the board doesn't fully power on (that is, boot).
 If you don't have a suitable clip, you can also use the ROM_RCVRY header
 right next to the flash chip. By default only the footprint is present,
 so you have to solder a pin header of your own. End result can be seen
-and the pinout can be seen in the photo earlier. Consult the HP service
-manual (page 241) on how to remove the motherboard from the chassis.
+and the pinout can be seen in the photo earlier. Consult the [HP service
+manual](http://web.archive.org/web/20210305234331/https://h10032.www1.hp.com/ctg/Manual/c03612798.pdf)
+(page 241) on how to remove the motherboard from the chassis.
 
-<http://web.archive.org/web/20210305234331/https://h10032.www1.hp.com/ctg/Manual/c03612798.pdf>
+
 
 If you do this, you have to reapply thermal paste.
 That might be a good idea anyway, considering how old these are getting

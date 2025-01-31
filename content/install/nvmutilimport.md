@@ -18,9 +18,7 @@ Libreboot release announcements, under `news/`, so please be sure to
 check that from now on.
 
 For historical and reference purposes, the original nvmutil repository
-shall be preserved on notabug. See:
-
-<https://notabug.org/osboot/nvmutil>
+shall be [preserved on notabug](https://notabug.org/osboot/nvmutil).
 
 nvmutil 20221106
 ================
@@ -194,10 +192,8 @@ SLOC (source lines of code):
 * 20220802 (unmodified): 421 lines
 * 20220802 (help/version command removed): 373 lines
 
-These numbers were obtained, using the `sloccount` program
-by David A. Wheeler, which you can find here:
-
-* <https://dwheeler.com/sloccount/>
+These numbers were obtained using the [`sloccount` program
+by David A. Wheeler](https://dwheeler.com/sloccount/).
 
 This means that the actual reduction in compiled *logic* is
 about 1.89KB, or a 15% reduction, in nvmutil 20220808. By *logic*,

@@ -11,9 +11,8 @@ system. However, the overall design philosophy and operation is mostly the
 same.
 
 On *most* current Intel platforms that have Intel ME, it is now possible
-to disable Intel ME after BringUp. See:
-
-<https://github.com/corna/me_cleaner>\
+to disable Intel ME after BringUp with
+[`me_cleaner`](https://github.com/corna/me_cleaner).
 
 On all GM45+ICH9M laptops that have an Intel ME in it (additionally, this means
 X4X+ICH10 desktops), the ME firmware is not needed in the boot flash. Either a
@@ -167,9 +166,9 @@ The book ***[Platform Embedded Security Technology
 Revealed](https://www.apress.com/9781430265719)*** describes in great
 detail the ME's hardware architecture and firmware application modules.
 
-If you're stuck with the ME (non-libreboot system), you might find this
-interesting:
-<https://hardenedlinux.github.io/firmware/2016/11/17/neutralize_ME_firmware_on_sandybridge_and_ivybridge.html>
+If you're stuck with the ME (non-libreboot system), you might find
+[this](https://hardenedlinux.github.io/firmware/2016/11/17/neutralize_ME_firmware_on_sandybridge_and_ivybridge.html)
+interesting.
 
 ## Firmware Support Package
 

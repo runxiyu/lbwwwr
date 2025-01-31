@@ -7,9 +7,7 @@ On some Dell Latitude laptops, you may encounter random shutdowns on
 heavy load. We believe this is because the SMSC EC is overly conservative
 by default; it is in charge of handling thermals and fan control on this
 machine. Our theory is that coreboot needs to write certain EC commands
-to allow higher temperatures; please read:
-
-<https://codeberg.org/libreboot/lbmk/issues/202>
+to allow higher temperatures; see [issue 202](https://codeberg.org/libreboot/lbmk/issues/202).
 
 Basically, what you need to do is:
 
@@ -17,9 +15,7 @@ Basically, what you need to do is:
   laptop came with, if you bought it on ebay for example). Arctic MX-6 is good.
 * Check that the fan works reliably
 
-Also: the `intel_pstate` driver can be used to artificially cap CPU speed. See:
-
-<https://www.kernel.org/doc/html/v4.12/admin-guide/pm/intel_pstate.html>
+Also: the [`intel_pstate`](https://www.kernel.org/doc/html/v4.12/admin-guide/pm/intel_pstate.html) driver can be used to artificially cap CPU speed. See:
 
 When you use this machine, it is recommended that you cap the CPU speed once
 you've booted into Linux. Set it to something like 50% at first. Then run a

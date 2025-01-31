@@ -30,10 +30,7 @@ if you want it to, and you can!
 Introduction
 ============
 
-This uses the free/opensource BIOS developed by the PCSX-Redux team, which you
-can learn more about here:
-
-<https://github.com/grumpycoders/pcsx-redux/tree/main/src/mips/openbios>
+This uses [the free/opensource BIOS developed by the PCSX-Redux team](https://github.com/grumpycoders/pcsx-redux/tree/main/src/mips/openbios).
 
 Build from source
 -----------------
@@ -55,8 +52,7 @@ cross compiler (mipsel one) from the AUR, which you will see when running e.g.:
 	./mk dependencies arch
 
 If you have another distro, or you're unsure, the PCSX-Redux project also
-provide generic instructions for other distros. Please see:\
-<https://github.com/grumpycoders/pcsx-redux/blob/main/src/mips/psyqo/GETTING_STARTED.md>
+provide [generic instructions for other distros](https://github.com/grumpycoders/pcsx-redux/blob/main/src/mips/psyqo/GETTING_STARTED.md)
 
 When you have the dependencies, including mipsel cross toolchain, you can
 just do this in lbmk:
@@ -118,9 +114,7 @@ or less fully reliable in most cases.
 Game compatibility
 ==================
 
-The upstream maintains a compatibility list, here:
-
-<https://docs.google.com/spreadsheets/d/1UNGs7uYb8viAbm7YJaf1CR4dkgX7ZzntUdcowGsjcVc/edit?pli=1&gid=772799649#gid=772799649>
+The upstream maintains [a compatibility list](https://docs.google.com/spreadsheets/d/1UNGs7uYb8viAbm7YJaf1CR4dkgX7ZzntUdcowGsjcVc/edit?pli=1&gid=772799649#gid=772799649)
 
 NOTE: Google Docs, but an option exists on there to export it for LibreOffice
 Calc. The list is provided as a spreadsheet.
@@ -134,6 +128,7 @@ for example 512KB x8 is a common part, for example [SST39VF040](https://eu.mouse
 
 Look here:
 <https://oshpark.com/profiles/mi213>
+<!-- TODO -->
 
 This person has designed PCBs that can be used to add a NOR flash, adapting to
 the pinout of the playstation BIOS. Some early launch model PlayStations used
@@ -207,9 +202,8 @@ modchip firmwares exist, such as Old crow, MultiMode3 and Mayumi; these run on
 PIC chips e.g. PIC12C508A. A special *OneChip* firmware is often used on PAL
 PSOne Slims.
 
-There is a *free/opensource* modchip type called PsNee, which is what Libreboot
-recommends:
-<https://github.com/kalymos/PsNee>
+We recommend a *free/opensource* modchip type called
+[PsNee](https://github.com/kalymos/PsNee).
 
 Unlike the other modchips, PsNee runs mostly on Arduino-type boards. You can
 find more info on its GitHub page.
@@ -260,11 +254,12 @@ the Sony PS1 BIOS.
 
 The two photos shown are as follows:
 
-* PSOne Slim photo was taken from here (the one provided by Libreboot is
-  scaled down and cropped, with color levels enhanced for better contrast):
-  <https://commons.wikimedia.org/wiki/File:PS_One_with_LCD.JPG> - 
-  released under the terms of Creative Commons Attribution-Share Alike 3.0 Unported license
-* The cube screenshot is of the PCSX-Redux Open BIOS in operation, on an emulator.
+* [PSOne Slim
+  photo](https://commons.wikimedia.org/wiki/File:PS_One_with_LCD.JPG)
+  (the one provided by Libreboot is scaled down and cropped, with
+  color levels enhanced for better contrast)
+* The cube screenshot is of the PCSX-Redux Open BIOS in operation, on an
+  emulator.
 
 PlayStation, PS1, PSOne and other terms are the trademark of Sony Interactive
 Entertainment. Libreboot is in no way affiliated to Sony Interactive

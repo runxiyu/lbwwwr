@@ -13,10 +13,10 @@ Ch1p's guide
 
 This page tells you how to flash an ivybridge ThinkPad with Libreboot,
 internally, when it has the Lenovo firmware on it. It was written independently
-of ch1p's original guide, the existence of which was later made clear to the
-Libreboot project, by ch1p himself.
-
-See: <https://github.com/gch1p/thinkpad-bios-software-flashing-guide>
+of [ch1p's original
+guide](https://github.com/gch1p/thinkpad-bios-software-flashing-guide), the
+existence of which was later made clear to the Libreboot project, by ch1p
+himself.
 
 Ch1p's own guide also tells you how to do exactly the same thing (same result)
 as this guide, but this guide (from the Libreboot project) was made
@@ -26,11 +26,11 @@ patch in coreboot, that the guide below makes use of. Specifically, this
 coreboot patch:
 
 ```
-    commit 833e9bad4762e0dca6c867d3a18dbaf6d5166be8
-    Author: Evgeny Zinoviev <me@ch1p.io>
-    Date:   Thu Nov 21 21:47:31 2019 +0300
-    
-        sb/intel/bd82x6x: Support ME Soft Temporary Disable Mode
+commit 833e9bad4762e0dca6c867d3a18dbaf6d5166be8
+Author: Evgeny Zinoviev <me@ch1p.io>
+Date:   Thu Nov 21 21:47:31 2019 +0300
+
+    sb/intel/bd82x6x: Support ME Soft Temporary Disable Mode
 ```
 
 Anyway, follow ch1p's guide or this one. Ch1p was on Libreboot IRC and linked
@@ -62,20 +62,16 @@ Internal flashing from vendor firmware (ThinkPads only)
 
 IVYBRIDGE ONLY:
 
-Refer to this coreboot guide:
-<https://doc.coreboot.org/motherboard/lenovo/ivb_internal_flashing.html?highlight=x230>
+Refer to this [coreboot guide](https://doc.coreboot.org/motherboard/lenovo/ivb_internal_flashing.html?highlight=x230)
 
 With this guide, you can exploit a vulnerability in Lenovo firmware, to flash
 just the BIOS region without disassembling your machine.
 
-You will have to flash just the BIOS region, on upstream coreboot. Just compile
-upstream coreboot from scratch. Coreboot instructions here:
-<https://doc.coreboot.org/tutorial/index.html>
+You will have to flash just the BIOS region, on upstream coreboot. Just
+[compile upstream coreboot from scratch](https://doc.coreboot.org/tutorial/index.html)
 
-You can then strap HDA\_SDO (soft descriptor override), which will disable
-flash protections set in the Intel Flash Descriptor. More info about that is
-available here:
-<https://winraid.level1techs.com/t/guide-unlock-intel-flash-descriptor-read-write-access-permissions-for-spi-servicing/32449>
+You can then strap HDA\_SDO (soft descriptor override), which will
+[disable flash protections set in the Intel Flash Descriptor](https://winraid.level1techs.com/t/guide-unlock-intel-flash-descriptor-read-write-access-permissions-for-spi-servicing/32449).
 
 On ivybridge platforms specifically, coreboot supports what's called
 the *ME Soft Temporary Disable*, which disables the ME after BringUp, similar

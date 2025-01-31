@@ -55,11 +55,7 @@ P*: Partially works with vendor firmware
 Introduction
 ============
 
-**Unavailable in Libreboot 20240612 or earlier. You must [compile from
-source](../build/), or use a version newer than Libreboot 20240612.**
-
-Official information about the computer can be found here:
-<https://www.dell.com/support/manuals/en-uk/optiplex-7010-plus-small-ff/opti_7010_sff_plus_om/specifications-of-optiplex-small-form-factor-plus-7010?guid=guid-7c9f07ce-626e-44ca-be3a-a1fb036413f9&lang=en-us>
+[Processor specification](https://www.dell.com/support/manuals/en-uk/optiplex-7010-plus-small-ff/opti_7010_sff_plus_om/specifications-of-optiplex-small-form-factor-plus-7010?guid=guid-7c9f07ce-626e-44ca-be3a-a1fb036413f9)
 
 Build ROM image from source
 ---------------------------

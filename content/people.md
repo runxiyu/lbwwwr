@@ -237,8 +237,7 @@ ThinkPad T480.
 I (Leah) worked with ezntek on some testing and he discovered several bugs on
 the ThinkPad T480, while Mate and I were working on it for Libreboot.
 
-ezntek wrote this guide:
-<https://ezntek.com/posts/Librebooting-the-thinkpad-t480-20241207t0933/>
+ezntek wrote [a guide](https://ezntek.com/posts/Librebooting-the-thinkpad-t480-20241207t0933/).
 
 This guide was written based on my and other people's help, on IRC, while we
 were in the process of adding the T480 to Libreboot. Several parts of this guide

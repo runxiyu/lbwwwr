@@ -8,8 +8,7 @@ TODO: this page is OLD. check that the info is still valid.
 Introduction
 ============
 
-Specifications available here:
-<https://www.asus.com/uk/Commercial-Servers-Workstations/KCMAD8/>
+[Vendor information](https://www.asus.com/uk/Commercial-Servers-Workstations/KCMAD8/)
 
 Quite a nice board; can have up to 16 Opteron 4200/4300 CPU cores, with up to
 64GiB of RAM. It holds its own against more modern machines, especially when
@@ -94,9 +93,7 @@ board produced September 2011 *or later* are compatible with libreboot. Boards
 originally shipped with BIOS version **2001** or higher are also compatible.
 
 For help locating these identifying markers, see [ASUS documentation for determining Opteron 4200 series compatibility](https://web.archive.org/web/20200710022605/https://dlcdnets.asus.com/pub/ASUS/mb/SocketC%281027%29/KCMA-D8/Manual&QVL/How_to_identify_MB_supporting_Opteron_4200_CPU.pdf)
-
-For more detailed information regarding the coreboot port, see
-<https://raptorengineeringinc.com/coreboot/kcma-d8-status.php>
+[Detailed information regarding the coreboot port](https://raptorengineeringinc.com/coreboot/kcma-d8-status.php)
 
 Form factor {#formfactor}
 ===========
@@ -125,9 +122,10 @@ compressed linux+initramfs image (BusyBox+Linux system) into CBFS and
 boot that, loading it into memory (and nowadays there is LinuxBoot, for which
 we would recommend a 16MiB boot flash)
 
-*DO NOT hot-swap the chip with your bare hands. Use a P-DIP 8 chip
-extractor. These can be found online. See
-<http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools>*
+*DO NOT hot-swap the chip with your bare hands. Use a P-DIP 8 [chip
+extractor](http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools).
+These can be found online.
+
 
 Ideally, you should not hot-swap. Only remove the IC when the system is
 powered down and disconnected from mains.

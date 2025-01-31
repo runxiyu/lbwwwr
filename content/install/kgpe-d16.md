@@ -16,7 +16,7 @@ work), merged into libreboot.
 
 *Memory initialization is still problematic, for some modules. We
 recommend avoiding Kingston modules.*
-*For working configurations see <https://www.coreboot.org/Board:asus/kgpe-d16>.*
+*Here are some [working configurations](https://www.coreboot.org/Board:asus/kgpe-d16).*
 
 Flashing instructions can be found at
 [../install/\#flashprog](../install/#flashprog) - note that external
@@ -33,7 +33,7 @@ Opteron 62xx and 63xx CPUs work just fine.
 Board status (compatibility) {#boardstatus}
 ============================
 
-See <https://raptorengineeringinc.com/coreboot/kgpe-d16-status.php>.
+[Raptor Engineering Inc's page](ttps://raptorengineeringinc.com/coreboot/kgpe-d16-status.php)
 
 Form factor {#formfactor}
 ===========
@@ -64,9 +64,9 @@ boot that, loading it into memory.
 libreboot has configs for 2, 4, 8 and 16 MiB flash chip sizes (default
 flash chip is 2MiB).
 
-*DO NOT hot-swap the chip with your bare hands. Use a P-DIP 8 chip
-extractor. These can be found online. See
-<http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools>*
+*DO NOT hot-swap the chip with your bare hands. Use a P-DIP 8 [chip
+extractor](http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools).
+These can be found online.*
 
 This guide shows how to flash the chip:\
 [25xx NOR flashing guide](../install/spi)
@@ -114,8 +114,7 @@ The information here is adapted, from the ASUS website.
 -   HyperTransport™ Technology 3.0
 -   CPUs supported:
     -   AMD Opteron 6100 series (Fam10h. No IOMMU support. *Not*
-        recommended - old. View errata datasheet here:
-        <http://support.amd.com/TechDocs/41322_10h_Rev_Gd.pdf>)
+        recommended - old. See [the errata datasheet](http://support.amd.com/TechDocs/41322_10h_Rev_Gd.pdf)
     -   AMD Opteron 6200 series (Fam15h, with full IOMMU support in
         libreboot.
     -   AMD Opteron 6300 series (Fam15h, with full IOMMU support in

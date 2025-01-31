@@ -6,7 +6,7 @@ title: AMD Pitfalls
 Many of these are a few years out of date.
 
 
-Nowadays there's openSIL <https://github.com/openSIL/openSIL> - it's AMD's
+Nowadays there's [openSIL](https://github.com/openSIL/openSIL) - it's AMD's
 attempt to provide some source code again, that projects like coreboot can use,
 but AMD is still problematic; the PSP for example (see below) cannot be
 "neutered" (nothing like `me_cleaner`, or `psp_cleaner`) exists yet.
@@ -57,7 +57,7 @@ CPUs.
 
 ## AMD IMC firmware
 
-Read <https://www.coreboot.org/AMD_IMC>.
+Read [coreboot documentation on AMD IMC](https://www.coreboot.org/AMD_IMC).
 
 ## AMD SMU firmware
 

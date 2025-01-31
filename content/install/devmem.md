@@ -49,11 +49,10 @@ functions to operate the internal flasher, at least on x86 machines.
 
 You need to enable `CONFIG_X86_IOPL_IOPERM` in your Linux kernel (see [this LWN
 article](https://lwn.net/Articles/804143/)). This is a *build-time* option, so
-you must re-compile your kernel, or find a build that has this option enabled
-(IOPL emulation). Many default kernel configurations now disable this option.
-
-Here's a handy-dandy guide for building a kernel from source:
-<https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html>
+you must [re-compile your
+kernel](https://www.cyberciti.biz/tips/compiling-linux-kernel-26.html), or find
+a build that has this option enabled (IOPL emulation). Many default kernel
+configurations now disable this option.
 
 **BSD users:** On OpenBSD and NetBSD if you get similar errors, note that it
 should work here, but you need to boot with `kern.securelevel=-1`.

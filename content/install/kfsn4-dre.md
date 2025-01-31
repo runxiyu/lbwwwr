@@ -48,9 +48,9 @@ P*: Partially works with vendor firmware
 | **SeaBIOS with GRUB** | Partially works |
 </div>
 
-This board uses LPC flash in a PLCC32 socket. This coreboot page shows an
-example of the push pin as a proof of concept:
-<http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools>
+This board uses LPC flash in a PLCC32 socket.
+[This coreboot page](http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools)
+shows an example of the push pin as a proof of concept.
 
 
 This is a server board using AMD hardware (Fam10h). It can also be used
@@ -80,9 +80,8 @@ SST49LF080A is the default that the board uses. SST49LF016C is an
 example of a 2MiB (16Mbits) chip, which might work. It is believed that
 2MiB (16Mbits) is the maximum size available for the flash chip.
 
-*DO NOT hot-swap the chip with your bare hands. Use a PLCC chip
-extractor. These can be found online. See
-<http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools>*
+*DO NOT hot-swap the chip with your bare hands. Use a PLCC [chip
+extractor](http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools). These can be found online.*
 
 Native graphics initialization {#graphics}
 ==============================
@@ -104,8 +103,9 @@ dual hex-core CPUs (Opteron 2400/8400 series), though only two board
 configurations are believed to support them. Other revisions are
 believed to only support dual quad-core CPUs.
 
-To be sure your board supports a CPU check the official ASUS website here:
-<https://www.asus.com/support/cpu_support>. Note: not all CPUs are listed.
+To be sure your board supports a CPU, check [the official ASUS
+website](https://www.asus.com/support/cpu_support). Note: not all CPUs are
+listed.
 
 If you are running a Hex-Core CPU on any board version, please contact us.
 

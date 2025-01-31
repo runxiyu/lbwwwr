@@ -3,12 +3,6 @@ title: ThinkPad T440p external flashing
 x-toc-enable: true
 ---
 
-Buy Libreboot preinstalled
-==========================
-
-**Minifree now sells the Libreboot T480, instead of the Libreboot T440p. See:
-<https://minifree.org/product/libreboot-t480/>**
-
 Introduction
 ============
 

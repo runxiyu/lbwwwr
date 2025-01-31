@@ -428,13 +428,12 @@ firmware.
 ### What are the prospects for libre hardware?
 
 One day, we will live in a world where anyone can get their own chips made,
-including CPUs but also every other type of IC. Efforts to make homemade
-chip fabrication a reality are now in their infancy, but such efforts do
-exist, for example, the work done by Sam Zeloof and the Libre Silicon project:
-
-* <https://www.youtube.com/channel/UC7E8-0Ou69hwScPW1_fQApA>
-* <http://sam.zeloof.xyz/> (Sam literally makes CPUs in his garage)
-* <https://libresilicon.com/>
+including CPUs but also every other type of IC. Efforts to make homemade chip
+fabrication a reality are now in their infancy, but such efforts do exist, for
+example, the work done by [Sam Zeloof](http://sam.zeloof.xyz)
+([YouTube](https://www.youtube.com/channel/UC7E8-0Ou69hwScPW1_fQApA); literally
+makes CPUs in his garage) and the [Libre Silicon](https://libresilicon.com/)
+project.
 
 ### Where can I learn more about electronics?
 
@@ -478,7 +477,7 @@ exist, for example, the work done by Sam Zeloof and the Libre Silicon project:
     * [Ben Eater](https://eater.net/) (shows how to build an 8-bit CPU from scratch,
 	also does things with MOS 6502)
 	(also shows how to make other things like graphics chips, teaches networking
-	concepts) - check out Ben's videos! <https://redirect.invidious.io/beneater>
+	concepts) - check out [Ben's videos](https://redirect.invidious.io/beneater)!
     * [iPad Rehab with Jessa Jones](https://yewtu.be/channel/UCPjp41qeXe1o_lp1US9TpWA)
 	(very precise soldering. she does repairs on mobile phones and such, also
 	featured in iFixit's series about getting into component repairs)

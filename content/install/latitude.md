@@ -52,7 +52,7 @@ make sure to run the [inject script](ivy_has_common) prior to flashing.
 E6400 nvidia issues
 -------------------
 
-See: <https://codeberg.org/libreboot/lbmk/issues/14#issuecomment-907758>
+See [issue 14](https://codeberg.org/libreboot/lbmk/issues/14#issuecomment-907758).
 
 If using Linux on Nvidia GPU variants of E6400, please boot using `nomodeset`.
 The `nv` drivers on BSD systems generally work, but can have severe performance
@@ -90,9 +90,7 @@ Go in there:
 
 **With this program, you can unlock the flash in such a way where everything
 is writeable. Information about how to use it is in the `README.md` file which
-is included in that program's directory, or you can read it online here:**
-
-**<https://browse.libreboot.org/lbmk.git/plain/util/dell-flash-unlock/README.md>**
+is included in that program's directory, or you can [read it online](https://browse.libreboot.org/lbmk.git/plain/util/dell-flash-unlock/README.md)**
 
 **Please make sure that you do fully read the README, because it contains
 useful information.**

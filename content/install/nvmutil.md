@@ -85,10 +85,6 @@ How to download newer versions
 Simply pull down the latest changes in `lbmk.git`. The `nvmutil`
 software is now part of lbmk, since 17 November 2022.
 
-More info about git:
-
-* <https://git-scm.com/>
-
 Context
 =======
 
@@ -158,9 +154,7 @@ flashed, you should *dump* the current full ROM image.
 If you already have a ROM image, you do not need to dump
 it, so you can skip this section.
 
-Download flashprog here:
-
-* <https://flashprog.org/>
+Download [flashprog](https://flashprog.org).
 
 Using recent flashprog versions, you can extract this region. If
 your regions are unlocked, you can run flashprog on the target
@@ -188,9 +182,7 @@ cat the files correctly.**
 If your GbE region is locked (per IFD settings), you can dump
 and flash it using external flashing equipment. The Libreboot
 project has a handy guide for this; it can be used for reading
-from and writing to the chip. See:
-
-* <https://libreboot.org/docs/install/spi.html>
+from and writing to the chip. See the [SPI guide](../spi/)
 
 If you're using an external programmer, the `-p internal`
 option should be changed accordingly. Read flashprog
@@ -235,9 +227,8 @@ repeating the above command:
 
 In addition to unlocked regions, you may wish to *neuter* the
 Intel Management Engine, removing all the nasty spying features
-from it, using `me_cleaner`. See:
+from it, using [`me_cleaner`](https://github.com/corna/me_cleaner).
 
-* <https://github.com/corna/me_cleaner>
 * Also available in `coreboot.git`, undir `util/`
 
 The `me_cleaner` program is outside the scope of this
@@ -578,9 +569,8 @@ running `git log util/nvmutil` in `lbmk.git`. No more changes
 to `nvmutilimport.md` will be applied, but future releases of
 Libreboot announced in `news/` will mention any nvmutil changes.
 
-The *older* `nvmutils` is still available, for reference. See:
-
-* <https://notabug.org/osboot/nvmutils/>
+The *older* `nvmutils` is still available for reference
+[on notabug](https://notabug.org/osboot/nvmutils/).
 
 The `nvmutil` software is a clean re-write of `nvmutils`,
 which is compiled to a single binary instead of multiple
@@ -591,10 +581,6 @@ abandoned. All new development shall now be performed
 on `nvmutil`.
 
 Libreboot's version of nvmutil is located at `util/nvmutil` in
-the `lbmk.git` repository. The original nvmutil project, when
-it was part of osboot, is still available (for reference) here:
+the `lbmk.git` repository.
 
-* <https://notabug.org/osboot/nvmutil/>
 
-Please use the latest nvmutil version. The above information is provided
-only for reference.

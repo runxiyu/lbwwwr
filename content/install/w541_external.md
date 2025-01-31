@@ -6,12 +6,6 @@ x-toc-enable: true
 NOTE: The same image for W541 also works on the W540, as the motherboard is
 identical.
 
-Buy Libreboot preinstalled
-==========================
-
-**Minifree now sells the Libreboot T480, instead of the Libreboot W541. See:
-<https://minifree.org/product/libreboot-t480/>**
-
 Introduction
 ============
 
@@ -60,10 +54,8 @@ image size is incorrect for the chip you're flashing.
 Disassembly
 -----------
 
-No disassembly pics yet. The W540/T540p hardware maintenance manual also
-applies to W541:
-
-<https://thinkpads.com/support/hmm/hmm_pdf/t540p_w540_hmm_en_sp40a26003_01.pdf>
+No disassembly pics yet. The [W540/T540p hardware maintenance manual](https://thinkpads.com/support/hmm/hmm_pdf/t540p_w540_hmm_en_sp40a26003_01.pdf)
+also applies to W541.
 
 This shows disassembly. When you disassemble, and get to flashing, please note:
 

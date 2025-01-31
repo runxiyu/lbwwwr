@@ -22,18 +22,10 @@ Guard is enforced, allowing for it to be disabled.
 See: [CVE-2017-5705](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00086.html)
 
 Mate Kukri, who authored the ThinkPad T480/T480 and OptiPlex 3050 Micro ports,
-wrote a tool called *deguard*, which Libreboot uses on these boards. This tool
-reconfigures the ME, exploiting it so as to disable the Boot Guard.
-
-You can find it hosted by the coreboot project:
-
-<https://review.coreboot.org/deguard> (git repository)
-
-and Libreboot provides a mirror of this repository:
-
-<https://codeberg.org/libreboot/deguard>
-
-More information is available there.
+wrote a tool called [deguard](https://review.coreboot.org/deguard)
+([mirror](https://codeberg.org/libreboot/deguard)), which Libreboot uses on
+these boards. This tool reconfigures the ME, exploiting it so as to disable the
+Boot Guard.
 
 This is done by externally flashing an older version. Libreboot's build system
 automatically downloads this older version, runs `me_cleaner` on it, and applies
@@ -67,13 +59,12 @@ thorough and easy to use as deguard existed previously!
 
 Mate Kukri was able to figure this out and implement deguard, using existing
 work done by PT Research and Youness El Alaoui, exploiting the Intel SA 00086
-bug which you can read more about here:
+bug.
 
-<https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00086.html>
-
-<https://www.intel.com/content/www/us/en/support/articles/000025619/software.html>
-
-Note that *Intel* refers to this as a means of a so-called *attacker* running
+Note that *Intel* refers
+[to](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00086.html)
+[this](https://www.intel.com/content/www/us/en/support/articles/000025619/software.html)
+as a means of a so-called *attacker* running
 so-called *malicious* code; while this may also be possible in the strictest
 sense, flash write protection is possible on these machines, which you can
 read about on the [GRUB hardening](../linux/grub_hardening) page. Intel made

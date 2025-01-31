@@ -88,9 +88,9 @@ and you will be able to see MemTest86+ on the serial output as well. You
 can also configure your distro so that a terminal (TTY) is accessible
 from the serial console.
 
-The following guide is for Ubuntu, but it should work in Debian and
-Devuan, to enable a serial console using GeTTY:\
-<https://help.ubuntu.com/community/SerialConsoleHowto>
+There is [a guide for
+Ubuntu](https://help.ubuntu.com/community/SerialConsoleHowto), but it should
+work in Debian and Devuan, to enable a serial console using GeTTY:
 
 Note: part of the tutorial above requires changing your grub.cfg. Just
 change the `linux` line to add instructions for enabling getty. See
@@ -103,8 +103,7 @@ Sometimes the backlight control value (BLC\_PWM\_CTL) set by libreboot
 is not ideal. The result is either flicker, which could cause nausea or
 epilepsy or an uneven backlight and/or coil whine coming from the
 display. To fix this a different value for the gpu reg BLC\_PWM\_CTL
-needs to be set. See p94 of
-<https://01.org/sites/default/files/documentation/g45_vol_3_register_0_0.pdf>
+needs to be set. See p94 of [the manual](https://01.org/sites/default/files/documentation/g45_vol_3_register_0_0.pdf)
 for more information on this reg. The tool for setting registry values
 on intel gpu's is included in intel-gpu-tools. Install intel-gpu-tools:
 
@@ -182,9 +181,9 @@ work in BLM Legacy Mode. This makes backlight more complicated since the
 duty cycle is derived from 3 instead of 2 registers using the following
 formula: if(BPC[7:0] <> xFF) then BPCR[15:0] \* BPC[7:0]
 Else BPCR[15:0] BPC is LBB - PCI Backlight Control Register, described
-on <http://www.mouser.com/pdfdocs/945gmedatasheet.pdf> on page 315. BPCR
+on [datasheet](http://www.mouser.com/pdfdocs/945gmedatasheet.pdf) page 315. BPCR
 is BLC\_PWM\_CTL described in
-<https://01.org/sites/default/files/documentation/g45_vol_3_register_0_0.pdf>
+[handbook](https://01.org/sites/default/files/documentation/g45_vol_3_register_0_0.pdf)
 on page 94. More research needs to be done on this target so proceed
 with care.
 
@@ -201,6 +200,7 @@ to apply them. You can either use a pre-compiled rom image, or create an image
 from the current one in your computer. See here 
 <https://libreboot.org/docs/linux/grub_cbfs.html#get-the-rom-image> for 
 more information on how to do that.
+
 
 Once you have a libreboot rom image, say 'libreboot.rom', you can write
 changes on the image with the following commands.

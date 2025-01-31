@@ -146,13 +146,10 @@ Note: flashprog can never write if the flash chip isn't found automatically.
 
 All commands will be run from you Raspberry Pi.
 
-#### Setting up SPI
+#### Setting up [SPI](https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/README.md)
 
 You must configure `spidev` on your Raspberry Pi. This is a special driver in
 the Linux kernel; technically, the driver name is `spi-bcm2835`.
-
-This page has info:\
-<https://www.raspberrypi.org/documentation/hardware/raspberrypi/spi/README.md>
 
 In your Raspberry Pi, which we assume you're running the latest Raspbian version
 on, enable SPI in the Interface section of `raspi-config`.
@@ -367,9 +364,8 @@ supported by libreboot.
 
 ### GPIO pins on BeagleBone Black (BBB)
 
-Use this image for reference when connecting the pomona to the BBB:
-<https://beagleboard.org/Support/bone101#headers> (D0 = MISO or connects
-to MISO).
+Use [this image](https://beagleboard.org/Support/bone101#headers) for reference
+when connecting the pomona to the BBB. (D0 = MISO or connects to MISO)
 
 On that page, look at the *P9 header*. It is what you will use to wire up your
 chip for flashing.
@@ -424,8 +420,7 @@ RPi GPIO header:\
 ![](https://av.libreboot.org/rpi/0009.webp)
 ![](https://av.libreboot.org/rpi/0010.png)
 
-BBB P9 header:\
-<https://beagleboard.org/static/images/cape-headers.png>
+[BBB P9 header](https://beagleboard.org/static/images/cape-headers.png)
 
 Refer to this diagram:
 
@@ -525,8 +520,9 @@ Some advice:
 * DIP8 using adapter and SOIC8 is also possible. Use a 208-mil 1.27mm SOP8/SOIC8
   to DIP8 adapter PCB with a
   2.54mm 4-pin header on each side (square pins), then you can slot that in as
-  though it were a normal P-DIP 8 IC. This page shows a perfect example:
-  <https://coolcomponents.co.uk/products/soic-to-dip-adapter-8-pin>
+  though it were a normal P-DIP 8 IC. [This
+  page](https://coolcomponents.co.uk/products/soic-to-dip-adapter-8-pin) shows
+  a perfect example.
 * The above SOP8/DIP8 adapter is actually what we recommend, if you're going
   that route. It's made by Sparkfun and widely available; you don't have to buy
   from that particular website. The part number is: BOB-13655
@@ -634,13 +630,12 @@ have a SOIC8 because the pads are long enough to accommodate either type of
 chip.
 
 A good choice of soldering iron would be a T12-D08 or T12-K tip, on a T12
-soldering station. KSGER makes nice soldering stations:\
-<https://yewtu.be/watch?v=w0nZCK7B-0U>
+soldering station. [KSGER makes nice soldering stations](https://yewtu.be/watch?v=w0nZCK7B-0U).
 
 The case on that KSGER station is not grounded by default, so you should
-modify it to ground the case, in case of an electrical fault. This is for your
-safety. This video shows how to do it:\
-<https://yewtu.be/watch?v=-6IZ_sBgw8I>
+[modify it to ground the case](https://yewtu.be/watch?v=-6IZ_sBgw8I), in case
+of an electrical fault. This is for your safety.
+
 
 Use quality 60/40 or 63/37 lead+tin solder. Do not use lead-free! Lead-free is
 not suitable for hobbyist use such as this. Use quality *rosin* flux. Fluxes
@@ -735,10 +730,12 @@ evaporates quickly and it does not leave a corrosive residue.
 
 If you're using a BBB or RPi, install flashprog while logged into them.
 
-    git clone https://codeberg.org/libreboot/lbmk.git
-	cd lbmk
-	sudo ./mk dependencies debian
-	./mk -b flashprog
+```
+git clone https://codeberg.org/libreboot/lbmk.git
+cd lbmk
+sudo ./mk dependencies debian
+./mk -b flashprog
+```
 
 Replace `debian` with your distribution identifier; distribution configurations
 are available in `config/dependencies/`. If your distro is not listed, read one
@@ -746,7 +743,7 @@ of the lists and install the corresponding packages manually.
 
 **Note:** If you're flashing a Macronix flashchip on a ThinkPad X200, you will
 want to use a special patched version of flashprog, which you can download
-here: <https://vimuser.org/hackrom.tar.xz> - patched source code is available,
+[here](https://vimuser.org/hackrom.tar.xz) - patched source code is available,
 and a binary is also available that you can simply run. Pass the
 `--workaround-mx` argument in flashprog. This mitigates stability issues.
 

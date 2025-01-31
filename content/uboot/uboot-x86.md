@@ -10,8 +10,8 @@ Introduction
 U-Boot is available as a coreboot payload, in Libreboot 20241206 and later,
 on x86 boards; on ARM it has been available since late 2022 Libreboot releases.
 
-Please read <https://www.u-boot.org/>, especially the full U-Boot documentation
-available there.
+Please read [the U-Boot website](https://www.u-boot.org/), especially the full
+U-Boot documentation available there.
 
 **NOTE: This documentation refers only to x86. For ARM, please refer back to
 the [main U-Boot page](index).**
@@ -45,9 +45,7 @@ For example, upstream didn't implement an auto-boot timeout for the first
 selected boot item, so this was implemented. Libreboot also themed it to look
 more like an official Libreboot bootloader.
 
-Here is an example of what it looks like on the boot menu:
-
-<https://mas.to/@libreleah/113596262378713418>
+[Here is an example of what it looks like on the boot menu](https://mas.to/@libreleah/113596262378713418)
 
 Errors
 ------

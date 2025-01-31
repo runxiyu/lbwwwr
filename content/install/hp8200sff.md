@@ -68,14 +68,9 @@ from 20230423 onwards.
 Brief board info
 ----------------
 
-HP Elite 8200 SFF is a small-form-factor desktop of Intel Sandybridge platform
-which you can read more about here:
+[HP Elite 8200 SFF](https://support.hp.com/gb-en/product/hp-compaq-8200-elite-small-form-factor-pc/5037931) is a small-form-factor desktop of Intel Sandybridge platform.
 
-<https://support.hp.com/gb-en/product/hp-compaq-8200-elite-small-form-factor-pc/5037931>
-
-MT is an identical board with a larger chassis and more powerful power supply:
-
-<https://support.hp.com/gb-en/product/hp-compaq-8200-elite-desktop-pc-series/5037940>
+[MT](https://support.hp.com/gb-en/product/hp-compaq-8200-elite-desktop-pc-series/5037940) is an identical board with a larger chassis and more powerful power supply:
 
 Here's the [Technical Reference Manual](https://web.archive.org/web/20160109143257/https://h10032.www1.hp.com/ctg/Manual/c02778024.pdf).
 This system supports Ivy Bridge processors too. The original BIOS
@@ -90,11 +85,9 @@ entire ROM.
 Internal flashing from OEM BIOS is possible by setting a jumper
 on the board. Step by step instructions for this are below.
 
-The *coreboot* project proper has technical details on why this works if
+The *coreboot* project proper has [technical details](https://doc.coreboot.org/motherboard/hp/compaq_8200_sff.html) on why this works if
 you are interested. It also has external flashing instructions if you need
 to recover from an unbootable BIOS:
-
-<https://doc.coreboot.org/motherboard/hp/compaq_8200_sff.html>
 
 You can build the images for it in Libreboot like so:
 
@@ -202,11 +195,12 @@ Power cycle the computer again.
 HP 6200 Pro Business PC
 -----------------------
 
-According to this page from the vendor, HP BIOS updates are the same on both
-the 8200 SFF Elite *and* 6200 Pro Business desktop PCs; therefore, we believe
-that the Libreboot config for 8200 SFF will *also* work on 6200 Pro Business
-PCs. That page is here:
-<https://support.hp.com/fi-fi/drivers/selfservice/swdetails/hp-compaq-8200-elite-small-form-factor-pc/5037931/swItemId/vc-229778-2>
+[According to the
+vendor](https://support.hp.com/fi-fi/drivers/selfservice/swdetails/hp-compaq-8200-elite-small-form-factor-pc/5037931/swItemId/vc-229778-2),
+HP BIOS updates are the same on both the 8200 SFF Elite *and* 6200 Pro Business
+desktop PCs; therefore, we believe that the Libreboot config for 8200 SFF will
+*also* work on 6200 Pro Business PCs.
+
 
 The config for this board is courtesy of *Riku Viitanen* (`Riku_V` on Libreboot
 IRC), who tested and confirmed the following functionality:

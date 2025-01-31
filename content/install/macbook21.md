@@ -65,10 +65,8 @@ believed that this is the only difference.
 Compatibility
 =============
 
-The following pages list many models of MacBook1,1 and MacBook2,1:
-
-* <http://www.everymac.com/ultimate-mac-lookup/?search_keywords=MacBook1,1>
-* <http://www.everymac.com/ultimate-mac-lookup/?search_keywords=MacBook2,1>
+* [MacBook 1,1](http://www.everymac.com/ultimate-mac-lookup/?search_keywords=MacBook1,1)
+* [MacBook 2,1](http://www.everymac.com/ultimate-mac-lookup/?search_keywords=MacBook2,1)
 
 Models
 ------
@@ -215,9 +213,7 @@ to reconfigure GRUB2 correctly, else your system won't boot.*
 Coreboot wiki page
 ==================
 
-The following page has some information:
-
-* <https://www.coreboot.org/Board:apple/macbook21>
+[Here](https://www.coreboot.org/Board:apple/macbook21)
 
 Issues and solutions/workarounds
 ================================

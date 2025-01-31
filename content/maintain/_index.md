@@ -357,8 +357,9 @@ Third-party source trees are downloaded into this directory, by lbmk.
 src/bios\_extract/
 ---------------
 
-Used by the vendor file handler scripts. The upstream that we use is here:
-<https://review.coreboot.org/bios_extract>
+Used by the vendor file handler scripts.
+
+[Upstream](https://review.coreboot.org/bios_extract)
 
 The `dell_inspiron_1100_unpacker.py` script is used here, to extract from Dell
 BIOS updates, to get at the VGA ROM for Nvidia GPU on certain models of Dell
@@ -367,8 +368,9 @@ Latitude E6400.
 src/biosutilities/
 ---------------
 
-Used by the vendor file handler scripts. The upstream that we use is here:
-<https://github.com/platomav/BIOSUtilities>
+Used by the vendor file handler scripts.
+
+[Upstream](https://github.com/platomav/BIOSUtilities)
 
 Specifically: the pfs extract utility from this is used on Dell vendor updates,
 to extract SCH5545 EC (Environment Control) firmware.
@@ -376,9 +378,7 @@ to extract SCH5545 EC (Environment Control) firmware.
 src/coreboot/
 ---------------
 
-Please also visit: <https://coreboot.org/>
-
-Coreboot is the main boot firmware, providing hardware initialisation. Libreboot
+[Coreboot](https://coreboot.org/) is the main boot firmware, providing hardware initialisation. Libreboot
 makes extensive use of coreboot, on supported motherboards.
 
 Coreboot trees go here. Libreboot's build system does not simply use one tree,
@@ -422,12 +422,10 @@ which when downloading in lbmk in the `src/deguard/` directory.
 src/flashprog/
 ---------------
 
-Please also visit: <https://flashprog.org/>
-
-Although currently unused by any part of lbmk, we provide flashprog for the
-convenience of users, and this is copied to release archives. Flashrom is the
-program that you will use to read, erase and write the flash, containing
-coreboot firmware.
+Although currently unused by any part of lbmk, we provide
+[flashprog](https://flashprog.org/) for the convenience of users, and this is
+copied to release archives. Flashrom is the program that you will use to read,
+erase and write the flash, containing coreboot firmware.
 
 src/gpio-scripts
 ----------------
@@ -444,9 +442,8 @@ purpose, on much newer Intel systems (from around Skylake era or later).
 src/grub/TREE
 ---------------
 
-Please also visit: <https://www.gnu.org/software/grub/>
-
-The GNU GRUB bootloader, a reference multiboot implementation with its own
+The [GNU GRUB bootloader](https://www.gnu.org/software/grub/), a reference
+multiboot implementation with its own
 small kernel/OS and drivers (e.g. file systems, cryptography). This is the
 default recommended [coreboot payload](https://doc.coreboot.org/payloads.html)
 on x86-based Libreboot systems. GRUB will load and execute your Linux kernel,
@@ -484,7 +481,7 @@ support in coreboot and SeaBIOS, for the HP EliteBook 8560w.
 src/memtest86plus/
 ---------------
 
-Please also visit: <https://www.memtest.org/>
+[Memtest86+](https://www.memtest.org/)
 
 This is provided inside ROM images, as a payload executed from main GRUB or
 SeaBIOS payload. It checks for corrupted memory.
@@ -506,7 +503,7 @@ this fact, but such hacks are no longer required because of Riku's tool.
 src/seabios/
 ---------------
 
-Please also visit: <https://www.seabios.org/SeaBIOS>
+[SeaBIOS](https://www.seabios.org/SeaBIOS)
 
 This is the PC BIOS implementation used by Libreboot, on x86 machines (not all
 of them). A BIOS/UEFI implementation is not required, because Linux and BSD
@@ -519,7 +516,6 @@ executed from GRUB (if GRUB is the main payload, on a given target).
 src/u-boot/
 ---------------
 
-Please also visit: <https://www.denx.de/project/u-boot/>
 
 This is a bootloader provided on ARM chromebooks, within Libreboot. It also
 provides UEFI. Information about that can be found on these resources:
@@ -537,7 +533,7 @@ and it can successfully boot UEFI applications on x86 Libreboot systems.
 src/uefitool/
 ---------------
 
-Please also visit: <https://github.com/LongSoft/UEFITool>
+[UEFITool](https://github.com/LongSoft/UEFITool)
 
 This is compiled, so as to provide `UEFIExtract`. Currently used by the
 vendor download logic within `include/vendor.sh`, to download SCH5545 EC
@@ -561,23 +557,18 @@ BIOS image is provided in Libreboot release archives.
 src/pico-serprog
 ---------------------------
 
-Used by lbmk, to build firmware for serprog-based SPI flashers with RP2040 SoC.
-Alongside this, `util-fw/rp2040/pico-sdk` is imported which is required for
-building it.
-
-Please visit these pages:
-
-* <https://github.com/raspberrypi/pico-sdk>
-* <https://codeberg.org/libreboot/pico-serprog>
+[pico-serprog](https://codeberg.org/libreboot/pico-serprog) is used by lbmk, to
+build firmware for serprog-based SPI flashers with RP2040 SoC. Alongside this,
+[`util-fw/rp2040/pico-sdk`](https://github.com/raspberrypi/pico-sdk) is
+imported which is required for building it.
 
 src/stm32-vserprog
 ----------------------
 
-Used by lbmk, to build firmware for serprog-based SPI flashers with STM32 MCU.
-Alongside this, `libopencm3` is imported which is required for building it.
-
-* <https://codeberg.org/libreboot/stm32-vserprog>
-* <https://github.com/libopencm3/libopencm3>
+[stm320vserprog](https://codeberg.org/libreboot/stm32-vserprog) is used by
+lbmk, to build firmware for serprog-based SPI flashers with STM32 MCU.
+Alongside this, [`libopencm3`](https://github.com/libopencm3/libopencm3) is
+imported which is required for building it.
 
 These serprog programmers are quite desirable, owing to their low cost and ease
 of use. You can learn more on the [SPI flashing guide](../install/spi).
@@ -629,12 +620,11 @@ README file included in this directory, for more information.
 util/me7\_update\_parser/
 ---------------
 
-This is a special fork of `me_cleaner`, specifically for parsing and neutering
-Intel ME images provided by Lenovo for ThinkPad X220 and other Lenovo
-ThinkPads of Intel SandyBridge platform. You can find information about this
-on the original repository:
-
-<https://github.com/Thrilleratplay/me7_update_parser>
+[me7_update_parser](https://github.com/Thrilleratplay/me7_update_parser) is a
+special fork of `me_cleaner`, specifically for parsing and neutering Intel ME
+images provided by Lenovo for ThinkPad X220 and other Lenovo ThinkPads of Intel
+SandyBridge platform. You can find information about this on the original
+repository:
 
 ME7 Update Parser was originally written for *Heads*, another coreboot distro
 very similar to Libreboot that provides coreboot build automation with Linux
@@ -1316,10 +1306,8 @@ the `config/PROJECT` directory.
 U-Boot build system
 -------------------
 
-If you wish to know about U-Boot, refer here:\
-<https://u-boot.readthedocs.io/en/latest/>
 
-This and other documents from U-Boot shall help you to understand *U-Boot*.
+[Docs](https://u-boot.readthedocs.io/en/latest/) and other documents from U-Boot shall help you to understand *U-Boot*.
 
 You create a config, for `config/u-boot/TREENAME/configs`, by finding the
 corresponding board name in the upstream U-Boot `configs` directory, and
