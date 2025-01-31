@@ -9,11 +9,6 @@ identical.
 Introduction
 ============
 
-**NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
-now, as of 27 January 2024, which is a fork of flashrom.
-The reason why was explained, in
-the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
-
 Read the [Ivybridge/Haswell common guide](/docs/install/ivy_has_common.html) if you want more information.
 All of the following instructions assume that you've cloned lbmk and are operating from the
 root of that project. To do so, run

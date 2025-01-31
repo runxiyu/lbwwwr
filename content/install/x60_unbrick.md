@@ -5,11 +5,6 @@ x-toc-enable: true
 
 Only the Intel GPU is compatible. Do not flash the ATI GPU models.
 
-**NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
-now, as of 27 January 2024, which is a fork of flashrom.
-The reason why was explained, in
-the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
-
 "Unbricking" means flashing a known-good (working) ROM. The problem:
 you can't boot the system, making this difficult. In this situation,
 external hardware is needed which can flash the SPI chip (where libreboot

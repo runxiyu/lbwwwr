@@ -136,11 +136,6 @@ between the pins until you can see the normal BIOS boot screen.
 
 ![](https://av.libreboot.org/hp8200sff/fdo\_screwdriver.jpg)
 
-**NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
-now, as of 27 January 2024, which is a fork of flashrom.
-The reason why was explained, in
-the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
-
 Now, run this command:
 
 	flashprog -p internal -c MX25L6406E/MX25L6408E
@@ -176,9 +171,6 @@ Power off the computer. Make sure to power off, rebooting is not enough!
 Power on the computer.
 Now we can flash the full 8 MiB image. Boot to an OS with flashprog
 again.
-
-NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
-now, as of 27 January 2024, which is a fork of flashrom.
 
 Pick a Libreboot image of your choice from `bin/hp8200sff_8mb`
 or from a release archive. We'll refer to it as `libreboot8.rom`.

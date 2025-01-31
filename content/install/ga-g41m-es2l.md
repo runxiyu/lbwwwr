@@ -164,8 +164,3 @@ NOTE: If you don't flash both chips, the recovery program from the default
 factory BIOS will kick in and your board will be soft bricked. Make sure that
 you flash both chips!
 
-**NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
-now, as of 27 January 2024, which is a fork of flashrom.
-The reason why was explained, in
-the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
-

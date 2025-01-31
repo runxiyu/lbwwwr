@@ -78,11 +78,6 @@ crystal (small metal cylinder) and the power cable for the optical drive.
 
 Boot into an OS of your choice (that has flashprog support).
 
-**NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
-now, as of 27 January 2024, which is a fork of flashrom.
-The reason why was explained, in
-the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
-
 The BIOS should no longer impose any write-protections.
 You can now use `flashprog -p internal` freely.
 

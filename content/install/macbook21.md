@@ -103,11 +103,6 @@ MacBook2,1 can always be flashed internally, even if running Apple firmware:
 
 	sudo flashprog -p internal:laptop=force_I_want_a_brick,boardmismatch=force -w your.rom
 
-**NOTE: Libreboot standardises on [flashprog](https://flashprog.org/wiki/Flashprog)
-now, as of 27 January 2024, which is a fork of flashrom.
-The reason why was explained, in
-the [Libreboot 20240225 release](../../news/libreboot20240225.md#flashprog-now-used-instead-of-flashrom)**
-
 The MacBook1,1 can't be flashed internally if running the Apple EFI firmware. 
 You must flash externally.
 
