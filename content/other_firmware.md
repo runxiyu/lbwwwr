@@ -6,6 +6,12 @@ Libreboot is concerned with what goes into the main boot flash IC. The
 following potentially nonfree firmware is outside the scope of Libreboot but
 may also be relevant to a Libreboot user.
 
+### WiFi
+
+We actually do not recommend Atheros cards:
+
+![Why Atheros cards could be less free than Intel cards](https://av.libreboot.org/firmware.png)
+
 ### External GPUs
 
 The Video BIOS is present on most video cards. For integrated graphics, the
