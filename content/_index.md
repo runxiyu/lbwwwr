@@ -2,6 +2,18 @@
 title: Home
 ---
 
+## About this site
+
+The official documentation is at [libreboot.org](https://libreboot.org).
+
+The one you're reading right now is [Runxi Yu](https://runxiyu.org)'s unofficial
+attempt to document Libreboot with language that they personally consider to be
+more accessible. This version of the documentation is not currently supported
+by the upstream project, but we currently do plan to merge in the future when
+it's ready.
+
+## Introduction
+
 Libreboot provides [mostly](freedom_status/) [free, libre, and
 open source](https://writefreesoftware.org/) boot firmware based on coreboot,
 replacing proprietary BIOS/UEFI firmware for supported motherboards. It
@@ -57,11 +69,3 @@ technical knowledge.
 * It does not contain backdoors (e.g. the Intel ME and the AMD PSP). <!-- TODO -->
 * It is community-oriented.
 
-## Documentation information
-
-The official documentation is at [libreboot.org](https://libreboot.org).
-
-The one you're reading right now is [Runxi Yu](https://runxiyu.org)'s unofficial
-attempt to document Libreboot with language that they personally consider to be
-more accessible. This version of the documentation is not supported by the
-upstream project.
