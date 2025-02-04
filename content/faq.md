@@ -328,6 +328,7 @@ There are many images on the [SPI guide](../install/spi/).
 
 {{< accordion title="How do I pad a ROM before flashing?" >}}
 
+<!--
 It is advisable to simply use a larger ROM image. This section was written
 mostly for ASUS KCMA-D8 and KGPE-D16 motherboards, where previously we only
 provided 2MiB ROM images in libreboot, but we now provide 16MiB ROM images.
@@ -335,44 +336,38 @@ Other sizes are not provided because in practise, someone upgrading one of
 these chips will just use a 16MiB one. Larger sizes are available, but 16MiB
 is the maximum that you can use on all currently supported libreboot systems
 that use SPI flash.
+-->
 
-Required for ROMs where the ROM image is smaller than the flash chip
-(e.g. writing a 2MiB ROM to a 16MiB flash chip).
+First, try to simply use a larger ROM image. But if you must:
 
-Create an empty (00 bytes) file with a size the difference between
-the ROM and flash chip. The case above, for example:
+Create an zeroed file with a size the difference between the ROM and flash
+chip. If you have a 2 MiB image but a 16 MiB flash, for example:
 
 ```
 truncate -s +14MiB pad.bin
 ```
 
 For x86 descriptorless images you need to pad from the *beginning* of the ROM:
-
 ```
 cat pad.bin yourrom.rom > yourrom.rom.new
 ```
 
 For ARM and x86 with intel flash descriptor, you need to pad after the image:
-
 ```
 cat yourrom.rom pad.bin > yourrom.rom.new
 ```
 
-Flash the resulting file. Note that cbfstool will not be able to
-operate on images padded this way so make sure to make all changes to
-the image, including runtime config, before padding.
+Note that cbfstool will not be able to operate on images padded this way.
+Therefore, you should use cbfstool to make all necessary changes to the image, including runtime config, before padding.
 
-To remove padding, for example after reading it off the flash chip,
-simply use dd(1) to extract only the non-padded portion. Continuing with the
-examples above, in order to extract a 2MiB x86 descriptorless ROM from a
-padded 16MiB image do the following:
+To remove padding, for example after reading it off the flash chip to operate
+on it with cbfstool, simply use dd(1) to extract only the non-padded portion.
+Continuing with the examples above, in order to extract a 2MiB x86
+descriptorless ROM from a padded 16MiB image do the following:
 
 ```
 dd if=flashprogread.rom of=yourrom.rom ibs=14MiB skip=1
 ```
-
-With padding removed cbfstool will be able to operate on the image as usual.
-
 
 {{< /accordion >}}
 
@@ -387,7 +382,7 @@ align the pins properly. The connection is generally more sturdy. -->
 
 {{< accordion title="Can I use CH341A?" >}}
 
-This SPI flasher will damage your chip, and motherboard unless if you modify
+The CH341A will damage your chip and motherboard, unless if you modify
 its circuitry. We strongly recommend using a Raspberry Pi Pico instead, which
 is superior in every way, and costs about the same price. [Read more here.](../install/ch341a/)
 
@@ -406,11 +401,9 @@ finished.
 
 {{< accordion title="Can I use Linux?" >}}
 
-Absolutely! It is well-tested in Libreboot, and highly recommended. See
-[the Linux guide](../os/linux/).
-
 Any recent distribution should work, as long as it uses KMS (kernel mode
 setting) for the graphics.
+See [the Linux guide](../os/linux/).
 
 {{< /accordion >}}
 
@@ -424,9 +417,9 @@ Refer to [the Linux guide](../os/linux/).
 
 {{< accordion title="Can I use BSD?" >}}
 
-Absolutely! The Libreboot firmware has good support for FreeBSD, NetBSD and
-OpenBSD. Other systems are untested, but should work just fine.
-See [the BSD guide](../os/bsd/).
+The Libreboot firmware has good support for FreeBSD, NetBSD and OpenBSD. Other
+systems are untested, but should work just fine. There are caveats for
+graphical environments. See [the BSD guide](../os/bsd/).
 
 {{< /accordion >}}
 
