@@ -2,10 +2,6 @@
 title: Frequently Asked Questions
 ---
 
-<div style="text-align: center;">
-    Also known as the <span style="font-weight: bold;">Frequently Questioned Answers</span>
-</div>
-
 <!--
   -- TODO: Replace all of these with shortcodes that use <details>
   -->
@@ -357,11 +353,10 @@ align the pins properly. The connection is generally more sturdy. -->
 
 ### Can I use CH341A?
 
-**No!** This SPI flasher will damage your chip, and the motherboard that it is
-connected to.
+This SPI flasher will damage your chip, and motherboard unless if you modify
+its circuitry. We strongly recommend using a Raspberry Pi Pico instead, which
+is superior in every way, and costs about the same price. [Read more here.](../install/ch341a/)
 
-Read the notes about CH341A on [docs/install/spi.md](docs/install/spi) to
-learn more.
 
 ### I'm having issues with `/dev/mem`
 
