@@ -6,6 +6,47 @@ title: Frequently Asked Questions
   -- TODO: Replace all of these with shortcodes that use <details>
   -->
 
+<script>
+function toggle_all_entries(expand) {
+	document.querySelectorAll('details.accordion').forEach(x => {
+		x.open = expand;
+		x.setAttribute("aria-expanded", expand ? "true" : "false");
+	});
+
+	document.getElementById("expand_all_entries").style.display = expand ? "none" : "inline-block";
+	document.getElementById("collapse_all_entries").style.display = expand ? "inline-block" : "none";
+
+	document.getElementById("expand_all_entries").setAttribute("aria-expanded", expand ? "true" : "false");
+	document.getElementById("collapse_all_entries").setAttribute("aria-expanded", expand ? "true" : "false");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+	const button_container = document.getElementById("expand_collapse_buttons");
+
+	const buttons = [
+		{ id: "expand_all_entries", text: "Expand all entries", display: "inline-block", action: () => toggle_all_entries(true) },
+		{ id: "collapse_all_entries", text: "Collapse all entries", display: "none", action: () => toggle_all_entries(false) }
+	];
+
+	buttons.forEach(({ id, text, display, action }) => {
+		const button = document.createElement('button');
+		button.type = "button";
+		button.className = "btn";
+		button.id = id;
+		button.textContent = text;
+		button.style.display = display;
+		button.setAttribute("aria-expanded", "false");
+		button.addEventListener('click', action);
+		button_container.appendChild(button);
+	});
+});
+/*
+ * This is so that users with JS disabled, or both JS and CSS disabled, would
+ * not see non-functioning buttons.
+ */
+</script>
+<div id="expand_collapse_buttons" style="margin-top: 1rem;"></div>
+
 ## General questions
 
 {{< accordion title="How do I install Libreboot?" >}}
