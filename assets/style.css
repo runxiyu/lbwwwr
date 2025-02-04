@@ -204,3 +204,20 @@ footer {
 	opacity: 70%;
 	margin: 0.5rem;
 }
+
+/* Accordion */
+details {
+	background-color: var(--box-background-color);
+	margin: 0.6rem 0rem;
+	border-radius: var(--border-radius-small);
+	padding: 0.2rem 0.5rem;
+}
+
+details > summary {
+	font-weight: bold;
+}
+
+details > summary:hover {
+	cursor: pointer;
+}
+
