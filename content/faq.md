@@ -8,21 +8,27 @@ title: Frequently Asked Questions
 
 ## General questions
 
-### How do I install Libreboot?
+{{< accordion title="How do I install Libreboot?" >}}
 
 Refer to the [installation guide](../install/).
 
-### How do I build from source?
+{{< /accordion >}}
+
+{{< accordion title="How do I build from source?" >}}
 
 Refer to the [lbmk build instructions](../build/).
 
-### How can I help?
+{{< /accordion >}}
+
+{{< accordion title="How can I help?" >}}
 
 Refer to the [contributing guide](../contrib/).
 
+{{< /accordion >}}
+
 ## Issues with specific boards
 
-### Unable to load `thinkpad_acpi` on post-Haswell systems
+{{< accordion title="Unable to load `thinkpad_acpi` on post-Haswell systems" >}}
 
 Reported by a user on Debian 11 (on a ThinkPad T440p) and a user on Void Linux
 (ThinkPad T480), Linux (or modprobe) may fail to load `thinkpad_acpi`:
@@ -62,7 +68,9 @@ thinkpad_acpi.force_load=1
 
 to your kernel parameters (in GRUB, or your preferred linux-capable bootloader).
 
-### TLP
+{{< /accordion >}}
+
+{{< accordion title="TLP" >}}
 
 
 You can install the `tlp` package and start that service. For example, on
@@ -88,7 +96,9 @@ tlp-stat -b
 
 This will provide information about the battery.
 
-### Uneven backlight on GM45 ThinkPads
+{{< /accordion >}}
+
+{{< accordion title="Uneven backlight on GM45 ThinkPads" >}}
 
 We don't know how to detect the correct PWM value to use in coreboot, so we
 just use the default one in coreboot which has this issue on some CCFL panels,
@@ -98,13 +108,17 @@ You can work around this in your distribution, by following the notes at [docs:
 backlight control](../misc/#finetune-backlight-control-on-intel-gpus).
 <!-- TODO -->
 
-### GM45 thinkpad ethernet port doesn't autoconnect
+{{< /accordion >}}
+
+{{< accordion title="GM45 thinkpad ethernet port doesn't autoconnect" >}}
 
 This was observed on some systems using NetworkManager. This happens both on
 the original BIOS and in Libreboot. It's a quirk in the hardware. Restart the
 `NetworkManager` service when you connect the cable.
 
-### PIKE2008 module hangs KGPE-D16 / KCMA-D8
+{{< /accordion >}}
+
+{{< accordion title="PIKE2008 module hangs KGPE-D16 / KCMA-D8" >}}
 
 Loading the option ROM from the PIKE2008 module on either ASUS KCMA-D8
 or KGPE-D16 causes the system to hang at boot. It's possible to use
@@ -113,7 +127,9 @@ this in the payload (if you use a Linux kernel payload, like
 SeaBIOS) from regular SATA and then use it in Linux. Linux is capable of using
 the PIKE2008 module without loading the option ROM.
 
-### How to save kernel panic logs on ThinkPads?
+{{< /accordion >}}
+
+{{< accordion title="How to save kernel panic logs on ThinkPads?" >}}
 
 The easiest method of doing so is by using the kernel's netconsole
 and reproducing the panic. Netconsole requires two machines, the one that is
@@ -179,9 +195,11 @@ the target (`target$`):
 
 7.  Try to reproduce the kernel panic.
 
+{{< /accordion >}}
+
 ## General technical questions
 
-### How do I write-protect the flash chip?
+{{< accordion title="How do I write-protect the flash chip?" >}}
 
 By default, there is no write-protection on a Libreboot system. This is
 for usability reasons, because most people do not have easy access to an
@@ -204,7 +222,9 @@ protection](../write_protect/).
 <!-- Document PRx based flash protection on Intel platforms, and investigate
 other methods on AMD systems. -->
 
-### How do I change BIOS settings?
+{{< /accordion >}}
+
+{{< accordion title="How do I change BIOS settings?" >}}
 
 Most Libreboot setups actually use the [GRUB
 payload](http://www.coreboot.org/GRUB2). More information about payloads
@@ -240,7 +260,9 @@ nvramtool -C yourrom.rom -a
 This will change the default inside that ROM image, and then you can re-flash
 it.
 
-### Do I need to install a bootloader when installing a distribution?
+{{< /accordion >}}
+
+{{< accordion title="Do I need to install a bootloader when installing a distribution?" >}}
 
 Most libreboot setups integrate the GRUB bootloader already, as a
 [payload](http://www.coreboot.org/Payloads). This means that the GRUB
@@ -262,7 +284,9 @@ expect, so you would need a separate bootloader.
 
 <!-- TODO: uhhh how do you configure the GRUB? -->
 
-### Do I need to re-flash when I re-install a distribution?
+{{< /accordion >}}
+
+{{< accordion title="Do I need to re-flash when I re-install a distribution?" >}}
 
 <!--
   -- TODO: this seems to imply that you should install GRUB to chainload if
@@ -280,9 +304,11 @@ If you're using the SeaBIOS payload, it's even easier. It works just like you
 would expect. SeaBIOS implements a normal x86 BIOS interface.
 
 
+{{< /accordion >}}
+
 ## Hardware compatibility
 
-### Which systems are compatible?
+{{< accordion title="Which systems are compatible?" >}}
 
 Any system that coreboot supports can easily be added, so *compatibility*
 merely refers to whatever boards are integrated in the `lbmk` build system,
@@ -290,13 +316,17 @@ which Libreboot uses.
 
 The [installation page](../install/) lists compatible machines.
 
+{{< /accordion >}}
+
 ## Issues during flashing
 
-### What does a flash chip look like?
+{{< accordion title="What does a flash chip look like?" >}}
 
 There are many images on the [SPI guide](../install/spi/).
 
-### How do I pad a ROM before flashing?
+{{< /accordion >}}
+
+{{< accordion title="How do I pad a ROM before flashing?" >}}
 
 It is advisable to simply use a larger ROM image. This section was written
 mostly for ASUS KCMA-D8 and KGPE-D16 motherboards, where previously we only
@@ -344,29 +374,37 @@ dd if=flashprogread.rom of=yourrom.rom ibs=14MiB skip=1
 With padding removed cbfstool will be able to operate on the image as usual.
 
 
-### How do I program an SPI flash chip?
+{{< /accordion >}}
+
+{{< accordion title="How do I program an SPI flash chip?" >}}
 
 Refer to the [SPI guide](../install/spi/).
 
 <!-- It's possible to use a 16-pin SOIC test clip on an 8-pin SOIC chip, if you
 align the pins properly. The connection is generally more sturdy. -->
 
-### Can I use CH341A?
+{{< /accordion >}}
+
+{{< accordion title="Can I use CH341A?" >}}
 
 This SPI flasher will damage your chip, and motherboard unless if you modify
 its circuitry. We strongly recommend using a Raspberry Pi Pico instead, which
 is superior in every way, and costs about the same price. [Read more here.](../install/ch341a/)
 
 
-### I'm having issues with `/dev/mem`
+{{< /accordion >}}
+
+{{< accordion title="I'm having issues with `/dev/mem`" >}}
 
 Before internal flashing, you must first [disable `/dev/mem`
 protections](../install/devmem/). Make sure to re-enable them after you're
 finished.
 
+{{< /accordion >}}
+
 ## Operating systems
 
-### Can I use Linux?
+{{< accordion title="Can I use Linux?" >}}
 
 Absolutely! It is well-tested in Libreboot, and highly recommended. See
 [the Linux guide](../os/linux/).
@@ -374,19 +412,25 @@ Absolutely! It is well-tested in Libreboot, and highly recommended. See
 Any recent distribution should work, as long as it uses KMS (kernel mode
 setting) for the graphics.
 
-### Fedora won't boot?
+{{< /accordion >}}
+
+{{< accordion title="Fedora won't boot?" >}}
 
 On Fedora, by default the grub.cfg tries to boot linux in 16-bit mode. You
 just have to modify Fedora's GRUB configuration. 
 Refer to [the Linux guide](../os/linux/).
 
-### Can I use BSD?
+{{< /accordion >}}
+
+{{< accordion title="Can I use BSD?" >}}
 
 Absolutely! The Libreboot firmware has good support for FreeBSD, NetBSD and
 OpenBSD. Other systems are untested, but should work just fine.
 See [the BSD guide](../os/bsd/).
 
-### Can I use Windows?
+{{< /accordion >}}
+
+{{< accordion title="Can I use Windows?" >}}
 
 In theory, yes, you can use Windows [10](https://yewtu.be/watch?v=BWq6XnWKQnM)
 and [11](https://yewtu.be/watch?v=OFHiMfVNNeA). You will need to [bypass the
@@ -399,17 +443,23 @@ to use, study, adapt and share the software in any reasonable way. This is
 contradictory to the goals of Libreboot, are not officially supported, and the
 community cannot provide support for them.
 
-### Can I use Plan 9?
+{{< /accordion >}}
+
+{{< accordion title="Can I use Plan 9?" >}}
 
 You will need to use the VGA ROM. <!-- TODO -->
 
-### Are other operating systems compatible?
+{{< /accordion >}}
+
+{{< accordion title="Are other operating systems compatible?" >}}
 
 Unknown. Perhaps so, but it's impossible to say without further testing.
 
+{{< /accordion >}}
+
 ## Licensing and other non-technical information
 
-### What level of software freedom does Libreboot give me?
+{{< accordion title="What level of software freedom does Libreboot give me?" >}}
 
 You should refer to:
 - The [binary blob minimalization policy](../policy/)
@@ -420,7 +470,9 @@ No device we support is "100% free", as they all include firmware outside of
 Libreboot's scope, such as disk/USB controllers and the embedded controller
 firmware.
 
-### What are the prospects for libre hardware?
+{{< /accordion >}}
+
+{{< accordion title="What are the prospects for libre hardware?" >}}
 
 One day, we will live in a world where anyone can get their own chips made,
 including CPUs but also every other type of IC. Efforts to make homemade chip
@@ -430,7 +482,9 @@ example, the work done by [Sam Zeloof](http://sam.zeloof.xyz)
 makes CPUs in his garage) and the [Libre Silicon](https://libresilicon.com/)
 project.
 
-### Where can I learn more about electronics?
+{{< /accordion >}}
+
+{{< accordion title="Where can I learn more about electronics?" >}}
 
 * Basics of soldering and rework by PACE  
     Both series of videos are mandatory regardless of your soldering skill.
@@ -484,3 +538,5 @@ links.
 
 Lastly the most important message to everybody gaining this wonderful new
 hobby: [Secret to Learning Electronics](https://yewtu.be/watch?v=xhQ7d3BK3KQ)
+
+{{< /accordion >}}
