@@ -3,7 +3,7 @@ html {
 	--border-radius-small: .32rem;
 	--background-color: #280b22;
 	--foreground-color: #EEEFF1;
-	--box-background-color: #42253c;
+	--box-background-color: #381b32;
 	--border-color: rgb(80, 80, 80);
 	--dim-text-color: #999;
 	--link-color: #fcc;
@@ -206,18 +206,26 @@ footer {
 }
 
 /* Accordion */
-details {
+details.accordion {
 	background-color: var(--box-background-color);
 	margin: 0.6rem 0rem;
 	border-radius: var(--border-radius-small);
 	padding: 0.2rem 0.5rem;
 }
 
-details > summary {
+.accordion-inner > :first-child {
+	margin-top: 0rem;
+}
+
+.accordion-inner > :last-child {
+	margin-bottom: 0rem;
+}
+
+details.accordion > summary {
 	font-weight: bold;
 }
 
-details > summary:hover {
+details.accordion > summary:hover {
 	cursor: pointer;
 }
 
