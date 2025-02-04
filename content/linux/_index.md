@@ -1,5 +1,6 @@
 ---
 title: Linux Guide
+toc: true
 ---
 
 This guide pertains to x86 hosts with the GRUB payload, and does not cover

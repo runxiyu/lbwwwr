@@ -1,5 +1,6 @@
 ---
 title: Intel Pitfalls
+toc: true
 ---
 
 ## Intel Management Engine

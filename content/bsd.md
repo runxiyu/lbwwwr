@@ -1,5 +1,6 @@
 ---
 title: BSD Operating Systems
+toc: true
 ---
 
 This guide pertains to x86 Libreboot hosts. For ARM targets e.g. CrOS/ARM

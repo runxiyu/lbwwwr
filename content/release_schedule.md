@@ -1,5 +1,6 @@
 ---
 title: Release Schedule
+toc: true
 ---
 
 ## Release cycle

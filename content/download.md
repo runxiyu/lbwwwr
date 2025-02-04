@@ -1,5 +1,6 @@
 ---
 title: Download Libreboot
+toc: true
 ---
 
 <!-- TODO: Safety warning should be a shortcode -->

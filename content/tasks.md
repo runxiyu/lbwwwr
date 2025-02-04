@@ -1,5 +1,6 @@
 ---
 title: Jobs that Need Doing
+toc: true
 ---
 
 Please read the [contributing page](../contrib/) and occasionally refer to the [maintenance manual](../maintain/).

@@ -1,5 +1,6 @@
 ---
 title: Building ROM Images from Source
+toc: true
 ---
 
 Libreboot's build system is named `lbmk`, short for `LibreBoot MaKe`, and this

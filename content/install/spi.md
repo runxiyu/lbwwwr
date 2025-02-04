@@ -1,5 +1,6 @@
 ---
 title: External Flashing via SPI
+toc: true
 ---
 
 **Note: SCK and CLK mean the same thing.**

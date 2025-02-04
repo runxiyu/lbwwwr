@@ -1,5 +1,6 @@
 ---
 title: Software and hardware freedom status for each motherboard supported by Libreboot
+toc: true
 ---
 
 This page documents how Libreboot's [binary blob reduction policy](../policy/)

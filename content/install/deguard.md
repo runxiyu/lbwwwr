@@ -1,6 +1,6 @@
 ---
 title: Disabling Intel Boot Guard on MEv11
-x-toc-enable: true
+toc: true
 ---
 
 This covers Intel Skylake, Kaby Lake and Kaby Lake Refresh / Coffeelake

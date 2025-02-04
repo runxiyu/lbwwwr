@@ -1,5 +1,6 @@
 ---
 title: Generic Internal Flashing Instructions
+toc: true
 ---
 
 This applies to the x86 machines. Chromebook users should refer to the

@@ -1,5 +1,6 @@
 ---
 title: Project Contributors
+toc: true
 ---
 
 This list does not necessarily reflect who is currently working on the project,

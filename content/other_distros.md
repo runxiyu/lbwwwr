@@ -1,5 +1,6 @@
 ---
 title: Other Libre Firmware Projects
+toc: true
 ---
 
 Libreboot is a coreboot distribution. Libreboot's build system automatically

@@ -1,5 +1,6 @@
 ---
 title: AMD Pitfalls
+toc: true
 ---
 
 <!-- TODO -->

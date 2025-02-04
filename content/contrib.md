@@ -1,5 +1,6 @@
 ---
 title: Contributing
+toc: true
 ---
 
 The [tasks page](../tasks/) has a list of tasks that we would be happy to accept

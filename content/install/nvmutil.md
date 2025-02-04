@@ -1,6 +1,6 @@
 ---
 title: nvmutil manual
-x-toc-enable: true
+toc: true
 ---
 
 With this software, you can change the MAC address inside GbE regions

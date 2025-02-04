@@ -1,5 +1,6 @@
 ---
 title: Flash write protection
+toc: true
 ---
 
 Flash write protection will prevent anyone except you from overwriting the

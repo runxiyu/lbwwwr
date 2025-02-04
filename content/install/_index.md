@@ -1,5 +1,6 @@
 ---
 title: Installing Libreboot
+toc: true
 ---
 
 This page will teach you how to install Libreboot, on any of the supported

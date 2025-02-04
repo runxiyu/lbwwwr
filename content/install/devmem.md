@@ -1,5 +1,6 @@
 ---
 title: Disabling /dev/mem protections
+toc: true
 ---
 
 This section applies to any program that makes use of lower memory

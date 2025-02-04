@@ -1,5 +1,6 @@
 ---
 title: Chromebook flashing instructions
+toc: true
 ---
 
 ## Board support

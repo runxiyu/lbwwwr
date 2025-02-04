@@ -1,5 +1,6 @@
 ---
 title: Firmware Outside of Libreboot’s Scope
+toc: true
 ---
 
 Libreboot is concerned with what goes into the main boot flash IC. The

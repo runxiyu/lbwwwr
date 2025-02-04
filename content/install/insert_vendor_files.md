@@ -1,6 +1,6 @@
 ---
 title: Insert Vendor Files not Included in Release Images
-x-toc-enable: true
+toc: true
 ---
 
 **PLEASE MAKE SURE you read and follow the instructions on this page, prior to

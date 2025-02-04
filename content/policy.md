@@ -1,5 +1,6 @@
 ---
 title: Binary Blob Reduction Policy
+toc: true
 ---
 
 ## Introduction

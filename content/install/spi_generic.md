@@ -1,6 +1,6 @@
 ---
 title: Generic SPI Flashing Guide
-x-toc-enable: true
+toc: true
 ---
 
 There are a plethora of single board computers with which you can flash libreboot to a SOIC chip.
