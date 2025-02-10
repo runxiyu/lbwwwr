@@ -3,9 +3,11 @@
 {{ end }}
 {{ define "main" }}
 	<h1>{{ .Title }}</h1>
-	<div id="table-of-contents">
-		<h2>Contents</h2>
-		{{ .TableOfContents }}
-	</div>
+	{{ if .Params.toc }}
+		<div id="table-of-contents">
+			<h2>Contents</h2>
+			{{ .TableOfContents }}
+		</div>
+	{{ end }}
 	{{ .Content }}
 {{ end }}
