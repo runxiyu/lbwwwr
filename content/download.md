@@ -11,9 +11,9 @@ Libreboot releases are signed with [GnuPG](https://www.gnupg.org). Newest keys g
 
 | First release | Fingerprint                                                                      |
 | -             | -                                                                                |
-| 20241206      | [`8BB1 F7D2 8CF7 696D BF4F 7192 5C65 4067 D383 B1FF`](/static/keys/20241206.asc) |
-| 20160907      | [`98CC DDF8 E560 47F4 75C0 44BD D0C6 2464 FA8B 4856`](/static/keys/20160907.asc) |
-| 20160818      | [`CDC9 CAE3 2CB4 B7FC 84FD C804 969A 9795 05E8 C5B2`](/static/keys/20160818.asc) |
+| 20241206      | [`8BB1 F7D2 8CF7 696D BF4F 7192 5C65 4067 D383 B1FF`](/keys/20241206.asc) |
+| 20160907      | [`98CC DDF8 E560 47F4 75C0 44BD D0C6 2464 FA8B 4856`](/keys/20160907.asc) |
+| 20160818      | [`CDC9 CAE3 2CB4 B7FC 84FD C804 969A 9795 05E8 C5B2`](/keys/20160818.asc) |
 
 ## Development versions
 
