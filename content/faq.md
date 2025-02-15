@@ -249,16 +249,9 @@ inconvenient to use an external programmer.
 
 On some systems, it is possible to write-protect the firmware, such that
 it is rendered read-only at the OS level (external flashing is still
-possible, using dedicated hardware). For example, on current GM45
-laptops (e.g. ThinkPad X200, T400), you can write-protect (see
-[ICH9 gen utility](docs/install/ich9utils.md#ich9gen)).
+possible, using dedicated hardware).
 
-It's possible to write-protect on all Libreboot systems, but the instructions
-need to be written. The documentation is in the main git repository, so you are
-welcome to submit patches adding these instructions.
-
-There is also another incomplete guide for [flash write
-protection](../write_protect/).
+There is an incomplete guide for [flash write protection](../write_protect/).
 
 <!-- Document PRx based flash protection on Intel platforms, and investigate
 other methods on AMD systems. -->

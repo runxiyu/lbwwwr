@@ -69,7 +69,7 @@ on pin 8 of the chip that you're flashing. Ideally you should pull the other
 chip select high via 47ohm resistor, which should be enough to prevent damage
 in the case of accidentally shorting the wrong pin.
 
-Doing this means that you *disable* the chip fou're not flashing. It's very
+Doing this means that you *disable* the chip you're not flashing. It's very
 important that you ensure only the one you want to flash is active, when using
 an external flasher.
 
@@ -85,7 +85,7 @@ You can now proceed to [flashing](/docs/install/spi.html) this machine.
 ---------------------------------------
 
 It has been reported by a user that `thinkpad_acpi` does not load correctly on
-the T440p. Since the W541/W540/T540p are also haswell machines, you may be
+the T440p. Since the W541/W540/T540p are also Haswell machines, you may be
 affected by this issue.
 
 If you encounter this, check [this page](../../faq.md#thinkpad-acpi)

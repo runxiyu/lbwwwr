@@ -123,7 +123,7 @@ privacy that can't be ignored.
 Before version 6.0 (that is, on systems from 2008/2009 and earlier), the
 ME can be disabled by setting a couple of values in the SPI flash
 memory. The ME firmware can then be removed entirely from the flash
-memory space. The libreboot project [does this](docs/install/ich9utils) on
+memory space. The libreboot project does this on
 the Intel 4 Series systems that it supports, such as the [ThinkPad
 X200](../install/x200) and [ThinkPad
 T400](../install/t400). ME firmware versions 6.0 and

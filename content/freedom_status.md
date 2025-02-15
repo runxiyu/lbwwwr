@@ -47,9 +47,8 @@ as:
   the initialisation firmware plus operating system for it is loaded from this
   dedicated region in the main boot flash. More info is available [in the
   FAQ](faq.md#intelme) &mdash; where ME firmware is otherwise present,
-  Libreboot either [removes](docs/install/ich9utils.html) it or (with the
-  `me_cleaner` program)
-  [reconfigures](https://github.com/corna/me_cleaner/wiki/How-does-it-work%3F)
+  Libreboot either removes it or (with the `me_cleaner` program)
+  [reconfigures](https://github.com/corna/ me_cleaner/wiki/How-does-it-work%3F)
   it in such a way where it is disabled during machine initialisation.
 
 * Platform region: non-program data, usually just a bunch of strings put there
@@ -75,8 +74,7 @@ This section applies to boards on which the ME can be completely removed.
 
 Libreboot provides a way to fully remove the ME firmware, while retaining full
 use of the machine, on GM45 platforms with ICH9M southbridge. These include
-ThinkPad X200/T400/T500/W500 and so on of that generation. See [the ICH9utils
-page](../install/ich9utils/)
+ThinkPad X200/T400/T500/W500 and so on of that generation.
 
 ### Intel ME images
 
@@ -190,7 +188,6 @@ Intel Flash Descriptors are provided as blobs on some boards, but these are
 not *software* blobs. They are configurations provided in a binary format,
 fully readable by libre software. For example:
 
-* Libreboot's `ich9gen` program generates ICH9M flash descriptors from scratch.
 * Coreboot's `ifdtool` program has extensive features for manipulating Intel
   flash descriptors.
 * Corebot's `bincfg` program generates any sort of binary from a `.spec` file
@@ -200,8 +197,6 @@ fully readable by libre software. For example:
 
 Intel GbE NVM config (configuration data, binary-encoded, for gigabit NIC):
 
-* Libreboot's `ich9gen` program *also* generates GbE NVM images specifically
-  for Intel NICs used in GM45 thinkpads.
 * Libreboot's `nvmutil` program can manipulate GbE NVM images
 
 ### BL1 bootloader on `peach`/`daisy` Chromebooks
