@@ -37,7 +37,7 @@ The latest release is [Libreboot 20241206](releases/20241206/). This release
 adds support for the U-boot payload, and the following boards: Lenovo ThinkPad
 T480, Lenovo ThinkPad T480S, Dell OptiPlex 780 USFF, Dell OptiPlex 780 MT.
 
-The latest amendment is [Libreboot 20241206 revision 8](releases/20241206rev8/).
+The latest revision is [Libreboot 20241206 revision 10](releases/20241206rev10/).
 
 ## Technical overview
 
