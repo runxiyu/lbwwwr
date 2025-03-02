@@ -13,6 +13,12 @@
 			<a id="site-title" href="/">
 				{{ .Site.Title }}
 			</a>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Home.RegularPages) }}
+			</ul>
 			{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Sections) }}
 		</aside>
 		<div id="main-and-footer">
