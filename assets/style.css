@@ -257,7 +257,7 @@ aside#sidebar {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: min(33%, 300px);
+	width: min(33%, 350px);
 	height: 100%;
 	background-color: var(--header-background-color);
 	overflow-y: auto;
@@ -285,7 +285,7 @@ aside#sidebar > ul {
 }
 
 div#main-and-footer {
-	margin-left: min(33%, 300px);
+	margin-left: min(33%, 350px);
 	padding: 0px 10px;
 	overflow-x: auto;
 }
