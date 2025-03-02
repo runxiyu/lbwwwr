@@ -159,7 +159,6 @@ header a {
 
 #site-title {
 	font-weight: bold;
-	font-size: 130%;
 }
 
 nav#main-nav-bar {
@@ -249,4 +248,65 @@ details.accordion > summary:hover {
 a.btn:link, a.btn:visited {
 	text-decoration: none;
 	color: var(--foreground-color);
+}
+
+
+
+
+aside#sidebar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: min(33%, 300px);
+	height: 100%;
+	background-color: var(--header-background-color);
+	overflow-y: auto;
+	padding: 10px 10px;
+	box-sizing: border-box;
+}
+
+aside#sidebar a:link,
+aside#sidebar a:visited {
+	text-decoration: none;
+	color: var(--header-foreground-color);
+}
+
+aside#sidebar ul {
+	padding-left: 1rem;
+}
+
+aside#sidebar > ul > li:not(first-child) {
+	margin-top: 1rem;
+}
+
+aside#sidebar > ul {
+	padding-left: 0rem;
+	list-style: none;
+}
+
+div#main-and-footer {
+	margin-left: min(33%, 300px);
+	padding: 0px 10px;
+	overflow-x: auto;
+}
+
+main {
+	margin: 0 auto;
+}
+
+main:not(.wide) {
+	max-width: 50rem;
+}
+
+@media(max-width: 550px) {
+	aside#sidebar {
+		display: none;
+	}
+	div#main-and-footer {
+		margin-left: 0px;
+	}
+}
+
+.nav-current {
+	font-weight: bold;
 }

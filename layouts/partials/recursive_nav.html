@@ -1,0 +1,12 @@
+{{ $currentPage := .currentPage }}
+<ul>
+	{{ range .pages }}
+		{{ $isCurrentOrAncestor := or (eq $currentPage .) ($currentPage.IsDescendant .) }}
+		<li {{ if eq $currentPage . }}class="nav-current"{{ end }}>
+			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+		</li>
+		{{ if .Pages }}
+			{{ partial "recursive_nav.html" (dict "currentPage" $currentPage "pages" .Pages) }}
+		{{ end }}
+	{{ end }}
+</ul>
