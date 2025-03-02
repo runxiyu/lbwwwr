@@ -7,4 +7,4 @@ set -x
 
 cd "${BASH_SOURCE[0]%/*}"
 
-hugo && rsync --chmod=u=rwX,go=rX --delete-after -rv public/ runxiyu.org:/var/www/libreboot/
+hugo && rsync --chmod=u=rwX,go=rX --delete-after -rv public/ me@runxiyu.org:/var/www/libreboot/
