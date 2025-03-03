@@ -12,6 +12,9 @@ more accessible. This version of the documentation is not currently supported
 by the upstream project, but we currently do plan to merge in the future when
 it's ready.
 
+**Note: It is possible that all links are broken here right now. I'm massively
+restructuring and reorganizing the site.**
+
 ## Introduction
 
 Libreboot provides [mostly](freedom_status/) [free, libre, and
