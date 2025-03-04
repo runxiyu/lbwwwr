@@ -1,5 +1,5 @@
 ---
-title: LibreBoot MaKe (lbmk) build system design and maintenance manual
+title: Maintaining lbmk
 ---
 
 In addition to this manual, you should also refer to [porting.md](porting)
