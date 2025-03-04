@@ -2,10 +2,10 @@
 <ul>
 	{{ range .pages }}
 		{{ $isCurrentOrAncestor := or (eq $currentPage .) ($currentPage.IsDescendant .) }}
-		<li {{ if eq $currentPage . }}class="nav-current"{{ end }}>
+		<li {{ if eq $currentPage . }}class="nav-current" id="sidebar-scroll-to-target"{{ end }}>
 			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 		</li>
-		{{ if and .Pages $isCurrentOrAncestor }}
+		{{ if and .Pages $isCurrentOrAncestor }} {{/* TODO: Make the others expandable */}}
 			{{ partial "recursive_nav.html" (dict "currentPage" $currentPage "pages" .Pages) }}
 		{{ end }}
 	{{ end }}
