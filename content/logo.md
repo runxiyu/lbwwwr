@@ -1,7 +1,8 @@
 ---
-title: Libreboot Logo License
+title: Logo
 ---
 
+<img src="https://av.libreboot.org/logo/logo.svg" alt="Logo SVG" style="filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(294deg) brightness(108%) contrast(101%);" />
 
 The Libreboot logo was created by Marcus Moeller. It is released to the
 public domain under the terms of the [Creative Commons Zero license, version
