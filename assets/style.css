@@ -13,7 +13,7 @@ html {
 	font-family: system-ui, sans-serif;
 	color: var(--foreground-color);
 	background-color: var(--background-color);
-	line-height: 1.3;
+	line-height: 1.4;
 }
 
 body {
@@ -267,6 +267,7 @@ aside#sidebar {
 	overflow-y: auto;
 	padding: 10px 10px;
 	box-sizing: border-box;
+	line-height: 1.3;
 }
 
 aside#sidebar a:link,
@@ -286,6 +287,14 @@ aside#sidebar > ul > li:not(first-child) {
 aside#sidebar > ul {
 	padding-left: 0rem;
 	list-style: none;
+}
+
+aside#sidebar li + li {
+	margin-top: 0.2rem;
+}
+
+aside#sidebar ul li:first-child {
+	margin-top: 0.2rem;
 }
 
 div#main-and-footer {
