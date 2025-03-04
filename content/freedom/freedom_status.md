@@ -1,5 +1,5 @@
 ---
-title: Software and hardware freedom status for each motherboard supported by Libreboot
+title: Freedom status for each board
 toc: true
 ---
 

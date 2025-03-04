@@ -37,7 +37,17 @@
 			</main>
 		</div>
 		<script>
-document.getElementById('sidebar-scroll-to-target').scrollIntoView(true);
+try {
+	document.getElementById('sidebar-scroll-to-target').scrollIntoView(true);
+} catch (e) {}
+
+const style = document.createElement('style');
+style.innerHTML = '@keyframes oscillate { 0% { font-size: 1em; } 50% { font-size: 1.05em; } 100% { font-size: 1em; } }';
+document.head.appendChild(style);
+document.querySelectorAll('p').forEach((el) => {
+	el.style.animation = 'oscillate 20s infinite';
+});
+// lol
 		</script>
 	</body>
 </html>

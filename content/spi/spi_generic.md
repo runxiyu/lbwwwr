@@ -1,11 +1,11 @@
 ---
-title: Generic SPI Flashing Guide
+title: Le Potato SPI Flashing Guide
 toc: true
 ---
 
 There are a plethora of single board computers with which you can flash libreboot to a SOIC chip.
 Some users might be daunted by the price of a raspberry pi.
-This guide is intended to help users looking to use a programmer which is not listed in the [main guide.](spi)
+This guide is intended to help users looking to use a programmer which is not listed in the [main guide.](../)
 As an example, this guide will use the [libre computer 'le potato.'](https://libre.computer/products/aml-s905x-cc/)
 You should note however, that this guide is intended to demonstrate how to set up any SBC with SPI programming capabilities for flashing libreboot.
 

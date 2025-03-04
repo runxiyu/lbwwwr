@@ -1,5 +1,5 @@
 ---
-title: Firmware Outside of Libreboot’s Scope
+title: Firmware out of our Scope
 toc: true
 ---
 
