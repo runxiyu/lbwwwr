@@ -1,6 +1,5 @@
 ---
-title: MacBook2,1 and MacBook1,1
-x-toc-enable: true
+title: MacBook 1,1 and 2,1
 ---
 
 <div class="specs">

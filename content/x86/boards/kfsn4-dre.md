@@ -1,6 +1,5 @@
 ---
-title: ASUS KFSN4-DRE server/workstation board 
-x-toc-enable: true
+title: ASUS KFSN4-DRE Server/Workstation
 ---
 
 <div class="specs">

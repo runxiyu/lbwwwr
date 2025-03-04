@@ -1,6 +1,5 @@
 ---
 title: HP Compaq Elite 8300 USDT
-x-toc-enable: true
 ---
 
 <div class="specs">

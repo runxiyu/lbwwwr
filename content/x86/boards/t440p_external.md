@@ -1,6 +1,5 @@
 ---
 title: ThinkPad T440p external flashing
-x-toc-enable: true
 ---
 
 Introduction

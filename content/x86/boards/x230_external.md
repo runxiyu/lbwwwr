@@ -1,6 +1,5 @@
 ---
 title: ThinkPad X230/X230T external flashing
-x-toc-enable: true
 ---
 
 NOTE: Internal flashing (from vendor firmware) to Libreboot is possible, on

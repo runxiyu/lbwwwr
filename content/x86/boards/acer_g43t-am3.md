@@ -1,5 +1,5 @@
 ---
-title: Acer G43T-AM3 notes
+title: Acer G43T-AM3
 ---
 
 This is similar to Gigabyte GA-G41M-ES2L but uses an Intel NIC rather than

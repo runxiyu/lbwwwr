@@ -1,6 +1,5 @@
 ---
-title: Flashing Libreboot on Dell Latitude laptops
-x-toc-enable: true
+title: Dell Latitude flashing
 ---
 
 All of the Dell Latitude models can be flashed internally, which means that

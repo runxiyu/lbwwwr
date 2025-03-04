@@ -1,5 +1,5 @@
 ---
-title: Gigabyte GA-G41M-ES2L desktop board 
+title: Gigabyte GA-G41M-ES2L Desktop
 ---
 
 <div class="specs">

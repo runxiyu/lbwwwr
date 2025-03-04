@@ -1,6 +1,5 @@
 ---
 title: ThinkPad T420 external flashing
-x-toc-enable: true
 ---
 
 Read the [Ivybridge/Haswell common guide](/docs/install/ivy_has_common.html) if you want more information. Please note, for Thinkpad T420, splitting the rom is not required.

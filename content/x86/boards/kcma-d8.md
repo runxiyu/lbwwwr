@@ -1,6 +1,5 @@
 ---
-title: ASUS KCMA-D8 desktop/workstation board 
-x-toc-enable: true
+title: ASUS KCMA-D8 Desktop/Workstation
 ---
 
 TODO: this page is OLD. check that the info is still valid.

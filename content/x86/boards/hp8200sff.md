@@ -1,6 +1,5 @@
 ---
 title: HP Elite 8200 SFF/MT and 6200 Pro Business
-x-toc-enable: true
 ---
 
 <div class="specs">

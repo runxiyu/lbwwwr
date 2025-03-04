@@ -1,6 +1,5 @@
 ---
-title: ASUS KGPE-D16 server/workstation board 
-x-toc-enable: true
+title: ASUS KGPE-D16 Server/Workstation
 ---
 
 TODO: OLD page. TODO: check that all the info is still valid.

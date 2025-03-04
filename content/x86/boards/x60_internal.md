@@ -1,5 +1,5 @@
 ---
-title: ThinkPad X60/X60T/T60 Internal Flashing
+title: ThinkPad X60/X60T/T60 internal flashing
 ---
 
 There's an exploit that allows flashing internally. Does not work if there's a

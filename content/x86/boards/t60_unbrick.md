@@ -1,6 +1,5 @@
 ---
-title: ThinkPad T60 Recovery guide
-x-toc-enable: true
+title: ThinkPad T60 recovery guide
 ---
 
 Only the Intel GPU is compatible. Do not flash the ATI GPU models.

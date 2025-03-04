@@ -1,5 +1,5 @@
 ---
-title: Intel D945GCLF Desktop Board 
+title: Intel D945GCLF Desktop
 ---
 
 d945gclf: Doesn't boot at all, according to last report. D510MO is still in

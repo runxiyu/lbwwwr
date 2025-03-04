@@ -1,6 +1,5 @@
 ---
 title: Dell Latitude thermal throttling
-x-toc-enable: true
 ---
 
 On some Dell Latitude laptops, you may encounter random shutdowns on

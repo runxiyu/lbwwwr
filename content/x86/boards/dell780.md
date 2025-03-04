@@ -1,6 +1,5 @@
 ---
 title: Dell OptiPlex 780 MT/USFF
-x-toc-enable: true
 ---
 
 Libreboot is compatible with the Dell OptiPlex 780, of variants: MT and USFF.

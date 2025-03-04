@@ -1,6 +1,5 @@
 ---
 title: ThinkPad W541/W540 external flashing
-x-toc-enable: true
 ---
 
 NOTE: The same image for W541 also works on the W540, as the motherboard is
