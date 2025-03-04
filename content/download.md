@@ -1,5 +1,5 @@
 ---
-title: Download Libreboot
+title: Download
 toc: true
 ---
 
