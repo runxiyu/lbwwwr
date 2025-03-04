@@ -5,7 +5,7 @@
 		<li {{ if eq $currentPage . }}class="nav-current"{{ end }}>
 			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
 		</li>
-		{{ if .Pages }}
+		{{ if and .Pages $isCurrentOrAncestor }}
 			{{ partial "recursive_nav.html" (dict "currentPage" $currentPage "pages" .Pages) }}
 		{{ end }}
 	{{ end }}
