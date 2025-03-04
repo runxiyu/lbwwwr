@@ -1,5 +1,5 @@
 ---
-title: Project Contributors
+title: Contributors
 toc: true
 ---
 

@@ -51,6 +51,10 @@ a:link, a:visited {
 	color: var(--link-color);
 }
 
+.sidebar-dir-slash {
+	color: var(--text-decoration-color);
+}
+
 pre, code {
 	font-family: "Inconsolata", "DejaVu Sans Mono", "Menlo", monospace;
 }

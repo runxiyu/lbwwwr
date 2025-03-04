@@ -3,7 +3,7 @@
 	{{ range .pages }}
 		{{ $isCurrentOrAncestor := or (eq $currentPage .) ($currentPage.IsDescendant .) }}
 		<li {{ if eq $currentPage . }}class="nav-current" id="sidebar-scroll-to-target"{{ end }}>
-			<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+			<a href="{{ .RelPermalink }}">{{ .Title }}{{ if not .IsPage }}<span class="sidebar-dir-slash">/</span>{{ end }}</a>
 		</li>
 		{{ if and .Pages $isCurrentOrAncestor }} {{/* TODO: Make the others expandable */}}
 			{{ partial "recursive_nav.html" (dict "currentPage" $currentPage "pages" .Pages) }}

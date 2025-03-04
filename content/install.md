@@ -1,5 +1,5 @@
 ---
-title: Installing Libreboot
+title: Install
 toc: true
 ---
 
