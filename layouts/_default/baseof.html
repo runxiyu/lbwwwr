@@ -17,7 +17,9 @@
 				<li>
 					<a href="/">Home</a>
 				</li>
-				{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Home.RegularPages) }}
+				{{ if or (eq .Site.Home .) (and (eq .Parent .Site.Home) .IsPage) }}
+					{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Home.RegularPages) }}
+				{{ end }}
 			</ul>
 			{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Sections) }}
 		</aside>
