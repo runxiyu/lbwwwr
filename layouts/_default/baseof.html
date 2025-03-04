@@ -10,29 +10,31 @@
 	</head>
 	<body>
 		<aside id="sidebar">
-			<a id="site-title" href="/">
-				{{ .Site.Title }}
-			</a>
-			<ul>
-				<li>
-					<a href="/">Home</a>
-				</li>
-				{{ if or (eq .Site.Home .) (and (eq .Parent .Site.Home) .IsPage) }}
-					{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Home.RegularPages) }}
+			<nav>
+				<a id="site-title" href="/">
+					{{ .Site.Title }}
+				</a>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					{{ if or (eq .Site.Home .) (and (eq .Parent .Site.Home) .IsPage) }}
+						{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Home.RegularPages) }}
+					{{ end }}
+				</ul>
+				{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Sections) }}
+			</nav>
+			<footer>
+				{{ block "footer" . }}
+				License: <a href="/license">GFDL v1.3</a> with a <a href="/disclaimer">disclaimer</a>
 				{{ end }}
-			</ul>
-			{{ partial "recursive_nav.html" (dict "currentPage" . "pages" .Site.Sections) }}
+			</footer>
 		</aside>
 		<div id="main-and-footer">
 			<main>
 			{{ block "main" . }}
 			{{ end }}
 			</main>
-			<footer>
-				{{ block "footer" . }}
-				Unless otherwise noted, all documentation is available under <a href="/license">the GNU Free Documentation License, version 1.3</a>. A <a href="/disclaimer">disclaimer</a> applies.
-				{{ end }}
-			</footer>
 		</div>
 		<script>
 document.getElementById('sidebar-scroll-to-target').scrollIntoView(true);

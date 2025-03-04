@@ -165,26 +165,6 @@ header a {
 	font-weight: bold;
 }
 
-nav#main-nav-bar {
-	margin-top: 0.5rem;
-	line-height: 1.5;
-}
-
-nav#main-nav-bar > ul {
-	list-style-type: none;
-	text-align: center;
-	margin: 0;
-	padding: 0;
-}
-
-nav#main-nav-bar > ul > li {
-	display: inline-block;
-}
-
-nav#main-nav-bar li:not(:last-child)::after {
-	content: "   ";
-}
-
 /* Table of Contents */
 #table-of-contents {
 	border-radius: var(--border-radius-small);
@@ -270,30 +250,30 @@ aside#sidebar {
 	line-height: 1.3;
 }
 
-aside#sidebar a:link,
-aside#sidebar a:visited {
+aside#sidebar > nav a:link,
+aside#sidebar > nav a:visited {
 	text-decoration: none;
 	color: var(--header-foreground-color);
 }
 
-aside#sidebar ul {
+aside#sidebar > nav ul {
 	padding-left: 1rem;
 }
 
-aside#sidebar > ul > li:not(first-child) {
+aside#sidebar > nav > ul > li:not(first-child) {
 	margin-top: 1rem;
 }
 
-aside#sidebar > ul {
+aside#sidebar > nav > ul {
 	padding-left: 0rem;
 	list-style: none;
 }
 
-aside#sidebar li + li {
+aside#sidebar > nav li + li {
 	margin-top: 0.2rem;
 }
 
-aside#sidebar ul li:first-child {
+aside#sidebar > nav ul li:first-child {
 	margin-top: 0.2rem;
 }
 
