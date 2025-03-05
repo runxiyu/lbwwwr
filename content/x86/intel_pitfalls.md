@@ -1,5 +1,5 @@
 ---
-title: Intel Pitfalls
+title: Intel pitfalls
 toc: true
 ---
 

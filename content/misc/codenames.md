@@ -1,5 +1,5 @@
 ---
-title: Product Codenames
+title: Board codenames
 ---
 
 TODO: this page could do with an update. More info, about more boards

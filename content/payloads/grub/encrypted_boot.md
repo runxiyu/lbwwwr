@@ -1,5 +1,5 @@
 ---
-title: Encrypted /boot via LUKS2 with Argon2id
+title: Encrypted /boot via LUKS2 with argon2id
 ---
 
 Full encryption for basic LUKS2 (with PBKDF or Argon2 key derivation) is

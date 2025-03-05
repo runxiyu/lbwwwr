@@ -1,5 +1,5 @@
 ---
-title: U-Boot payload (x86 specific)
+title: U-Boot payload for x86
 ---
 
 ## Introduction

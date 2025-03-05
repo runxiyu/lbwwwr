@@ -1,5 +1,5 @@
 ---
-title: AMD Pitfalls
+title: AMD pitfalls
 toc: true
 ---
 

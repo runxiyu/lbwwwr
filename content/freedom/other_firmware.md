@@ -1,5 +1,5 @@
 ---
-title: Firmware out of our Scope
+title: Firmware out of our scope
 toc: true
 ---
 

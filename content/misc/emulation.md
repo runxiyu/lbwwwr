@@ -1,5 +1,5 @@
 ---
-title: Building Libreboot for Emulation
+title: Building for emulation
 ---
 
 ## Introduction

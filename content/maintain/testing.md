@@ -1,5 +1,5 @@
 ---
-title: Apply to become board maintainer/tester for Libreboot
+title: Apply for board maintainer/tester
 ---
 
 This page is very new, and these guidelines/procedures will be revised over

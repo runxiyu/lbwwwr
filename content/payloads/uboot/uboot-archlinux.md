@@ -1,10 +1,10 @@
 ---
-title: Installing ArchLinuxARM on a Chromebook with U-Boot installed
+title: Installing Arch Linux ARM on a Chromebook with U-Boot installed
 ---
 
 ## Background
 
-ArchLinuxARM Latest (as of May 1st 2023) boots and can be installed successfully using libreboot 20230319 on a gru_bob chromebook.
+Arch Linux ARM Latest (as of May 1st 2023) boots and can be installed successfully using libreboot 20230319 on a gru_bob chromebook.
 
 The following process should theoretically be applicable to other U-Boot devices and GNU/Linux distributions, but the focus here is specifically on ArchLinuxARM.
 

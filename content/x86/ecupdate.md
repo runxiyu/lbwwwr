@@ -1,5 +1,5 @@
 ---
-title: EC Firmware Updates
+title: EC firmware updates
 ---
 
 EC firmware is usually not on the main boot flash and usually could only be

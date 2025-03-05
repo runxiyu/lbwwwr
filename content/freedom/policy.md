@@ -1,5 +1,5 @@
 ---
-title: Binary Blob Reduction Policy
+title: Binary blob reduction policy
 toc: true
 ---
 

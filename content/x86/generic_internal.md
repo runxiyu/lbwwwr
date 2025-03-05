@@ -1,5 +1,5 @@
 ---
-title: Generic Internal Flashing Instructions
+title: Generic internal flashing
 toc: true
 ---
 

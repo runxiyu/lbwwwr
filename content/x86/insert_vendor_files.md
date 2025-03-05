@@ -1,5 +1,5 @@
 ---
-title: Insert Vendor Files not Included in Release Images
+title: Insert vendor files
 toc: true
 ---
 

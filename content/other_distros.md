@@ -1,5 +1,5 @@
 ---
-title: Other Libre Firmware Projects
+title: Other Libre Firmware projects
 toc: true
 ---
 

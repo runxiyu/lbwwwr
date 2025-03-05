@@ -1,5 +1,5 @@
 ---
-title: lbmk coding style and design
+title: lbmk code style and design
 ---
 
 For context, please also read the main [lbmk maintenance manual](../).

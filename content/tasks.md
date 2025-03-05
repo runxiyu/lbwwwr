@@ -1,5 +1,5 @@
 ---
-title: Misc Tasks
+title: Misc tasks
 draft: true
 ---
 

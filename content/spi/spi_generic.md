@@ -1,5 +1,5 @@
 ---
-title: Le Potato SPI Flashing Guide
+title: SPI flashing with Le Potato
 toc: true
 ---
 

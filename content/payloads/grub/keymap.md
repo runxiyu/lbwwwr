@@ -1,5 +1,5 @@
 ---
-title: GRUB Keyboard Layouts
+title: GRUB keyboard layouts
 ---
 
 First, [learn how to build libreboot ROM images](../../build/).

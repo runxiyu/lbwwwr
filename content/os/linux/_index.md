@@ -1,5 +1,5 @@
 ---
-title: Linux Guide
+title: Linux guide
 toc: true
 ---
 
