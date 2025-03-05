@@ -303,3 +303,8 @@ main:not(.wide) {
 .nav-current {
 	font-weight: bold;
 }
+
+.nav-current::after {
+	content: " ←";
+	color: var(--dim-text-color);
+}
