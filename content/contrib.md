@@ -3,9 +3,6 @@ title: Contribute
 toc: true
 ---
 
-The [tasks page](../tasks/) has a list of tasks that we would be happy to accept
-contributions from.
-
 Please see the [lbmk system maintenance manual](../maintain/).
 
 ## Repositories

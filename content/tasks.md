@@ -1,6 +1,6 @@
 ---
 title: Misc Tasks
-toc: true
+draft: true
 ---
 
 TODO: Move all of this to the issue tracker
