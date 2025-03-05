@@ -1,3 +1,3 @@
 ---
-title: Misc information
+title: UNCATEGORIZED
 ---

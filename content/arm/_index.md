@@ -1,5 +1,5 @@
 ---
-title: Chromebook flashing instructions
+title: ARM Chromebooks
 toc: true
 ---
 

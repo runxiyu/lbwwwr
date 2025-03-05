@@ -1,5 +1,5 @@
 ---
-title: Building ROM Images from Source
+title: Building from source
 toc: true
 ---
 

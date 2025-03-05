@@ -1,3 +1,3 @@
 ---
-title: Operating system information
+title: Operating systems
 ---

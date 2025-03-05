@@ -1,5 +1,5 @@
 ---
-title: Maintaining lbmk
+title: Maintainance manual
 ---
 
 In addition to this manual, you should also refer to [porting.md](porting)

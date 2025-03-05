@@ -1,5 +1,5 @@
 ---
-title: External Flashing via SPI
+title: External SPI Flashing
 toc: true
 ---
 

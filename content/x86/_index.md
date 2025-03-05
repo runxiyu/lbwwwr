@@ -1,3 +1,3 @@
 ---
-title: x86
+title: X86
 ---
