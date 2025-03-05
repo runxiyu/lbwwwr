@@ -1,5 +1,6 @@
 ---
 title: License
+toc: true
 ---
 
 This documentation is licensed under the GNU Free Documentation License,
