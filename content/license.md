@@ -2,7 +2,42 @@
 title: License
 ---
 
-**GNU Free Documentation License**
+This documentation is licensed under the GNU Free Documentation License,
+version 1.3.
+
+This does not apply to the code of the build system.
+
+## Disclaimer
+
+Pursuant to section 1 paragraph 11 of the license, the "Warranty Disclaimers"
+for this documentation are defined as the following:
+
+> There is no warranty for this documentation, to the extent permitted by
+> applicable law. Except when otherwise stated in writing the copyright holders
+> and/or other parties provide this documentation “as is” without warranty of any
+> kind, either expressed or implied, including, but not limited to, the implied
+> warranties of merchantability and fitness for a particular purpose. The entire
+> risk as to the quality and accuracy of this documentation is with you. Should
+> this documentation prove defective, you assume the cost of all necessary
+> servicing, repair, or correction.
+> 
+> In no event unless required by applicable law or agreed to in writing will any
+> copyright holder, or any other party who modifies and/or distributes the
+> documentation, be liable to you for damages, including any general, special,
+> incidental or consequential damages arising out of the use or inability to use
+> this documentation (including but not limited to loss of computer functionality
+> or any other losses sustained by you or third parties or a failure of this
+> documentation to be accurate), even if such holder or other party has been
+> advised of the possibility of such damages.
+> 
+> If the disclaimer of warranty and limitation of liability provided above cannot
+> be given local legal effect according to their terms, reviewing courts shall
+> apply local law that most closely approximates an absolute waiver of all civil
+> liability in connection with this documentation, unless a warranty or
+> assumption of liability accompanies a copy of this documentation in return for
+> a fee.
+
+## GNU Free Documentation License
 
 Version 1.3, 3 November 2008
 
@@ -12,7 +47,7 @@ Inc. <https://fsf.org/>
 Everyone is permitted to copy and distribute verbatim copies of this
 license document, but changing it is not allowed.
 
-## 0. Preamble
+### 0. Preamble
 
 The purpose of this License is to make a manual, textbook, or other
 functional and useful document "free" in the sense of freedom: to
@@ -35,7 +70,7 @@ can be used for any textual work, regardless of subject matter or
 whether it is published as a printed book. We recommend this License
 principally for works whose purpose is instruction or reference.
 
-## 1. Applicability and definitions
+### 1. Applicability and definitions
 
 This License applies to any manual or other work, in any medium, that
 contains a notice placed by the copyright holder saying it can be
@@ -124,7 +159,7 @@ License, but only as regards disclaiming warranties: any other
 implication that these Warranty Disclaimers may have is void and has
 no effect on the meaning of this License.
 
-## 2. Verbatim copying
+### 2. Verbatim copying
 
 You may copy and distribute the Document in any medium, either
 commercially or noncommercially, provided that this License, the
@@ -139,7 +174,7 @@ number of copies you must also follow the conditions in section 3.
 You may also lend copies, under the same conditions stated above, and
 you may publicly display copies.
 
-## 3. Copying in quantity
+### 3. Copying in quantity
 
 If you publish printed copies (or copies in media that commonly have
 printed covers) of the Document, numbering more than 100, and the
@@ -177,7 +212,7 @@ Document well before redistributing any large number of copies, to
 give them a chance to provide you with an updated version of the
 Document.
 
-## 4. Modifications
+### 4. Modifications
 
 You may copy and distribute a Modified Version of the Document under
 the conditions of sections 2 and 3 above, provided that you release
@@ -266,7 +301,7 @@ The author(s) and publisher(s) of the Document do not by this License
 give permission to use their names for publicity for or to assert or
 imply endorsement of any Modified Version.
 
-## 5. Combining documents
+### 5. Combining documents
 
 You may combine the Document with other documents released under this
 License, under the terms defined in section 4 above for modified
@@ -290,7 +325,7 @@ in the various original documents, forming one section Entitled
 and any sections Entitled "Dedications". You must delete all sections
 Entitled "Endorsements".
 
-## 6. Collections of documents
+### 6. Collections of documents
 
 You may make a collection consisting of the Document and other
 documents released under this License, and replace the individual
@@ -305,7 +340,7 @@ copy of this License into the extracted document, and follow this
 License in all other respects regarding verbatim copying of that
 document.
 
-## 7. Aggregation with independent works
+### 7. Aggregation with independent works
 
 A compilation of the Document or its derivatives with other separate
 and independent documents or works, in or on a volume of a storage or
@@ -324,7 +359,7 @@ electronic equivalent of covers if the Document is in electronic form.
 Otherwise they must appear on printed covers that bracket the whole
 aggregate.
 
-## 8. Translation
+### 8. Translation
 
 Translation is considered a kind of modification, so you may
 distribute translations of the Document under the terms of section 4.
@@ -344,7 +379,7 @@ If a section in the Document is Entitled "Acknowledgements",
 its Title (section 1) will typically require changing the actual
 title.
 
-## 9. Termination
+### 9. Termination
 
 You may not copy, modify, sublicense, or distribute the Document
 except as expressly provided under this License. Any attempt otherwise
@@ -371,7 +406,7 @@ this License. If your rights have been terminated and not permanently
 reinstated, receipt of a copy of some or all of the same material does
 not give you any rights to use it.
 
-## 10. Future revisions of this license
+### 10. Future revisions of this license
 
 The Free Software Foundation may publish new, revised versions of the
 GNU Free Documentation License from time to time. Such new versions
@@ -391,7 +426,7 @@ that a proxy can decide which future versions of this License can be
 used, that proxy's public statement of acceptance of a version
 permanently authorizes you to choose that version for the Document.
 
-## 11. Relicensing
+### 11. Relicensing
 
 "Massive Multiauthor Collaboration Site" (or "MMC Site") means any
 World Wide Web server that publishes copyrightable works and also
@@ -419,25 +454,29 @@ The operator of an MMC Site may republish an MMC contained in the site
 under CC-BY-SA on the same site at any time before August 1, 2009,
 provided the MMC is eligible for relicensing.
 
-## Addendum: How to use this License for your documents
+### Addendum: How to use this License for your documents
 
 To use this License in a document you have written, include a copy of
 the License in the document and put the following copyright and
 license notices just after the title page:
 
-        Copyright (C)  YEAR  YOUR NAME.
-        Permission is granted to copy, distribute and/or modify this document
-        under the terms of the GNU Free Documentation License, Version 1.3
-        or any later version published by the Free Software Foundation;
-        with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-        A copy of the license is included in the section entitled "GNU
-        Free Documentation License".
+```
+Copyright (C)  YEAR  YOUR NAME.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license is included in the section entitled "GNU
+Free Documentation License".
+```
 
 If you have Invariant Sections, Front-Cover Texts and Back-Cover
 Texts, replace the "with … Texts." line with this:
 
-        with the Invariant Sections being LIST THEIR TITLES, with the
-        Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.
+```
+with the Invariant Sections being LIST THEIR TITLES, with the
+Front-Cover Texts being LIST, and with the Back-Cover Texts being LIST.
+```
 
 If you have Invariant Sections without Cover Texts, or some other
 combination of the three, merge those two alternatives to suit the
