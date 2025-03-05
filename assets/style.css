@@ -312,3 +312,17 @@ main:not(.wide) {
 nav#TableOfContents ul {
 	padding-left: 1.2rem;
 }
+
+ol.paren-ol {
+    counter-reset: list;
+}
+ol.paren-ol > li {
+    list-style: none;
+    position: relative;
+}
+ol.paren-ol > li:before {
+    counter-increment: list;
+    content: "(" counter(list, lower-alpha) ") ";
+    position: absolute;
+    left: -2em;
+}
