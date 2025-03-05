@@ -1,5 +1,5 @@
 ---
-title: Building for emulation
+title: Emulation
 ---
 
 ## Introduction

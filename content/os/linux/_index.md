@@ -1,5 +1,5 @@
 ---
-title: Linux guide
+title: Linux-based systems
 toc: true
 ---
 

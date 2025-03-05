@@ -1,5 +1,5 @@
 ---
-title: BSD operating systems
+title: BSD systems
 toc: true
 ---
 
