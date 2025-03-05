@@ -308,3 +308,7 @@ main:not(.wide) {
 	content: " ←";
 	color: var(--dim-text-color);
 }
+
+nav#TableOfContents ul {
+	padding-left: 1.2rem;
+}
