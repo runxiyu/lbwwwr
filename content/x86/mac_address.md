@@ -3,8 +3,7 @@ title: Changing the MAC address
 toc: true
 ---
 
-Introduction (GM45+e1000)
-=========================
+## Introduction (GM45+e1000)
 
 This section is applicable to all libreboot-supported laptops with the
 mobile 4 series chipset (as shown in `$ lspci`)
@@ -34,8 +33,7 @@ operating system's boot scripts.
 In either case, it is a good idea to write down the address that your
 computer originally had.
 
-Obtaining the existing MAC address
-==================================
+## Obtaining the existing MAC address
 
 The existing MAC address may be obtained by the following methods:
 
@@ -64,8 +62,7 @@ The existing MAC address may be obtained by the following methods:
     will be incorrect if the motherboard was changed and the stickers were not
     updated.
 
-Changing the MAC address in the operating system
-================================================
+## Changing the MAC address in the operating system
 
 There are three portable ways of doing so:
 
@@ -90,8 +87,7 @@ init scripts or you can use your operating system's own networking
 configuration. Refer to your operating system's documentation for
 how to do this.
 
-Changing the MAC address (e.g. X230/T440p)
-==========================================
+## Changing the MAC address (e.g. X230/T440p)
 
 See [nvmutil documentation](../install/nvmutil)
 

@@ -2,8 +2,7 @@
 title: U-Boot payload (x86 specific)
 ---
 
-Introduction
-============
+## Introduction
 
 <img tabindex=1 class="r" src="https://av.vimuser.org/uboot.png" /><span class="f"><img src="https://av.vimuser.org/uboot.png" /></span>
 
@@ -24,8 +23,7 @@ payload. It has several boot methods but the most interesting (in an x86
 context) is UEFI. U-Boot provides a very sensible UEFI implementation that can
 reliably boot many Linux and BSD systems.
 
-Availability
-------------
+### Availability
 
 Do this in lbmk.git (Libreboot's build system) to check whether your board has
 U-Boot enabled:
@@ -47,8 +45,7 @@ more like an official Libreboot bootloader.
 
 [Here is an example of what it looks like on the boot menu](https://mas.to/@libreleah/113596262378713418)
 
-Errors
-------
+### Errors
 
 If you see error `-25` in the bootflow menu, it's because there's nothing
 installed that i t can use e.g. EFI bootloader such as GRUB.
@@ -57,8 +54,7 @@ If you see error `-2` it's likely that you have tried to boot a USB drive
 automatically; sometimes you have to do it manually (see the section below
 about using the bootflow command manually, via `bootflow select`).
 
-Boot Linux/BSD installer (USB)
----------------------------
+### Boot Linux/BSD installer (USB)
 
 Just stick your formatted USB stick in. U-Boot should detect it. Sometimes some
 USB flash drives are broken, because many of them violate specifications and
@@ -79,19 +75,16 @@ After selecting the device, you can do:
 
 	bootflow boot
 
-Booting installed system
-------------------------
+### Booting installed system
 
 It should just work. If all is well, it'll show the bootflow menu. Simply
 select your device. If you see error, perhaps try:
 
 	bootefi bootmgr
 
-Tested operating systems
-========================
+## Tested operating systems
 
-Linux/BSD
----------
+### Linux/BSD
 
 Arch Linux, Debian Linux and OpenBSD have been tested.
 
@@ -105,15 +98,13 @@ bootloader in the installed system).
 EFI-based GRUB menus like in the Debian installer seemed to work just fine,
 that is: setups that use the EFI framebuffer instead of a text console.
 
-Windows
--------
+### Windows
 
 Windows was tested, and doesn't work yet. Simon Glass maintains the x86
 coreboot payload, and has informed me that he still has some work to do
 there.
 
-SecureBoot
-==========
+## SecureBoot
 
 Supported by U-Boot, though U-Boot does not currently have a robust way of
 storing EFI variables, and Libreboot disables SecureBoot by default. However,
@@ -127,8 +118,7 @@ UEFI SecureBoot with a Linux UKI could achieve similar results in a security
 sense to Libreboot's GRUB hardening setup, though the latter is more flexible,
 albeit not widely used by the mainstream, but it does work (I use it myself!).
 
-ThinkPad X60/T60
-================
+## ThinkPad X60/T60
 
 The 32-bit U-Boot payload is only useful for 32-bit setups, and 32-bit UEFI
 isn't really that common on x86; the 64-bit U-Boot payload is much more useful,
@@ -164,8 +154,7 @@ Using a full UEFI setup on such old hardware is quite novel and might be
 interesting in the future, as more distros stop supporting BIOS-based methods,
 or where the latter may become untested in the future.
 
-Bugs
-====
+## Bugs
 
 Limited testing, at least as of 6 December 2024, but some issues that appeared
 included:
@@ -184,8 +173,7 @@ Haswell machines mostly work OK (with a few bugs), some Kaby Lake machines work
 but some don't very well; the GM45 machines work well, e.g. a ThinkPad X200 was
 tested.
 
-Mitigating instability
-=======================
+## Mitigating instability
 
 U-Boot is not a primary payload on any board where it's enabled. It's instead
 chainloaded from SeaBIOS on 64-bit x86, and from GRUB on 32-bit x86. You select

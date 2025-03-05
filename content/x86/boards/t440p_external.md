@@ -2,8 +2,7 @@
 title: ThinkPad T440p external flashing
 ---
 
-Introduction
-============
+## Introduction
 
 Read the [Ivybridge/Haswell common guide](ivy_has_common) if you want more information.
 All of the following instructions assume that you've cloned lbmk and are operating from the
@@ -14,8 +13,7 @@ root of that project. To do so, run
 
 You can now follow the rest of the instructions.
 
-Preparing a release Rom
------------------------
+### Preparing a release Rom
 
 **Please follow this prior to flashing, or you may brick your machine.**
 
@@ -24,8 +22,7 @@ use this guide to change the built-in MAC address for your Intel Gigabit
 Ethernet device; doing so is advisable, because otherwise you will have a
 default, generic MAC address.
 
-Splitting The Rom
------------------
+### Splitting The Rom
 
 You can use `dd` to easily split your rom into the two separate portions for
 external flashing.
@@ -38,8 +35,7 @@ Don't worry about knowing which chip is which on a standard setup; flashprog wil
 image size is incorrect for the chip you're flashing.
 
 
-Disassembly
------------
+### Disassembly
 
 Start by removing the back cover screws and the main battery.\
 <img tabindex=1 src="https://av.libreboot.org/board/t440p/t440p_back.jpg" /><span class="f"><img src="https://av.libreboot.org/board/t440p/t440p_back_orig.jpg" /></span>
@@ -65,16 +61,14 @@ You should now be able to see the two flash chips near the RAM.\
 
 You can now proceed to [flashing](/docs/install/spi.html) this machine.
 
-`thinkpad_acpi` issues {#thinkpad-acpi}
----------------------------------------
+### `thinkpad_acpi` issues {#thinkpad-acpi}
 
 It has been reported by that `thinkpad_acpi` does not load correctly on the T440p.
 
 If you encounter this, check [this page](../../faq.md#thinkpad-acpi)
 for details as to how to fix this.
 
-Errata
-======
+## Errata
 
 NOTE: As of Libreboot releases from May 2024 onward, the Intel MRC is no longer
 included for Haswell; MRC is a blob for raminit, but we now provide libre

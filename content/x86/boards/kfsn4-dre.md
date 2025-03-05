@@ -58,15 +58,13 @@ for building a high-powered workstation. Powered by libreboot.
 Flashing instructions can be found at
 [../install/\#flashprog](../install/)
 
-Form factor {#formfactor}
-===========
+## Form factor {#formfactor}
 
 These boards use the SSI EEB 3.61 form factor; make sure that your case
 supports this. This form factor is similar to E-ATX in that the size is
 identical, but the position of the screws are different.
 
-Flash chips {#flashchips}
-===========
+## Flash chips {#flashchips}
 
 These boards use LPC flash (not SPI), in a PLCC socket. The default
 flash size 1MiB (8Mbits), and can be upgraded to 2MiB (16Mbits).
@@ -77,19 +75,16 @@ example of a 2MiB (16Mbits) chip, which might work. It is believed that
 *DO NOT hot-swap the chip with your bare hands. Use a PLCC [chip
 extractor](http://www.coreboot.org/Developer_Manual/Tools#Chip_removal_tools). These can be found online.*
 
-Native graphics initialization {#graphics}
-==============================
+## Native graphics initialization {#graphics}
 
 Native graphics initialization exists (XGI Z9s) for this board.
 Framebuffer- and text-mode both work. A serial port is also available.
 
-Memory
-======
+## Memory
 
 DDR2 533/667 Registered ECC. 16 slots. Total capacity up to 64GiB.
 
-Hex-core CPUs {#hexcore}
-=============
+## Hex-core CPUs {#hexcore}
 
 PCB revision 1.05G is the latest version of this board and the best one
 (the revision number is be printed on the board), if you want to use
@@ -103,8 +98,7 @@ listed.
 
 If you are running a Hex-Core CPU on any board version, please contact us.
 
-Board configurations {#configurations}
-==============
+## Board configurations {#configurations}
 There are 7 different configurations of this board: "standard", 2S, iKVM,
 iKVM/IST, SAS, SAS/iKVM and SAS/iKVM/IST.
 
@@ -122,8 +116,7 @@ Note: the SAS functionality is **not supported** by libreboot.
 The IST versions with PCB revision 1.05G are the ones who are believed to
 support the six core Opteron Istanbul processors (2400 and 8400 series).
 
-Current issues {#issues}
-==============
+## Current issues {#issues}
 
 -   There seems to be a 30 second bootblock delay (observed by
     tpearson); the system otherwise boots and works as expected. See
@@ -149,8 +142,7 @@ Current issues {#issues}
     a CD/DVD reader in order to boot a copy of the installer of your OS, since
     the USB booting doesn't work.
 
-Other information
-=================
+## Other information
 
 [specifications](https://web.archive.org/web/20181212180051/http://ftp.tekwind.co.jp/pub/asustw/mb/Socket%20F/KFSN4-DRE/Manual/e3335_kfsn4-dre.pdf)
 

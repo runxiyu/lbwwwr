@@ -3,8 +3,7 @@ title: Ivybridge internal flashing
 x-toc-enable: true
 ---
 
-Ch1p's guide
-============
+## Ch1p's guide
 
 This page tells you how to flash an ivybridge ThinkPad with Libreboot,
 internally, when it has the Lenovo firmware on it. It was written independently
@@ -31,11 +30,9 @@ Date:   Thu Nov 21 21:47:31 2019 +0300
 Anyway, follow ch1p's guide or this one. Ch1p was on Libreboot IRC and linked
 the above guide, so it has been added here to honour him.
 
-Introduction
-============
+## Introduction
 
-External flashing still recommended
------------------------------------
+### External flashing still recommended
 
 Internal flashing is quite complex, from a software and hardware
 perspective, when switching from Lenovo firmware to Libreboot.
@@ -52,8 +49,7 @@ or just a dead ThinkPad. Proceed at your own risk!
 
 If you prefer external flashing, see: [external flashing](x230_external)
 
-Internal flashing from vendor firmware (ThinkPads only)
-----------------------------------------
+### Internal flashing from vendor firmware (ThinkPads only)
 
 IVYBRIDGE ONLY:
 

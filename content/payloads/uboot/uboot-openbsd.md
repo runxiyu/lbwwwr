@@ -2,8 +2,7 @@
 title: OpenBSD Install Attempt on a Samsung Chromebook Plus
 ---
 
-System Configuration
-====================
+## System Configuration
 
 Hardware: Samsung Chromebook Plus XE513C24 (gru_kevin)
 
@@ -11,8 +10,7 @@ Libreboot: 2023-04-23
 
 Operating System: OpenBSD 7.3
 
-Install Media Preparation
-=========================
+## Install Media Preparation
 
 Follow the OpenBSD arm64 installation instructions in the link below:
 
@@ -24,8 +22,7 @@ with the appropriate device path on your system.
 # dd if=install73.img of=/dev/sdcard_device bs=1M status=progress; sync
 ```
 
-Installation Attempt
-====================
+## Installation Attempt
 
 1. Insert the micro sdcard into the slot on the Chromebook.
 2. Power on the Chromebook.

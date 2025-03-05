@@ -4,8 +4,7 @@ title: ASUS KGPE-D16 Server/Workstation
 
 TODO: OLD page. TODO: check that all the info is still valid.
 
-Introduction
-============
+## Introduction
 
 This is a server board using AMD hardware (Fam10h *and Fam15h* CPUs
 available). It can also be used for building a high-powered workstation.
@@ -24,25 +23,21 @@ currently installed. If you already have libreboot, by default it is
 possible to re-flash using software running in Linux on the
 KGPE-D16, without using external hardware.
 
-CPU compatibility
-=================
+## CPU compatibility
 
 Opteron 62xx and 63xx CPUs work just fine.
 
-Board status (compatibility) {#boardstatus}
-============================
+## Board status (compatibility) {#boardstatus}
 
 [Raptor Engineering Inc's page](ttps://raptorengineeringinc.com/coreboot/kgpe-d16-status.php)
 
-Form factor {#formfactor}
-===========
+## Form factor {#formfactor}
 
 These boards use the SSI EEB 3.61 form factor; make sure that your case
 supports this. This form factor is similar to E-ATX in that the size is
 identical, but the position of the screws are different.
 
-IPMI iKVM module add-on {#ipmi}
-=======================
+## IPMI iKVM module add-on {#ipmi}
 
 Don't use it. It uses proprietary firmware and adds a backdoor (remote
 out-of-band management chip, similar to the [Intel Management
@@ -51,8 +46,7 @@ unsigned (possibly to replace) and physically separate from the
 motherboard since it's on the add-on module, which you don't have to
 install.
 
-Flash chips {#flashchips}
-===========
+## Flash chips {#flashchips}
 
 2MiB flash chips are included by default, on these boards. It's on a
 P-DIP 8 slot (SPI chip). The flash chip can be upgraded to higher sizes:
@@ -70,14 +64,12 @@ These can be found online.*
 This guide shows how to flash the chip:\
 [25xx NOR flashing guide](../install/spi)
 
-Native graphics initialization {#graphics}
-==============================
+## Native graphics initialization {#graphics}
 
 Only text-mode is known to work, but linux(kernel) can initialize the
 framebuffer display (if it has KMS - kernel mode setting).
 
-Current issues {#issues}
-==============
+## Current issues {#issues}
 
 -   LRDIMM memory modules are currently incompatible
 	(IT MAY WORK NOWADAYS, TODO TEST)
@@ -102,12 +94,11 @@ Current issues {#issues}
     the very least, it's not a major inconvenience to not have it).
 -   Graphics: only text-mode works. See [\#graphics](#graphics)
 
-Hardware specifications {#specifications}
------------------------
+### Hardware specifications {#specifications}
 
 The information here is adapted, from the ASUS website.
 
-### Processor / system bus
+#### Processor / system bus
 
 -   2 CPU sockets (G34 compatible)
 -   HyperTransport™ Technology 3.0
@@ -120,12 +111,12 @@ The information here is adapted, from the ASUS website.
         libreboot.
 -   6.4 GT/s per link (triple link)
 
-### Core logic
+#### Core logic
 
 -   AMD SR5690
 -   AMD SP5100
 
-### Memory compatibility (with libreboot)
+#### Memory compatibility (with libreboot)
 
 -   *Total Slots:* 16 (4-channel per CPU, 8 DIMM per CPU), ECC
 -   *Capacity:* Maximum up to 256GB RDIMM (Tested max 128GB)
@@ -136,7 +127,7 @@ The information here is adapted, from the ASUS website.
     -   16GB, 8GB, 4GB, 3GB, 2GB, 1GB RDIMM
     -   8GB, 4GB, 2GB, 1GB UDIMM
 
-### Expansion slots
+#### Expansion slots
 
 -   *Total slot:* 6
 -   *Slot Location 1:* PCI 32bit/33MHz
@@ -150,16 +141,16 @@ The information here is adapted, from the ASUS website.
 -   *Additional Slot 1:* PIKE slot (for SAS drives. See notes above)
 -   Follow SSI Location\#
 
-### Form factor {#form-factor}
+#### Form factor {#form-factor}
 
 -   SSI EEB 3.61 (12"x13")
 
-### ASUS features
+#### ASUS features
 
 -   Fan Speed Control
 -   Rack Ready (Rack and Pedestal dual use)
 
-### Storage
+#### Storage
 
 -   *SATA controller:*
     -   AMD SP5100
@@ -167,15 +158,15 @@ The information here is adapted, from the ASUS website.
 -   *SAS/SATA Controller:*
     -   ASUS PIKE2008 3Gbps 8-port SAS card included
 
-### Networking
+#### Networking
 
 -   2 x Intel® 82574L + 1 x Mgmt LAN
 
-### Graphics
+#### Graphics
 
 -   Aspeed AST2050 with 8MB VRAM
 
-### On board I/O
+#### On board I/O
 
 -   1 x PSU Power Connector (24-pin SSI power connector + 8-pin SSI
     12V + 8-pin SSI 12V power connector)
@@ -188,7 +179,7 @@ The information here is adapted, from the ASUS website.
 -   1 x TPM header
 -   1 x PS/2 KB/MS port
 
-### Back I/O ports
+#### Back I/O ports
 
 -   1 x External Serial Port
 -   2 x External USB Port
@@ -196,18 +187,18 @@ The information here is adapted, from the ASUS website.
 -   2 x RJ-45
 -   1 x PS/2 KB/Mouse
 
-### Environment
+#### Environment
 
 -   *Operation temperature:* 10C \~ 35C
 -   *Non operation temperature:* -40C \~ 70C
 -   *Non operation humidity:* 20% \~ 90% ( Non condensing)
 
-### Monitoring
+#### Monitoring
 
 -   CPU temperatures
 -   Fan speed (RPM)
 
-### Note:
+#### Note:
 
 -   DDR3 1600 can only be supported with AMD Opteron 6300/6200 series
     processor

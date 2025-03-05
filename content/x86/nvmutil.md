@@ -15,8 +15,7 @@ inserting vendor files, which you can use to change the MAC address. See:
 You can use the documentation below, if you wish to use `nvmutil` manually.
 Continue reading...
 
-Introduction
-============
+## Introduction
 
 This is the manual for `nvmutil`, included in the Libreboot,
 build system (lbmk) under `util/nvmutil/`. This program lets you modify
@@ -47,8 +46,7 @@ you how to dump or otherwise acquire that file; the second
 half of this README then tells you how to operate on it,
 using `nvmutil`.
 
-Automatic MAC address changer
------------------------------
+### Automatic MAC address changer
 
 **Please [install build dependencies](../build/) before you do this.**
 
@@ -79,14 +77,12 @@ The `restore` option restores the original one. The command works by using a
 reference GbE image file present in Libreboot's build system, for the given
 motherboard.
 
-How to download newer versions
-==============================
+## How to download newer versions
 
 Simply pull down the latest changes in `lbmk.git`. The `nvmutil`
 software is now part of lbmk, since 17 November 2022.
 
-Context
-=======
+## Context
 
 On many Intel systems with an IFD (Intel Flash Descriptor), the
 Intel PHY (Gigabit Ethernet) stores its configuration, binary
@@ -117,8 +113,7 @@ This 4KB region is then repeated, to make an 8KB region in
 flash, known as the *GbE region*. In `nvmutil`, the first part
 is referred to as *part 0* and the second part as *part 1*.
 
-Known compatible PHYs
----------------------
+### Known compatible PHYs
 
 TODO: write a full list her ofe what actual PHYs are known to work.
 
@@ -130,8 +125,7 @@ the user does not inadvertently use it on incompatible
 files; it is assumed that intel would later change the
 file size and/or checksum value and/or checksum location.
 
-How to obtain the GbE file
-==========================
+## How to obtain the GbE file
 
 The chip containing your BIOS/UEFI firmware (or coreboot) has
 it, if you have an Intel PHY for gigabit ethernet.
@@ -141,8 +135,7 @@ containing your NIC's configuration. This is the part that
 many people will struggle with, so we will dedicated an
 entire next section to it:
 
-Use flashprog
-------------
+### Use flashprog
 
 If you wish to operate on the GbE section that's already
 flashed, you should *dump* the current full ROM image.
@@ -184,8 +177,7 @@ option should be changed accordingly. Read flashprog
 documentation, and make sure you have everything
 properly configured.
 
-Use ifdtool
------------
+### Use ifdtool
 
 NOTE: This has only been tested on systems that use IFDv1
 (Intel Flash Descriptor, version 1). This distinction, between
@@ -296,8 +288,7 @@ containing your bootblock; GbE is probably located in
 SPI1. You should adjust the above parameters, according
 to your configuration.
 
-How to compile source code
-==========================
+## How to compile source code
 
 The nvmutil source code is located under `util/nvmutil/` in the
 lbmk repository. A makefile is included there, for you to build an
@@ -322,8 +313,7 @@ The `nvmutil` software has been build-tested on `Clang`, `GCC`
 and `tcc`. Only standard library functions (plus `err.h`) are
 used, so you don't need any extra libraries.
 
-How to compile it
------------------
+### How to compile it
 
 First, ensure that the current working directory is your
 copy of the nvmutil source code!
@@ -338,8 +328,7 @@ whatever is in your `$PATH` for userspace programs).
 
 TODO: Add `make install` to the Makefile, portably.
 
-How to use nvmutil
-==================
+## How to use nvmutil
 
 You run it, passing as argument the path to a file, and you run
 commands on that file. This section will tell you how to
@@ -351,8 +340,7 @@ done that, you could still run it in cwd for instance:
 
 	./nvm bla bla bla
 
-Exit status
------------
+### Exit status
 
 The `nvmutil` program uses `errno` extensively. The best error
 handling is done this way, the Unix way. Error handling is extremely
@@ -378,8 +366,7 @@ of size *8KB*.
 Additional rules regarding exit status shall apply, depending on
 what command you use. Commands are documented in the following sections:
 
-Change MAC address
-------------------
+### Change MAC address
 
 The `nvm` program lets you change the MAC address. It sets
 a valid checksum, after changing the MAC address. This program
@@ -444,8 +431,7 @@ corrected if you use the `setchecksum` command
 in `nvmutil`. It is common for vendor gbe files to contain
 one valid part and one invalid part, per checksum rules.
 
-Verify checksums (and show MAC addresses)
------------------------------------------
+### Verify checksums (and show MAC addresses)
 
 This command *only* requires *read* access on files.
 
@@ -461,8 +447,7 @@ NOTE: This will exit with zero status if at least one part
 contains a valid checksum. If both parts are invalid, nvmutil
 will exit with non-zero status.
 
-Copy part
----------
+### Copy part
 
 This command requires read *and* write access on files.
 
@@ -482,8 +467,7 @@ will be performed, and nvmutil will exit with non-zero status.
 Otherwise, it will (if all other conditions are met) exit with
 zero status.
 
-Swap parts
-----------
+### Swap parts
 
 This command requires read *and* write access on files.
 
@@ -502,8 +486,7 @@ If *at least one* part is valid, nvmutil will return
 with zero exit status. If both parts are invalid, it will
 return non-zero.
 
-Set valid checksum
-------------------
+### Set valid checksum
 
 This command requires read *and* write access on files.
 
@@ -523,8 +506,7 @@ set the checksum. There is no feasible way to guard against
 use on the wrong file, unlike with the other commands. Please
 make SURE you're running this on the correct file!*
 
-Set invalid checksum
---------------------
+### Set invalid checksum
 
 This command requires read *and* write access on files.
 
@@ -553,8 +535,7 @@ The Linux kernel's `e1000` driver will refuse to initialise
 Intel gigabit NICs that don't have a valid checksum. This
 is software-defined, and not enforced by the hardware.
 
-History
-=======
+## History
 
 A historical change log
 is included at [docs/install/nvmutilimport.md](nvmutilimport),

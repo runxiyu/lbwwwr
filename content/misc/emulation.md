@@ -2,8 +2,7 @@
 title: Building Libreboot for Emulation
 ---
 
-Introduction
-============
+## Introduction
 
 Libreboot supports building for qemu as a target board.
 The resulting rom can then be tested using qemu.
@@ -11,8 +10,7 @@ The resulting rom can then be tested using qemu.
 The qemu board is mostly intended to speed up development by removing the need to flash to bare metal during initial tests.
 Qemu may also be useful for end users who intend to make changes to their libreboot rom without having to flash and reboot their machine.
 
-Building and Testing
-====================
+## Building and Testing
 
 Libreboot can be built for qemu just like any other board.
 
@@ -59,8 +57,7 @@ qemu-system-aarch64 \
 
 U-Boot is also available on the x86 QEMU images.
 
-Use Cases
-=========
+## Use Cases
 
 While development is the primary motivation for qemu support, the board makes it easy to test minor changes to release roms.
 For example one can use *cbfstool* from coreboot to edit the background image in a libreboot rom as follows:

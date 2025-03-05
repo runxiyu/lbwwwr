@@ -29,8 +29,7 @@ build process makes use of coreboot's own cross-compile toolchain.
 supported, which should be easy targets to start tinkering on if you
 want to contribute.
 
-Usage
-=====
+## Usage
 
 When your board is powered on, U-Boot will ideally turn on the display
 and start printing console messages there. After a countdown of a few
@@ -63,8 +62,7 @@ loss or even brick your device by overwriting your disk's partition
 table, unexpected parts of the SPI ROM image, or do something else
 entirely.
 
-Known issues
-============
+## Known issues
 
 U-Boot integration in Libreboot is incomplete. Here is a list of known
 issues that affect all boards:
@@ -81,8 +79,7 @@ issues that affect all boards:
 - U-Boot "coreboot\*" defconfigs needs more work and an ARM64 version
 - UEFI support is incomplete
 
-See also
-========
+## See also
 - [U-Boot documentation](https://u-boot.readthedocs.io/en/latest/)
 - [U-Boot documentation (unmigrated files)](https://source.denx.de/u-boot/u-boot/-/tree/master/doc)
 - [U-Boot and generic distro boot](https://marcin.juszkiewicz.com.pl/2021/03/14/u-boot-and-generic-distro-boot/)

@@ -20,15 +20,14 @@ title: HP Compaq Elite 8300 USDT
 | **Intel ME/AMD PSP**      | Present, neutered                           |
 | **Flash chip**            | SOIC-16 16MiB                               |
 
-Disable security before flashing
-================================
+## Disable security before flashing
 
 Before internal flashing, you must first disable `/dev/mem` protections. Make
 sure to re-enable them after you're finished.
 
 See: [Disabling /dev/mem protection](../install/devmem)
 
-# Introduction
+## Introduction
 
 This is a small but powerful desktop using Sandy or Ivy Bridge CPUs
 (of up to 65W TDP).
@@ -54,9 +53,9 @@ These features are tested and confirmed working:
 * Wake on LAN
 * Rebooting
 
-# Installation
+## Installation
 
-## Internal flashing
+### Internal flashing
 
 Internal flashing is possible. OEM BIOS versions 2.87 and 2.90 are confirmed
 compatible with this guide. BIOS 2.05 is confirmed **not** to work.
@@ -104,7 +103,7 @@ You can now move the jumper back to its original place.
 By default, Libreboot applies no write-protection, so
 updating it can be done without the jumper anyway.
 
-## External flashing
+### External flashing
 
 Unbricking is possible by external flashing. You first need to remove
 the optical disk drive and 2.5" HDD/SSD and the metal bracket that

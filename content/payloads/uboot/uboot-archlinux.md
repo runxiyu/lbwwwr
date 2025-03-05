@@ -2,8 +2,7 @@
 title: Installing ArchLinuxARM on a Chromebook with U-Boot installed
 ---
 
-Background
-==========
+## Background
 
 ArchLinuxARM Latest (as of May 1st 2023) boots and can be installed successfully using libreboot 20230319 on a gru_bob chromebook.
 
@@ -16,8 +15,7 @@ And the the instructions from the ArchLinuxARM wiki [here](https://archlinuxarm.
 
 The purpose of this guide is to instruct users on how to install an ArchLinuxARM on an external disk that will boot on a gru_bob chromebook, and optionally on the internal eMMC. Many concepts covered in this guide may be familiar to prospective and veteran Libreboot users, with the scope being comprehensive.
 
-Boot Method
-===========
+## Boot Method
 
 There are (at least) three methods that can be used to boot into a Linux distribution from u-boot:
 1) EFI - common, modern boot method for amd64 architecture machines. This is not distribution-specific, so if you intend to make a portable drive that is compatible across multiple systems, you may have a use case.
@@ -34,8 +32,7 @@ For more information about what actually goes into a boot.scr script, check [thi
 
 Since extlinux.conf is supported by multiple bootloaders, making your system more portable, is natively supported by u-boot, it seems to be the best choice for a chromebook.
 
-Creating extlinux.conf
-======================
+## Creating extlinux.conf
 
 Here is an example template of extlinux.conf, [similar examples are found in the u-boot docs](https://u-boot.readthedocs.io/en/latest/develop/distro.html):
 
@@ -61,8 +58,7 @@ label archfallback
         append  root=PARTUUID=$PARTUUID rw console=tty1 console=ttyS2,115200 earlycon rootwait LANG=en_US.UTF-8
 ```
 
-Formatting and Partitioning Your External Media
-===============================================
+## Formatting and Partitioning Your External Media
 
 Now it's time partition the boot disk. During testing, a microSD card was used in the microSD card slot of the gru-bob chromebook.
 The libreboot configuration (in the 20230319 release) will boot the microSD card above the onboard eMMC if both are present and bootable. This is useful because it means no knowledge or use of the u-boot console is required.
@@ -104,8 +100,7 @@ append console=ttyS0,115200 console=tty1 rw root=PARTUUID=fc0d0284-ca84-4194-bf8
 ```
 in the template provided above, replace `$PARTUUID` with your own. It's possible to specify root in other ways - check the u-boot docs for more examples.
 
-Boot-Disk Creation
-==================
+## Boot-Disk Creation
 
 Now that we've got an extlinux.conf file, copy it to your /tmp directory, and we'll begin.
 ```
@@ -133,8 +128,7 @@ With that, you should now have a (kind of) working boot disk - insert your insta
 Extensive testing with ArchLinuxARM-latest release, showed that booting the fallback initramfs image will work, but the main image won't.
 If you create an extlinux.conf file with paths to both images - like in the template above - you can select either by number at boot.
 
-Going Live - Necessary Tweaks
-=============================
+## Going Live - Necessary Tweaks
 
 Once you're at the login prompt, the fun isn't over! Login & password for root are both `root` by default.
 Most Arch users will likely try to update their system now - don't update just yet.
@@ -168,8 +162,7 @@ lsblk -o NAME,UUID,FSTYPE,SIZE
 ```
 `NAME` and `SIZE` are not necessary, but they will help you tell which partition is which.
 
-Final Steps
-===========
+## Final Steps
 
 At this stage, you now have a fully functional ArchLinuxARM system on an external disk, and are ready to configure your system.
 If you intend to install onto the eMMC module, you can make your changes permanent with:

@@ -2,14 +2,10 @@
 title: nvmutil import
 ---
 
-nvmutil assimilation
-====================
-
 Detailed revision history can be found in the Git repository; for code,
 look at `lbmk.git` and for documentation, look at `lbwww.git`.
 
-Assimilation by Libreboot
-=========================
+## Assimilation by Libreboot
 
 With no additional changes to nvmutil, the project became part of lbmk,
 which is the Libreboot build system. Please refer to Libreboot's imported
@@ -24,8 +20,7 @@ check that from now on.
 For historical and reference purposes, the original nvmutil repository
 shall be [preserved on notabug](https://notabug.org/osboot/nvmutil).
 
-nvmutil 20221106
-================
+## nvmutil 20221106
 
 Very minor bugfix release:
 
@@ -35,8 +30,7 @@ Very minor bugfix release:
 * Documentation inaccuracies fixed (pertaining to nvmutil exit statuses)
 * Documentation generally tidied up a bit
 
-nvmutil 20221103
-================
+## nvmutil 20221103
 
 Not much has changed, as this just fixes minor bugs and behavioural
 quirks seen in the previous release:
@@ -51,8 +45,7 @@ quirks seen in the previous release:
   fully readable. Previously, nvmutil would exit non-zero if one or both
   checksums was correct, but it now only does this if both are invalid
 
-nvmutil 20220828
-================
+## nvmutil 20220828
 
 No new features have been added. This is a code cleanup and bugfix release.
 
@@ -75,8 +68,7 @@ No new features have been added. This is a code cleanup and bugfix release.
   were made (e.g. cleaner argument handling). Tested with tcc on an x86\_64
   machine, where a 0.16% binary size increase was observed.
 
-nvmutil 20220815
-================
+## nvmutil 20220815
 
 No new features have been added. This is a code cleanup and bugfix release.
 
@@ -107,8 +99,7 @@ No new features have been added. This is a code cleanup and bugfix release.
   reduces code bloat in nvmutil. The code still warns you if the MAC address
   is multicast
 
-nvmutil 20220810
-================
+## nvmutil 20220810
 
 * 3.4% reduction in binary size (as tested with tcc on x86\_64),
   due to code optimizations, *while* adding new checks and new features.
@@ -132,8 +123,7 @@ nvmutil 20220810
 * The `setmac` command can now be used without specifying a MAC address,
   which will cause the same behaviour as `setmac ??:??:??:??:??:??`
 
-nvmutil 20220808
-================
+## nvmutil 20220808
 
 Released on 8 August 2022. Changes:
 
@@ -175,8 +165,7 @@ Released on 8 August 2022. Changes:
   reduction; the other 2/3 of that reduction is due to increased
   code efficiency in general.
 
-Regarding code size reduction
------------------------------
+### Regarding code size reduction
 
 My test setup is an x86\_64 machine with `tcc` used
 as the compiler; the libc doesn't really matter, if
@@ -215,8 +204,7 @@ binary sizes are much larger with those compilers, even with
 optimization flags; despite this, the Makefile in nvmutil
 assumes GCC/Clang and sets `CFLAGS` to `-Os`.
 
-nvmutil 20220802
-================
+## nvmutil 20220802
 
 Released on 2 August 2022. Changes:
 
@@ -236,8 +224,7 @@ Released on 2 August 2022. Changes:
 * More human-friendly messages and help text
 * help/version commands actually listed in help output
 
-nvmutil 20220731
-================
+## nvmutil 20220731
 
 Released on 31 July 2022. Changes:
 
@@ -250,8 +237,7 @@ Released on 31 July 2022. Changes:
 
 That's it. Bug fixes and safety features added. Enjoy!
 
-nvmutil 20220728
-================
+## nvmutil 20220728
 
 Initial release. It is functionally equivalent to the
 older `nvmutils`, developed for the osboot project. This

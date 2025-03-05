@@ -6,8 +6,7 @@ All of the Dell Latitude models can be flashed internally, which means that
 you do not need to disassemble them. You can do it from Linux/BSD, using the
 instructions on this page.
 
-Disable security before flashing
-================================
+## Disable security before flashing
 
 Please also [disable /dev/mem protection](devmem), otherwise flashprog
 and dell-flash-unlock won't work. You can re-enable the protections after
@@ -17,14 +16,12 @@ Please also disable SecureBoot, if you're using a UEFI-based Dell Latitude.
 Note that Libreboot does not currently implement UEFI on x86 platforms, but
 you can set up [Secure libreBoot](../linux/grub_hardening) after flashing.
 
-MAC address
-===========
+## MAC address
 
 Make sure to set your own MAC address in the ROM image before flashing.
 Please read the [nvmutil manual](nvmutil) which says how to do this.
 
-Thermal safety
-==============
+## Thermal safety
 
 **Thermal safety**: this machine shuts down very quickly, when the machine
 exceeds 80c CPU temperature, which is far more conservative than on most
@@ -32,19 +29,16 @@ laptops (non-Dell ones), so you should make sure that your thermals are
 excellent. More info available [here](../install/dell_thermal). This is a
 known bug, but otherwise the machine will be mostly stable.
 
-Machine-specific notes
-======================
+## Machine-specific notes
 
-Latitude E6400
---------------
+### Latitude E6400
 
 Vendor files not required for Dell Latitude E6400 if you have the Intel GPU.
 
 If you have the Nvidia model, please use the `e6400nvidia_4mb` target, and
 make sure to run the [inject script](ivy_has_common) prior to flashing.
 
-E6400 nvidia issues
--------------------
+### E6400 nvidia issues
 
 See [issue 14](https://codeberg.org/libreboot/lbmk/issues/14#issuecomment-907758).
 
@@ -53,16 +47,14 @@ The `nv` drivers on BSD systems generally work, but can have severe performance
 issues; use of a tiling window manager is recommended, on BSD systems, because
 moving windows around can literally lag a lot otherwise, on most window managers.
 
-dGPU variants
--------------
+### dGPU variants
 
 On everything except E6400, Libreboot only supports the variant with an Intel
 GPU. Therefore, you must *only* purchase a Dell Latitude that has the Intel
 graphics; even on E6400, this is good advice, due to issues with the Nvidia
 GPU on E6400, documented later in this guide.
 
-Internal flashing
-=================
+## Internal flashing
 
 You can simply boot Linux/BSD, on the Dell Latitude you wish to flash, and
 run `flashprog` from there, for Libreboot installation. Certain other steps
@@ -121,11 +113,9 @@ When you see flashprog say `VERIFIED` at the end, that means the flash was
 successful. If you don't see that, or you're unsure, please [contact the
 Libreboot project via IRC](../../contact).
 
-External flashing
-=================
+## External flashing
 
-General guidance
-----------------
+### General guidance
 
 Machine-specific disassembly instructions not provided, but you can find
 the hardware maintenance manual for your Latitude module online. Just search
@@ -145,8 +135,7 @@ Please read the [external SPI flash guide](spi)
 
 External flashing is usually not required, on these machines.
 
-Chip size guidance
-------------------
+### Chip size guidance
 
 SOme Dell Latitudes use a single flash chip, so you can
 just use the ROM images as-is.

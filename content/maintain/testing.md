@@ -38,8 +38,7 @@ NOTE: If there are already testers for a given motherboard, *you* can still
 provide testing for the same motherboard if that's what you have. The more the
 merrier!
 
-Be Contactable
-==============
+## Be Contactable
 
 You should monitor whatever email you provide in your application.
 There is no specific time-frame for how long it should take after
@@ -48,8 +47,7 @@ You should make best efforts to respond within a few days.
 If you are the *only* maintainer for your board then please take
 into consideration that your input is especially vital.
 
-Have External Flashing Equipment
-================================
+## Have External Flashing Equipment
 
 The roms you test will of course be untested.
 To avoid having a bricked machine, you need to have external flashing
@@ -60,8 +58,7 @@ In rarer cases -such as some ARM chromebooks- your board might be flashed in a d
 Refer to [Coreboot's documentation](https://doc.coreboot.org/)
 or ask on IRC if you are unsure.
 
-Testing Procedure
-=================
+## Testing Procedure
 
 You will receive an email when roms are ready for testing.
 The email will link to an open issue on our [current git hosting platform.](/git.html#lbmk-libreboot-make)

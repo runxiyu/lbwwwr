@@ -48,8 +48,7 @@ P*: Partially works with vendor firmware
 | **SeaBIOS with GRUB** | Works |
 </div>
 
-Introduction
-============
+## Introduction
 
 This is a desktop board using intel hardware (circa \~2009, ICH7
 southbridge, similar performance-wise to the ThinkPad X200. It can make
@@ -88,8 +87,7 @@ in the build system:
 You can learn more about using the build system, lbmk, here:\
 [libreboot build instructions](../build/)
 
-RAM
-===
+## RAM
 
 **This board is very picky with RAM. If it doesn't boot, try an EHCI debug
 dongle, serial usb adapter and null modem cable, or spkmodem, to get a
@@ -104,8 +102,7 @@ Nanya NT2GT64U8HD0BY-AD with 2 GiB of NT5TU128M8DE-AD chips works too.
 Many other modules will probably work just fine, but raminit is very picky on
 this board. Your mileage *will* fluctuate, wildly.
 
-MAC ADDRESS
-===========
+## MAC ADDRESS
 
 NOTE: due to a bug in the hardware, the MAC address is hardcoded in
 coreboot. Therefore, you must set your own MAC address in your
@@ -115,15 +112,13 @@ Use [macchanger](http://www.gnu.org/software/macchanger) in your
 distro, to set a valid MAC address. By doing this, your NIC should
 work nicely.
 
-Flash chip size {#flashchips}
-===============
+## Flash chip size {#flashchips}
 
 Use this to find out:
 
 	flashprog -p internal
 
-Flashing instructions {#clip}
-=====================
+## Flashing instructions {#clip}
 
 Refer to [spi.md](spi) for how to set up an SPI programmer for
 external flashing. *You can only externally reprogram one of the chips

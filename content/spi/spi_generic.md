@@ -18,8 +18,7 @@ If you are wondering about which SBC to buy, keep these things in mind:
 All of this means that you should try to find a board that is *known* to support SPI on an OS for which there are available images.
 It is *not* enough to know that the board itself supports SPI.
 
-Selecting an Operating System
-=============================
+## Selecting an Operating System
 
 In theory, any linux based operating system will do.
 In practice, many distros are highly limited when it comes to single-board-computers.
@@ -32,8 +31,7 @@ Note that not all armbian images support SPI.
 If your SBC supports [Raspbian](https://www.raspberrypi.com/software/) then using it will make your work much easier.
 As a bonus, you may refer to the [main guide](spi) if the SBC you have supports raspbian, should you get confused with this guide.
 
-Connecting to your Programmer
-=============================
+## Connecting to your Programmer
 
 Many SBC operating systems enable ssh by default.
 If the OS you chose does not enable ssh on first boot, try checking the distro documentation and looking for terms such as 'headless install.'
@@ -53,8 +51,7 @@ For example:
 
 `ssh root@192.168.0.167`
 
-Finding GPIO Pins
-=================
+## Finding GPIO Pins
 
 If you have determined that a board supports SPI then the only step left is to
 determine the correct location of the SPI pins.
@@ -65,8 +62,7 @@ If your board is not raspberry pi compatible, refer to the [wiring table.](spi.h
 Match each of the categories in the 'signal' column with those in the 'pin' column.
 Using this method, you can theoretically use any single board computer with SPI support.
 
-Enabling SPI
-============
+## Enabling SPI
 
 The modules needed and methods to enable SPI vary based on the SBC you choose.
 You should always make sure there is a well documented method for enabling SPI on your SBC before purchasing.
@@ -77,8 +73,7 @@ sudo ldto enable spicc spicc-spidev
 sudo ldto merge spicc spicc-spidev
 ```
 
-Using Flashrom
-==============
+## Using Flashrom
 
 Most linux distros will provide flashprog in their default repositories.
 You can also download flashprog in binary form with [libreboot utils.](https://libreboot.org/download.html#https)

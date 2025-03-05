@@ -5,8 +5,7 @@ title: ThinkPad W541/W540 external flashing
 NOTE: The same image for W541 also works on the W540, as the motherboard is
 identical.
 
-Introduction
-============
+## Introduction
 
 Read the [Ivybridge/Haswell common guide](/docs/install/ivy_has_common.html) if you want more information.
 All of the following instructions assume that you've cloned lbmk and are operating from the
@@ -17,8 +16,7 @@ root of that project. To do so, run
 
 You can now follow the rest of the instructions.
 
-Preparing a release Rom
------------------------
+### Preparing a release Rom
 
 **Please follow this prior to flashing, or you may brick your machine.**
 
@@ -27,8 +25,7 @@ use this guide to change the built-in MAC address for your Intel Gigabit
 Ethernet device; doing so is advisable, because otherwise you will have a
 default, generic MAC address.
 
-Splitting The Rom
------------------
+### Splitting The Rom
 
 You can use `dd` to easily split your rom into the two separate portions for
 external flashing.
@@ -40,8 +37,7 @@ Flash the top chip with top.rom, and tho bottom chip with bottom.rom.
 Don't worry about knowing which chip is which on a standard setup; flashprog will let you know if the 
 image size is incorrect for the chip you're flashing.
 
-Disassembly
------------
+### Disassembly
 
 No disassembly pics yet. The [W540/T540p hardware maintenance manual](https://thinkpads.com/support/hmm/hmm_pdf/t540p_w540_hmm_en_sp40a26003_01.pdf)
 also applies to W541.
@@ -80,8 +76,7 @@ used when flashing either of the chips.
 
 You can now proceed to [flashing](/docs/install/spi.html) this machine.
 
-`thinkpad_acpi` issues {#thinkpad-acpi}
----------------------------------------
+### `thinkpad_acpi` issues {#thinkpad-acpi}
 
 It has been reported by a user that `thinkpad_acpi` does not load correctly on
 the T440p. Since the W541/W540/T540p are also Haswell machines, you may be
@@ -90,8 +85,7 @@ affected by this issue.
 If you encounter this, check [this page](../../faq.md#thinkpad-acpi)
 for details as to how to fix this.
 
-Errata
-======
+## Errata
 
 NOTE: As of Libreboot releases from May 2024 onward, the Intel MRC is no longer
 included for Haswell; MRC is a blob for raminit, but we now provide libre

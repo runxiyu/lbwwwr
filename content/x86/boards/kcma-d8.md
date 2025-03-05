@@ -4,8 +4,7 @@ title: ASUS KCMA-D8 Desktop/Workstation
 
 TODO: this page is OLD. check that the info is still valid.
 
-Introduction
-============
+## Introduction
 
 [Vendor information](https://www.asus.com/uk/Commercial-Servers-Workstations/KCMAD8/)
 
@@ -33,8 +32,7 @@ without using external hardware.
 If you currently have the ASUS firmware, please ignore the above link and
 instead refer to the section below:
 
-Flashing
-========
+## Flashing
 
 The default ASUS firmware write-protects the flash, so you have to remove the
 chip and re-flash it using external hardware.
@@ -53,8 +51,7 @@ this page: [../install/](../install/)
 Refer to the following guide:\
 [Externally rewrite 25xx NOR flash via SPI protocol](../install/spi)
 
-PCI option ROMs
-===============
+## PCI option ROMs
 
 Unlike Libreboot 20160907, Libreboot in newer releases now supports finding and
 loading PCI option ROMs automatically, both in GRUB and SeaBIOS on this machine.
@@ -63,22 +60,19 @@ This was inherited by libreboot, when the Libreboot project was forked.
 So for example, if you wish to use an add-on graphics card, you can! It's no
 problem, and should work just fine.
 
-CPU coolers
-===========
+## CPU coolers
 
 With some creativity, standard AM3+ coolers will work fine.
 
 2 x Socket C32 (LGA1207) available, so you can use 2 CPUs. (up to 32GiB per CPU)
 
-CPU compatibility
-=================
+## CPU compatibility
 
 - Opteron 4100 series: Incompatible
 - Opteron 4200 series: Compatible
 - Opteron 4300 series: Compatible
 
-Board status (compatibility) {#boardstatus}
-============================
+## Board status (compatibility) {#boardstatus}
 
 There are two ways to identify a supported KCMA-D8 board:
 
@@ -94,15 +88,13 @@ originally shipped with BIOS version **2001** or higher are also compatible.
 For help locating these identifying markers, see [ASUS documentation for determining Opteron 4200 series compatibility](https://web.archive.org/web/20200710022605/https://dlcdnets.asus.com/pub/ASUS/mb/SocketC%281027%29/KCMA-D8/Manual&QVL/How_to_identify_MB_supporting_Opteron_4200_CPU.pdf)
 [Detailed information regarding the coreboot port](https://raptorengineeringinc.com/coreboot/kcma-d8-status.php)
 
-Form factor {#formfactor}
-===========
+## Form factor {#formfactor}
 
 This board is ATX form factor. While the [ATX standard, version 2.2](https://web.archive.org/web/20120725150314/http://www.formfactors.org/developer/specs/atx2_2.pdf)
 specifies board dimensions 305mm x 244mm, this board measures 305mm x 253mm;
 please ensure that your case supports this extra ~cm in width.
 
-IPMI iKVM module add-on {#ipmi}
-=======================
+## IPMI iKVM module add-on {#ipmi}
 
 Don't use it. It uses proprietary firmware and adds a backdoor (remote
 out-of-band management chip, similar to the [Intel Management
@@ -111,8 +103,7 @@ unsigned (possible to replace) and physically separate from the
 motherboard since it's on the add-on module, which you don't have to
 install.
 
-Flash chips {#flashchips}
-===========
+## Flash chips {#flashchips}
 
 2MiB flash chips are included by default, on these boards. It's on a
 P-DIP 8 slot (SPI chip). The flash chip can be upgraded to higher sizes:
@@ -129,8 +120,7 @@ These can be found online.
 Ideally, you should not hot-swap. Only remove the IC when the system is
 powered down and disconnected from mains.
 
-Native graphics initialization {#graphics}
-==============================
+## Native graphics initialization {#graphics}
 
 Only text-mode is known to work, but linux(kernel) can initialize the
 framebuffer display (if it has KMS - kernel mode setting).
@@ -143,8 +133,7 @@ performance won't be as high in Nouveau, compared to the non-free Nvidia driver
 because the Nouveau driver can't increase the GPU clock (it doesn't know how,
 as of 18 March 2021).
 
-Current issues {#issues}
-==============
+## Current issues {#issues}
 
 -   Opteron 4100 series CPUs are currently incompatible
 -   LRDIMM memory modules are currently incompatible
@@ -186,8 +175,7 @@ considerations:
     the very least, it's not a major inconvenience to not have it).
 -   Graphics: only text-mode works. See [\#graphics](#graphics)
 
-Hardware specifications {#specifications}
------------------------
+### Hardware specifications {#specifications}
 
 Check the ASUS website.
 

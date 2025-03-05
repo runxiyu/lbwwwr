@@ -2,8 +2,7 @@
 title: Debian Bookworm Install on a Samsung Chromebook Plus
 ---
 
-System Configuration
-====================
+## System Configuration
 
 Hardware: Samsung Chromebook Plus XE513C24 (gru_kevin)
 
@@ -13,8 +12,7 @@ Operating System: Debian Bookworm RC2
 
 [https://wiki.debian.org/Firmware](https://wiki.debian.org/Firmware)
 
-Install Media Preparation
-=========================
+## Install Media Preparation
 
 Follow the Debian installation instructions in the link below:
 
@@ -33,8 +31,7 @@ with the appropriate device path on your system.
 # dd if=debian-bookworm-DI-rc2-arm64-DVD-1.img of=/dev/sdcard_device bs=1M status=progress; sync
 ```
 
-Installation
-============
+## Installation
 
 1. Insert the micro sdcard into the slot on the Chromebook.
 2. Power on the Chromebook.
@@ -147,8 +144,7 @@ internal emmc.
 ![](https://av.libreboot.org/xe513c24/debbook-desktop.jpg)
 ![](https://av.libreboot.org/xe513c24/debbook-firefox.jpg)
 
-System Functionality
-====================
+## System Functionality
 
 Things that work:
 

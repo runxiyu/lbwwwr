@@ -51,13 +51,11 @@ P*: Partially works with vendor firmware
 | **SeaBIOS**                | Works     |
 | **SeaBIOS with GRUB**      | Works     |
 </div>
-Introduction
-============
+## Introduction
 
 [Processor specification](https://www.dell.com/support/manuals/en-uk/optiplex-7010-plus-small-ff/opti_7010_sff_plus_om/specifications-of-optiplex-small-form-factor-plus-7010?guid=guid-7c9f07ce-626e-44ca-be3a-a1fb036413f9)
 
-Build ROM image from source
----------------------------
+### Build ROM image from source
 
 The build target, when building from source, is thus:
 
@@ -70,25 +68,21 @@ The `_truncate` image is needed if you're flashing Libreboot internally from
 the original Dell firmware. Otherwise, you only need the regular images that
 lack `_truncate` in the file name.
 
-100% FREE
-=========
+## 100% FREE
 
 This motherboard is entirely free software in the main boot flash. It is using
 the Intel X4X / ICH10 platform, same as on the already supported
 Gigabyte GA-G41M-ES2L motherboard.
 
-Installation
-============
+## Installation
 
-Set MAC address
----------------
+### Set MAC address
 
 This platform uses an Intel Flash Descriptor, and defines an Intel GbE NVM
 region. As such, release/build ROMs will contain the same MAC address. To
 change the MAC address, please read [nvmutil documentation](../install/nvmutil).
 
-WARNING about CPU/GPU compatibility
--------------------------------
+### WARNING about CPU/GPU compatibility
 
 Coreboot has libre initialisation code for Intel graphics, but libre
 initialisation code is not available for most graphics cards. This machine can
@@ -97,8 +91,7 @@ used, SeaBIOS executes its VGA ROM which provides video init, instead of
 coreboot's native Intel video init. GRUB piggybacks off of what SeaBIOS did,
 so the GRUB payload will also work.
 
-Flash a ROM image (software)
------------------
+### Flash a ROM image (software)
 
 **Always make sure to dump a copy of the current flash first. ALSO: [make
 sure /dev/mem protection is disabled](devmem) for the flashing to work!**
@@ -147,8 +140,7 @@ the full image; the one without `_truncate` in the file name uses all of the
 flash, with the BIOS region ending at the 8MB limit, so the BIOS region is
 therefore 2MB larger on those images.
 
-Flash a ROM image (hardware)
------------------
+### Flash a ROM image (hardware)
 
 For general information, please refer to [25xx NOR flash
 instructions](../install/spi) - that page refers to use of socketed flash.

@@ -45,22 +45,19 @@ P*: Partially works with vendor firmware
 | **SeaBIOS with GRUB**     | Works |
 </div>
 
-Disable security before flashing
-================================
+## Disable security before flashing
 
 Before internal flashing, you must first disable `/dev/mem` protections. Make
 sure to re-enable them after you're finished.
 
 See: [Disabling /dev/mem protection](../install/devmem)
 
-Introduction
-============
+## Introduction
 
 Libreboot has support for this, in the Git repository and release versions
 from 20230423 onwards.
 
-Brief board info
-----------------
+### Brief board info
 
 [HP Elite 8200 SFF](https://support.hp.com/gb-en/product/hp-compaq-8200-elite-small-form-factor-pc/5037931) is a small-form-factor desktop of Intel Sandybridge platform.
 
@@ -70,8 +67,7 @@ Here's the [Technical Reference Manual](https://web.archive.org/web/201601091432
 This system supports Ivy Bridge processors too. The original BIOS
 won't even POST with those, but with Libreboot they work fully.
 
-Installation of Libreboot
--------------------------
+### Installation of Libreboot
 
 You can actually just compile the Libreboot ROM for this, and flash the
 entire ROM.
@@ -112,8 +108,7 @@ in the same guide linked above, or read the nvmutil manual:
 
 [Modify MAC addresses with nvmutil](../install/nvmutil).
 
-Internal flashing from vendor BIOS
-----------------------------------
+### Internal flashing from vendor BIOS
 
 The vendor BIOS imposes write-protections in the Flash Descriptor and
 runtime. However, the flash descriptor can be bypassed by bridging a
@@ -178,8 +173,7 @@ or from a release archive. We'll refer to it as `libreboot8.rom`.
 
 Power cycle the computer again.
 
-HP 6200 Pro Business PC
------------------------
+### HP 6200 Pro Business PC
 
 [According to the
 vendor](https://support.hp.com/fi-fi/drivers/selfservice/swdetails/hp-compaq-8200-elite-small-form-factor-pc/5037931/swItemId/vc-229778-2),
@@ -219,15 +213,13 @@ According to the initial coreboot port from 2018, the following also works:
 * Native (libre) raminit with up to four DIMM modules (also tested by Riku and
   confirmed working, with 32GB RAM installed as 4x8GB)
 
-TPM
----
+### TPM
 
 According to git logs, TPM should work, and a commit from 2018 at revision
 ID `39d0e2a2cf45e28cdddd0fe0c88f94ce527ab1ef` in coreboot makes the TPM visible
 to operating systems.
 
-PSU Fan control
----------------
+### PSU Fan control
 
 See coreboot commit `9bd601584350f51f112b15a7369f9aa82f1d0919` - labelled
 by commit message `superio/nuvoton/npcd378: Add PSU fan control`.

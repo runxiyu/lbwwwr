@@ -41,8 +41,7 @@ If you're still unable to port the board, or anything in this guide is
 unclear, then contact libreboot developers.
 The best way to get in touch is via [libreboot irc.](/contact.html#irc-chatroom)
 
-Cloning lbmk
-============
+## Cloning lbmk
 
 Before you try to get any work done, you'll need to clone the lbmk (libreboot make)
 project.
@@ -53,8 +52,7 @@ the project.
 
 If you want more information on building lbmk see [the build instructions.](/docs/build/index.html)
 
-Coreboot Config
-===============
+## Coreboot Config
 
 Coreboot payloads (GRUB, Seabios, etc) are built separately.
 You therefore only need to focus on the coreboot config(s) for `board.`
@@ -93,8 +91,7 @@ If you try to flash this rom and it fails, then there are two probable reasons:
 
 Solutions to these problems follow in the proceeding sections.
 
-Wrong CBFS and or ROM size
-==========================
+## Wrong CBFS and or ROM size
 
 Different boards have different flash chip setups.
 Generally, you have one or two flash chips with a combined size of 4-16MB.
@@ -113,8 +110,7 @@ for various rom sizes.
 | 12MB     | 0xBE0000  |
 | 16MB     | 0xFE0000  |
 
-Getting Help
-============
+## Getting Help
 
 Once you have tried everything above, you might find that the board still doesn't
 work.

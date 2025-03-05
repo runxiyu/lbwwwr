@@ -52,8 +52,7 @@ If you just want flashing instructions, go to
 
 D945GCLF2D also reported working by a user.
 
-Introduction
-============
+## Introduction
 
 This board is a mini-itx desktop board for 2008. It uses an atom 230,
 which is a single core CPU but it is hyperthreaded so it appears to have
@@ -76,8 +75,7 @@ hyperthreaded). Since the board is almost identical (and coreboot code
 seem to indicate that it works, since MAX\_CPU=4 is set), it is believed
 that it should also work but this is untested.
 
-Remarks about vendor bios:
---------------------------
+### Remarks about vendor bios:
 
 -   Without coreboot/libreboot this board is completely useless, since the
     vendor bios is very bad. It cannot boot from any HDD whether it is
@@ -95,16 +93,14 @@ Here is an image of the D945GCLF2 board:\
 And SPI SOIC8 flash chip\
 ![](https://av.libreboot.org/d945gclf/20160923_141550.jpg){width="50%" height="50%"}
 
-Flashing instructions {#clip}
-=====================
+## Flashing instructions {#clip}
 
 Refer to [spi.md](spi) for how to re-flash externally.
 
 Here is an image of the flash chip:\
 ![](https://av.libreboot.org/d945gclf/d945gclf_spi.jpg)
 
-How to replace thermal paste and fan
-------------------------------------
+### How to replace thermal paste and fan
 
 This board comes with very crappy disposable loud fan, that one has no
 bearings, which can not be repaired or oiled properly, do not waste your

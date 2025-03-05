@@ -4,15 +4,14 @@ title: Product Codenames
 
 TODO: this page could do with an update. More info, about more boards
 
-Introduction
-============
+## Introduction
 
 This document lists product codenames for some hardware.
 Please note that just because a certain device is listed here does NOT mean
 that it is supported in libreboot. For supported devices refer to the
 installation documentation.
 
-### A note on GPUs
+#### A note on GPUs
 
 Some laptops come with and without a discrete GPU (dGPU). Whether the
 motherboard includes one or not can be determined by (in descending order
@@ -26,10 +25,9 @@ of reliability):
     discrete GPU laptops these will look orange and on integrated ones
     they will appear silver.
 
-List of models and codenames
-============================
+## List of models and codenames
 
-### Codenames
+#### Codenames
 
 -   Samsung Chromebook 2 13": peach-pi
 -   Samsung Chromebook 2 11": peach-pit
@@ -99,7 +97,7 @@ under RAM sticks.
     -   Mini Dock - Seville
     -   Port Replicator II - Seville-lite
 
-### Miscellaneous
+#### Miscellaneous
 -   [Calistoga](https://ark.intel.com/products/codename/5950/Calistoga):
 945GM/945PM chipset family name
 -   Napa: calistoga based platform
@@ -116,8 +114,7 @@ GM45/GS45/PM45 chipset family name.
     ICs for Notebook PCs. Tsurumai chip marking is "TB62501F" and datasheet
     of it fully describes its operation.
 
-See also
-========
+## See also
 -   Many more Intel codenames can be found at
     [Wikipedia](https://en.wikipedia.org/wiki/List_of_Intel_codenames).
 -   For ThinkPads see [Documentation/thinkpad/codenames.csv @ Coreboot]
