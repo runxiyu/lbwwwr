@@ -433,42 +433,11 @@ finished.
 
 ## Operating systems
 
-{{< accordion title="Can I use Linux?" >}}
-
-Any recent distribution should work, as long as it uses KMS (kernel mode
-setting) for the graphics.
-See [the Linux guide](../os/linux/).
-
-{{< /accordion >}}
-
 {{< accordion title="Fedora won't boot?" >}}
 
 On Fedora, by default the grub.cfg tries to boot linux in 16-bit mode. You
 just have to modify Fedora's GRUB configuration. 
 Refer to [the Linux guide](../os/linux/).
-
-{{< /accordion >}}
-
-{{< accordion title="Can I use BSD?" >}}
-
-The Libreboot firmware has good support for FreeBSD, NetBSD and OpenBSD. Other
-systems are untested, but should work just fine. There are caveats for
-graphical environments. See [the BSD guide](../os/bsd/).
-
-{{< /accordion >}}
-
-{{< accordion title="Can I use Windows?" >}}
-
-In theory, yes, you can use Windows [10](https://yewtu.be/watch?v=BWq6XnWKQnM)
-and [11](https://yewtu.be/watch?v=OFHiMfVNNeA). You will need to [bypass the
-TPM 1.2 and SecureBoot
-requirement](https://www.majorgeeks.com/content/page/bypass_tpm.html) to use
-Windows 11.
-
-Windows is proprietary software, which means that you do not have the freedom
-to use, study, adapt and share the software in any reasonable way. This is
-contradictory to the goals of Libreboot, are not officially supported, and the
-community cannot provide support for them.
 
 {{< /accordion >}}
 
