@@ -7,13 +7,13 @@ Libreboot is concerned with what goes into the main boot flash IC. The
 following potentially nonfree firmware is outside the scope of Libreboot but
 may also be relevant to a Libreboot user.
 
-### WiFi
+## WiFi
 
 We actually do not recommend Atheros cards:
 
 ![Why Atheros cards could be less free than Intel cards](https://av.libreboot.org/firmware.png)
 
-### External GPUs
+## External GPUs
 
 The Video BIOS is present on most video cards. For integrated graphics, the
 VBIOS (special kind of OptionROM) is usually embedded in the main boot
@@ -29,7 +29,7 @@ configuration.
 In configurations where SeaBIOS and native GPU init are used together, a
 special shim VBIOS is added that uses coreboot linear framebuffer.
 
-### EC (embedded controller) firmware 
+## EC (embedded controller) firmware 
 
 Most (all?) laptops have this. The EC (embedded controller) is a small,
 separate processor that basically processes inputs/outputs that are specific to
@@ -46,7 +46,7 @@ laptops, including but not limited to:
 EC is present on nearly all laptops. Other devices use, depending on complexity,
 either EC or a variant with firmware in Mask ROM such as Super I/O.
 
-### HDD/SSD firmware 
+## HDD/SSD firmware 
 
 HDDs and SSDs have firmware in them, intended to handle the internal workings
 of the device while exposing a simple, standard interface (such as AHCI/SATA)
@@ -147,7 +147,7 @@ of salt. This is still under discussion, and none of this is proven.**
 
 See also: [this Vice article](https://www.vice.com/en_us/article/ypwkwk/the-nsas-undetectable-hard-drive-hack-was-first-demonstrated-a-year-ago)
 
-### NIC (ethernet controller) 
+## NIC (ethernet controller) 
 
 Ethernet NICs will typically run firmware inside, which is responsible for
 initializing the device internally. Theoretically, it could be configured to
@@ -156,24 +156,24 @@ drop packets, or even modify them.
 With proper IOMMU, it might be possible to mitigate the DMA-related issues. A
 USB NIC can also be used, which does not have DMA.
 
-### Sound card 
+## Sound card 
 
 Sound hardware (integrated or discrete) typically has firmware on it (DSP) for
 processing input/output. Again, a USB DAC is a good workaround.
 
-### Webcam 
+## Webcam 
 
 Webcams have firmware integrated into them that process the image input into
 the camera; adjusting focus, white balancing and so on. Can use USB webcam
 hardware, to work around potential DMA issues; integrated webcams (on laptops,
 for instance) are discouraged by the libreboot project, for security reasons.
 
-### USB host controller 
+## USB host controller 
 
 USB host controllers require firmware. Sometimes, this has to be supplied by
 coreboot itself.
 
-### WWAN firmware 
+## WWAN firmware 
 
 Note that WWAN is unrelated to WiFi.
 
