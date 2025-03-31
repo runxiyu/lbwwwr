@@ -72,7 +72,7 @@ Specifically (Order No. / Model No. / CPU) for the MacBook1,1:
 
 * MA255LL/A / A1181 (EMC 2092) / Core Duo T2500 *(tested - working)*
 * MA254LL/A / A1181 (EMC 2092) / Core Duo T2400 *(tested - working)*
-* MA472LL/A / A1181 (EMC 2092) / Core Duo T2500 (untested)
+* MA472LL/A / A1181 (EMC 2092) / Core Duo T2500 *(tested - working)*
 
 For the MacBook2,1:
 

@@ -113,6 +113,12 @@ that asserts the WP pin on the flash chip. The screw can be identified
 by the fact that it bridges electrical contacts, but finding and
 removing it might require you to disassemble most of the board.
 
+In my case as an example, my kevin board had the protection screw 
+[here](https://av.libreboot.org/board/kevin/write_protection_screw.jpg). It was 
+tricky for me to find it since it was one of the screws that seemed to hold 
+the heat sink in place, which I thought made it an unlikely candidate. I 
+recommend you leave it unscrew never the less after flashing.
+
 Newer boards have a root-of-trust chip enforcing write-protection. The
 [Closed Case Debugging](https://chromium.googlesource.com/chromiumos/platform/ec/+/cr50_stab/docs/case_closed_debugging_gsc)
 mechanism should be used to disable hardware write-protection. Opening
@@ -179,6 +185,7 @@ three general methods for installing that vary depending on the distribution:
 
 * [ArchLinuxARM on RK3399-based Chromebooks](../uboot/uboot-archlinux).
 * [Debian Bookworm on Samsung Chromebook Plus XE513C24](../uboot/uboot-debian-bookworm).
+* [Trisquel Aramo on Samsung Chromebook Plus XE513C24](../uboot/uboot-trisquel-aramo.md).
 * [Debian on Asus Chromebook C201](https://wiki.debian.org/InstallingDebianOn/Asus/C201).
 
 ### Unsuccessful installations:

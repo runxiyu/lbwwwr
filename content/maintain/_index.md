@@ -1156,7 +1156,7 @@ as:
 
 These are similar in meaning to their coreboot counterparts.
 
-The tree` entry is actually a link, where its value is a directory name
+The `tree` entry is actually a link, where its value is a directory name
 under `config/u-boot`. For example, `tree="default"` would refer to
 `config/u-boot/default` and the corresponding U-Boot source tree created
 (when running `./mk u-boot`, which makes use of `target.cfg`)
