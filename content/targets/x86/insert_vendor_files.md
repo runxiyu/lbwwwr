@@ -258,45 +258,12 @@ by processing the MEv11 image with Mate Kukri's [deguard](deguard) utility.
 
 ## Errata
 
-This section should not concern you, if you're using newer Libreboot releases.
-This section largely concerns *bugs* which existed in older releases, pertaining
-to this documentation, and design changes made accordingly.
+Libreboot now uses native raminit for all supported Haswell platforms,
+replacing Intel’s MRC entirely. This implementation was developed by Angel Pons
+for the coreboot project and aligns with Libreboot’s commitment to fully free
+software.
 
-NOTE: As of Libreboot releases from May 2024 onward, the Intel MRC is no longer
-included for Haswell; MRC is a firmware for raminit, but we now provide native
-raminit written by Angel Pons, for the coreboot project. The following targets
-no longer exist in the build system:
-
-* `t440pmrc_12mb` (use `t440plibremrc_12mb` instead)
-* `t440pbmrc_12mb` (use `t440plibremrc_12mb` instead)
-* `w541mrc_12mb` (use `w541_12mb` instead)
-* `w541bmrc_12mb` (use `w541_12mb` instead)
-* `dell9020sff_12mb` (use `dell9020sff_nri_12mb` instead)
-* `dell9020sffbmrc` (use `dell9020sff_nri_12mb` instead)
-* `dell9020mt_12mb` (use `dell9020mt_nri_12mb` instead)
-* `dell9020mtbmrc` (use `dell9020mt_nri_12mb` instead)
-
-FSP images are also no longer baked in on release images, from
-Libreboot 20241206 rev8 or higher (or releases newer than the 20241206 series),
-but the machines that use them still need them; they are injected instead,
-using the commands shown above on this very page. Older images with FSP baked
-directly into release images had `_fsp` in the file names; newer images that
-need it to be injected have `_vfsp` in the file name. Releases from Libreboot
-20241206 release series at revision 8 or higher, or releases newer than the
-20241206 series, no longer include `_fsp` images as they are set `release="n"`
-in the build system; these releases include `_vfsp` images instead. Newer
-targets added in the future, that need FSP, will also have `_vfsp` in the
-file name, for consistency.
-
-This is written as errata because some users may still be using older release
-images but on the newer build system from May 2024 onward; you must use the
-Libreboot 20240225 release if you want to inject MRC and so on, for these older
-targets.
-
-Libreboot's [Binary Blob Reduction Policy](../../news/policy) is very strict,
-and states: if it can be done with free software exclusively, then it should be
-done with free software exclusively. Therefore, the MRC is removed on Haswell
-and Libreboot will only use the libre raminit (called NRI, short for Native Ram
-Initialisation).
-
-The four freedoms are absolute.
+Systems that require Intel FSP no longer include it baked into release images.
+Instead, FSP must be injected manually, using tools provided in the
+documentation. These images are clearly labeled with `_vfsp` in their
+filenames.

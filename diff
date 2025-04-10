@@ -1,0 +1,102 @@
+diff --git a/site/docs/install/ivy_has_common.md b/site/docs/install/ivy_has_common.md
+index a72843c..04a61d1 100644
+--- a/site/docs/install/ivy_has_common.md
++++ b/site/docs/install/ivy_has_common.md
+@@ -304,6 +304,12 @@ in the build system; these releases include `_vfsp` images instead. Newer
+ targets added in the future, that need FSP, will also have `_vfsp` in the
+ file name, for consistency.
+ 
++To eliminate any doubt: `_fsp` targets were also removed from lbmk,
++on 1 April 2025. Not everyone was aware of this change, yet the resulting build
++was identical (when compiling from source). To eliminate all questions about it,
++the `_fsp` targets were removed entirely. Please use the `_vfsp` targets from
++now on, when dealing with any machine that uses Intel FSP.
++
+ This is written as errata because some users may still be using older release
+ images but on the newer build system from May 2024 onward; you must use the
+ Libreboot 20240225 release if you want to inject MRC and so on, for these older
+diff --git a/site/docs/install/t480.md b/site/docs/install/t480.md
+index bff77dc..d8f454e 100644
+--- a/site/docs/install/t480.md
++++ b/site/docs/install/t480.md
+@@ -707,11 +707,7 @@ git commit -s -m "experimental/unstable t480 thunderbolt support"
+ 
+ **NOTE: With the above change, or if using the branch referenced below,
+ the build targets will be `t480_fsp_16mb` and `t480s_fsp_16mb`,
+-not `t480_vfsp_16mb` and `t480s_vfsp_16mb`; see notes regarding fsp/vfsp
+-elsewhere on this page. This branch also does not contain other fixes from
+-Libreboot 20231206 rev8/newer, since it's based on 20241206 rev2. A rebase will
+-not be conducted; instead, ThunderBolt PCI-E support will simply be added in
+-a subsequent release, and revision to the 20241206 release.**
++not `t480_vfsp_16mb` and `t480s_vfsp_16mb`.
+ 
+ You can now follow standard [build instructions](../build/).
+ 
+diff --git a/site/freedom-status.md b/site/freedom-status.md
+index 777dfc2..341c435 100644
+--- a/site/freedom-status.md
++++ b/site/freedom-status.md
+@@ -230,7 +230,7 @@ Here is a list, *for each* board, of those files:
+ 
+ Neutered ME required on these targets:
+ 
+-`dell9020mt_nri_12mb`, `dell9020sff_nri_12mb`, `e5420_6mb`, `e5520_6mb`, `e5530_12mb`, `e6220_10mb`, `e6230_12mb`, `e6320_10mb`, `e6330_12mb`, `e6420_10mb`, `e6430_12mb`, `e6520_10mb`, `e6530_12mb`, `hp2170p_16mb`, `hp2560p_8mb`, `hp2570p_16mb`, `hp8200sff_4mb`, `hp8200sff_8mb`, `hp820g2_12mb`, `hp8300cmt_16mb`, `hp8300usdt_16mb`, `hp8460pintel_8mb`, `hp8470pintel_16mb`, `hp8560w_8mb`, `hp9470m_16mb`, `t1650_12mb`, `t420_8mb`, `t420s_8mb`, `t430_12mb`, `t440plibremrc_12mb`, `t520_8mb`, `t530_12mb`, `w530_12mb`, `w541_12mb`, `x220_8mb`, `x230_12mb`, `x230_16mb`, `x230t_12mb`, `x230t_16mb`, `dell3050micro_fsp_16mb`, `dell3050micro_vfsp_16mb`, `t480_fsp_16mb`, `t480_vfsp_16mb`, `t480s_fsp_16mb`, `t480s_vfsp_16mb`
++`dell9020mt_nri_12mb`, `dell9020sff_nri_12mb`, `e5420_6mb`, `e5520_6mb`, `e5530_12mb`, `e6220_10mb`, `e6230_12mb`, `e6320_10mb`, `e6330_12mb`, `e6420_10mb`, `e6430_12mb`, `e6520_10mb`, `e6530_12mb`, `hp2170p_16mb`, `hp2560p_8mb`, `hp2570p_16mb`, `hp8200sff_4mb`, `hp8200sff_8mb`, `hp820g2_12mb`, `hp8300cmt_16mb`, `hp8300usdt_16mb`, `hp8460pintel_8mb`, `hp8470pintel_16mb`, `hp8560w_8mb`, `hp9470m_16mb`, `t1650_12mb`, `t420_8mb`, `t420s_8mb`, `t430_12mb`, `t440plibremrc_12mb`, `t520_8mb`, `t530_12mb`, `w530_12mb`, `w541_12mb`, `x220_8mb`, `x230_12mb`, `x230_16mb`, `x230t_12mb`, `x230t_16mb`, `dell3050micro_vfsp_16mb`, `t480_vfsp_16mb`, `t480s_vfsp_16mb`
+ 
+ As stated, Libreboot provides this in a state where the ME is no longer a
+ threat to security. It initialises itself, but then does nothing, so it's
+@@ -259,8 +259,7 @@ at the correct offset as defined by coreboot config for each board.
+ Provides romstage and raminit, used by coreboot on some boards. In Libreboot,
+ we use it for the following build targets:
+ 
+-`t480_fsp_16mb`, `t480_vfsp_16mb`, `t480s_fsp_16mb`, `t480s_vfsp_16mb`,
+-`dell3050micro_fsp_16mb`, `dell3050micro_vfsp_16mb`
++`t480_vfsp_16mb`, `t480s_vfsp_16mb`, `dell3050micro_vfsp_16mb`
+ 
+ #### SMSC SCH5545 Environmental Control
+ 
+diff --git a/site/freedom-status.tr.md b/site/freedom-status.tr.md
+index 6968568..e4c1e95 100644
+--- a/site/freedom-status.tr.md
++++ b/site/freedom-status.tr.md
+@@ -122,7 +122,7 @@ Bu makale, Libreboot'ta hangi satıcı dosyalarının yer aldığını ayrıntı
+ 
+ Bu hedeflerde nötrleştirilmiş ME gereklidir:
+ 
+-`dell9020mt_nri_12mb`, `dell9020sff_nri_12mb`, `e5420_6mb`, `e5520_6mb`, `e5530_12mb`, `e6220_10mb`, `e6230_12mb`, `e6320_10mb`, `e6330_12mb`, `e6420_10mb`, `e6430_12mb`, `e6520_10mb`, `e6530_12mb`, `hp2170p_16mb`, `hp2560p_8mb`, `hp2570p_16mb`, `hp8200sff_4mb`, `hp8200sff_8mb`, `hp820g2_12mb`, `hp8300cmt_16mb`, `hp8300usdt_16mb`, `hp8460pintel_8mb`, `hp8470pintel_16mb`, `hp8560w_8mb`, `hp9470m_16mb`, `t1650_12mb`, `t420_8mb`, `t420s_8mb`, `t430_12mb`, `t440plibremrc_12mb`, `t520_8mb`, `t530_12mb`, `w530_12mb`, `w541_12mb`, `x220_8mb`, `x230_12mb`, `x230_16mb`, `x230t_12mb`, `x230t_16mb`, `dell3050micro_fsp_16mb`, `dell3050micro_vfsp_16mb`, `t480_fsp_16mb`, `t480_vfsp_16mb`, `t480s_fsp_16mb`, `t480s_vfsp_16mb`
++`dell9020mt_nri_12mb`, `dell9020sff_nri_12mb`, `e5420_6mb`, `e5520_6mb`, `e5530_12mb`, `e6220_10mb`, `e6230_12mb`, `e6320_10mb`, `e6330_12mb`, `e6420_10mb`, `e6430_12mb`, `e6520_10mb`, `e6530_12mb`, `hp2170p_16mb`, `hp2560p_8mb`, `hp2570p_16mb`, `hp8200sff_4mb`, `hp8200sff_8mb`, `hp820g2_12mb`, `hp8300cmt_16mb`, `hp8300usdt_16mb`, `hp8460pintel_8mb`, `hp8470pintel_16mb`, `hp8560w_8mb`, `hp9470m_16mb`, `t1650_12mb`, `t420_8mb`, `t420s_8mb`, `t430_12mb`, `t440plibremrc_12mb`, `t520_8mb`, `t530_12mb`, `w530_12mb`, `w541_12mb`, `x220_8mb`, `x230_12mb`, `x230_16mb`, `x230t_12mb`, `x230t_16mb`, `dell3050micro_vfsp_16mb`, `t480_vfsp_16mb`, `t480s_vfsp_16mb`
+ 
+ Belirtildiği gibi, Libreboot bunu ME'nin artık bir güvenlik tehdidi olmadığı bir durumda sağlar. Kendini başlatır, ancak sonra hiçbir şey yapmaz, bu nedenle devre dışı bırakılmıştır. Bu, `me_cleaner` kullanılarak yapılır. Bkz: <https://github.com/corna/me_cleaner/wiki/How-does-it-work%3F>
+ 
+@@ -138,7 +138,7 @@ Bu, şu hedefler için geçerlidir: `hp2170p_16mb`, `hp2560p_8mb`, `hp2570p_16mb
+ 
+ Coreboot tarafından bazı kartlarda kullanılan romstage ve raminit sağlar. Libreboot'ta, aşağıdaki yapı hedefleri için kullanıyoruz:
+ 
+-`t480_fsp_16mb`, `t480_vfsp_16mb`, `t480s_fsp_16mb`, `t480s_vfsp_16mb`, `dell3050micro_fsp_16mb`, `dell3050micro_vfsp_16mb`
++`t480_vfsp_16mb`, `t480s_vfsp_16mb`, `dell3050micro_vfsp_16mb`
+ 
+ #### SMSC SCH5545 Çevresel Kontrol
+ 
+diff --git a/site/freedom-status.uk.md b/site/freedom-status.uk.md
+index 7081ac7..66d34ba 100644
+--- a/site/freedom-status.uk.md
++++ b/site/freedom-status.uk.md
+@@ -324,7 +324,7 @@ Libreboot *наразі* не розміщує ці блоби взагалі, 
+ 
+ Нейтралізований ME потрібен на цих цілях:
+ 
+-`dell9020mt_nri_12mb`, `dell9020sff_nri_12mb`, `e5420_6mb`, `e5520_6mb`, `e5530_12mb`, `e6220_10mb`, `e6230_12mb`, `e6320_10mb`, `e6330_12mb`, `e6420_10mb`, `e6430_12mb`, `e6520_10mb`, `e6530_12mb`, `hp2170p_16mb`, `hp2560p_8mb`, `hp2570p_16mb`, `hp8200sff_4mb`, `hp8200sff_8mb`, `hp820g2_12mb`, `hp8300cmt_16mb`, `hp8300usdt_16mb`, `hp8460pintel_8mb`, `hp8470pintel_16mb`, `hp8560w_8mb`, `hp9470m_16mb`, `t1650_12mb`, `t420_8mb`, `t420s_8mb`, `t430_12mb`, `t440plibremrc_12mb`, `t520_8mb`, `t530_12mb`, `w530_12mb`, `w541_12mb`, `x220_8mb`, `x230_12mb`, `x230_16mb`, `x230t_12mb`, `x230t_16mb`, `dell3050micro_fsp`, `dell3050micro_vfsp_16mb`, `t480_fsp_16mb`, `t480_vfsp_16mb`, `t480s_fsp_16mb`, `t480s_vfsp_16mb`
++`dell9020mt_nri_12mb`, `dell9020sff_nri_12mb`, `e5420_6mb`, `e5520_6mb`, `e5530_12mb`, `e6220_10mb`, `e6230_12mb`, `e6320_10mb`, `e6330_12mb`, `e6420_10mb`, `e6430_12mb`, `e6520_10mb`, `e6530_12mb`, `hp2170p_16mb`, `hp2560p_8mb`, `hp2570p_16mb`, `hp8200sff_4mb`, `hp8200sff_8mb`, `hp820g2_12mb`, `hp8300cmt_16mb`, `hp8300usdt_16mb`, `hp8460pintel_8mb`, `hp8470pintel_16mb`, `hp8560w_8mb`, `hp9470m_16mb`, `t1650_12mb`, `t420_8mb`, `t420s_8mb`, `t430_12mb`, `t440plibremrc_12mb`, `t520_8mb`, `t530_12mb`, `w530_12mb`, `w541_12mb`, `x220_8mb`, `x230_12mb`, `x230_16mb`, `x230t_12mb`, `x230t_16mb`, `dell3050micro_vfsp_16mb`, `t480_vfsp_16mb`, `t480s_vfsp_16mb`
+ 
+ Як заявлено, Libreboot надає це в стані, де ME більше не є
+ загрозою для безпеки. Він ініціалізує себе, але потім нічого не робить, тому його
+@@ -353,8 +353,7 @@ at the correct offset as defined by coreboot config for each board.
+ Provides romstage and raminit, used by coreboot on some boards. In Libreboot,
+ we use it for the following build targets:
+ 
+-`t480_fsp_16mb`, `t480_vfsp_16mb`, `t480s_fsp_16mb`, `t480s_vfsp_16mb`,
+-`dell3050micro_fsp_16mb`, `dell3050micro_vfsp_16mb`
++`t480_vfsp_16mb`, `t480s_vfsp_16mb`, `dell3050micro_vfsp_16mb`
+ 
+ #### SMSC SCH5545 Environmental Control
+ 

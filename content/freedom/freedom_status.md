@@ -3,6 +3,8 @@ title: Freedom status for each board
 toc: true
 ---
 
+<!-- TODO -->
+
 This page documents how Libreboot's [binary blob reduction policy](../policy/)
 is applied in practice, i.e. the free software status of each board.
 
