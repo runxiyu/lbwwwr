@@ -40,6 +40,9 @@ This may also apply to CentOS or Redhat. Chroot guide can be found on
 
 ### linux16 issue
 
+This applies to older versions of Fedora. If your version is recent and doesn't
+have the sixteenbit variable, ignore this subsection.
+
 Libreboot's default GRUB config sources fedora's grub config
 `grub.cfg` (in `/boot/grub2/grub.cfg`), fedora by default makes use of the
 `linux16` command, where it should be saying `linux`.
