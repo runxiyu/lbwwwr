@@ -48,6 +48,8 @@ flash via the SPI protocol. Versions with "H" in their name have "headers"
 Currently, Libreboot supports both the Pico (RP2040 chip) and Pico 2 (RP2530).
 Other RP2530 models should also work.
 
+**Note:** RP2530 support has been temporarily removed due to bugs.
+
 We recommend these since they only cost about $5, and all of the software
 (including its own [Boot ROM](https://github.com/raspberrypi/pico-bootrom))
 are libre, other than the wireless firmware on versions with "W" in their name

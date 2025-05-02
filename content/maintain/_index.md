@@ -160,7 +160,7 @@ instead, because nproc is not available on every operating system.
 
 ### XBMK\_RELEASE
 
-If set to `y`, it signals to `script/roms` that a release is being built,
+If set to `y`, it signals that a release is being built,
 and it will honour `release="n"` in target.cfg files. You could also set this
 yourself when doing regular builds, if you wanted to test how `./mk -b coreboot`
 behaves running it in release mode. Do this if you want to:
@@ -508,7 +508,7 @@ and it can successfully boot UEFI applications on x86 Libreboot systems.
 Please also visit: <https://github.com/LongSoft/UEFITool>
 
 This is compiled, so as to provide `UEFIExtract`. Currently used by the
-vendor download logic within `include/vendor.sh`, to download SCH5545 EC
+vendor download logic within `include/inject.sh`, to download SCH5545 EC
 firmware (used for fan control on Dell Precision T1650).
 
 This has also been modified to build reliably on non-glibc-based systems e.g.
@@ -1320,7 +1320,7 @@ posix shell scripts) that constitute the entire Libreboot build system, lbmk:
 Scripts in root directory of lbmk
 ---------------------------------
 
-### build
+### mk
 
 This is the main build script.
 
@@ -1329,7 +1329,7 @@ Example commands:
 	./mk -b coreboot
 	./mk
 
-Special commands available (not provided by files under `script/`):
+Special commands available:
 
 	./mk release
 	./mk inject
@@ -1342,6 +1342,168 @@ You can also know what build system revision you have by running:
 	./mk version
 
 This script is the beating heart of Libreboot. Break it and you break Libreboot.
+
+<!-- TODO There was some giant change here that didn't make sense.
+     RY 2025-05-02 -->
+
+include/
+--------
+
+This directory contains *helper scripts*, to be included
+by main scripts using the `.` command (called the `source`
+command in `bash`, but we rely upon posix `sh` only).
+
+### include/git.sh
+
+These functions in here previously existed as independent scripts, but they
+were unified here, and they are used when you pass the `-f` argument
+to `script/update/trees` (e.g. `./mk -f coreboot`).
+
+These functions deal with git cloning, submodule updates, revision resets and
+the application of patch files via `git am`. *Every* git repository downloaded
+by lbmk is handled by the functions in this file.
+
+### include/mrc.sh
+
+This was previously a separate script. The download logic was removed, and
+now the logic under `include/vendor.sh` is used for downloads. This file now
+only contains those functions used for extraction of MRC files from Google
+Chromebook images, currently only used for Haswell motherboards.
+
+This is an include, used by `include/vendor.sh`, but it's here in
+this file because the vendor download script is GPLv3-only, while the MRC
+extract logic in this file is GPLv2-only (forked from coreboot ages ago). Thus,
+it is provided as an include to bypass license incompatibility. It has been
+heavily modified to use the same style of logic and general control flow used
+in the script at `include/vendor.sh`, and it is used from there.
+
+### include/lib.sh
+
+Several other parts of lbmk also use this file. It is added to as little as
+possible, and contains miscallaneous functions that don't belong anywhere else.
+
+The functions here are mostly those that deal with configuration files; scanning
+them to set variables and so on.
+
+This file also contains generic error handling, used by all lbmk scripts.
+
+This also contains functions to verify the current libreboot version, and check
+whether Git is properly initialised on the host system. It also contains
+the `setvars` function, which provides a shorthand way of initialising many
+variables (combined with use of `eval`), which lbmk uses heavily.
+
+This function also contains `x_()` which lbmk uses to execute commands
+and ensure that they cause an exit (with non-zero status) from lbmk, if they
+return an error state.
+
+This also includes the `mk()` function, which can be used as shorthand to
+build multiple projects, but it doesn't handle targets within multi-tree projects,
+so if for example you say `mk coreboot`, it would build every coreboot target.
+This is useful for the release build logic, because now it can much more simply
+build all of Libreboot, while still being flexible about it.
+
+### include/rom.sh
+
+This builds coreboot ROM images. Specifically, this contains mkhelper functions.
+It also builds serprog images, and it could be used to provide functions for
+building other types of firmware.
+
+Command: `./mk -b coreboot targetname`
+
+The `targetname` argument must be specified, chosen from this output:
+
+	./mk -b coreboot list
+
+Pass several board names if you wish to build only for specific targets. For
+example:
+
+	./mk -b coreboot x60 x200_8mb
+
+To build *all* targets, specify:
+
+	./mk -b coreboot
+
+For x86 targets, these scripts build with the GRUB and/or SeaBIOS payloads
+inserted into the ROM images; secondary payloads like Memtest86+ are also
+handled and inserted here.
+
+It heavily makes use of the `target.cfg` file, for a given board. This script
+will *only* operate on a single target, from a directory in `config/coreboot/`.
+
+If `grub_scan_disk` is set, it sets that in the `scan.cfg` file that is to be
+inserted into a ROM image, when `payload_grub` is turned on.
+
+It automatically detects if `crossgcc` is to be compiled, on a given coreboot
+tree (in cases where it has not yet been compiled), and compiles it for a
+target based on the `arch` entry in `target.cfg`.
+
+It creates ROM images with GRUB, SeaBIOS, U-Boot, optionally with Memtest86+
+also included, in various separate configurations in many different ROM images
+for user installation.
+
+If no payload is defined in `target.cfg`, the `build/roms` script will exit
+with error status.
+
+If SeaBIOS is to be used, on `libgfxinit` setups, SeaVGABIOS will also be
+inserted. This provides a minimal VGA compatibility layer on top of the
+coreboot framebuffer, but does not allow for *switching* the VGA mode. It is
+currently most useful for directly executing ISOLINUX/SYSLINUX bootloaders,
+and certain OS software (some Windows setups might work, poorly, depending on
+the board configuration, but don't hold your breath; it is far from complete).
+
+If SeaBIOS is to be used, in `vgarom` setups or `normal` setups, SeaVGABIOS
+is not inserted and you rely on either coreboot and/or SeaBIOS to execute VGA
+option ROMs.
+
+In all cases, this script automatically inserts several SeaBIOS runtime
+configurations, such as: `etc/ps2-keyboard-spinup` set to 3000 (PS/2 spinup
+wait time), `etc/pci-optionrom-exec` set to 2 (despite that already being
+the default anyway) to enable *all* option ROMs, unless `vgarom` setups are
+used, in which case the option is set to *0* (disabled) because coreboot is
+then expected to handle option ROMs, and SeaBIOS should not do it.
+
+This script handles U-Boot separately, for ARM-based chromeos devices.
+
+When the ROM is finished compiling, it will appear under a directory in `bin/`
+
+This script is the beating heart of Libreboot. Break it, and you break
+Libreboot!
+
+CCACHE is automatically used, when building coreboot, but not currently for
+other projects. This is done by cooking coreboot configs at build time, enabling
+coreboot's build option for it.
+
+### Serprog images:
+
+Build firmware images for serprog-based SPI programmers, where they use an
+STM32 MCU. It also builds for RP2040-based programmers like Raspberry Pi Pico.
+
+Example command: `./mk -b pico-serprog`
+
+Example command: `./mk -b stm32-vserprog`
+
+This also uses `rom.sh` as with the coreboot image build logic. It's all
+defined in that file, so read the main section pertaining to this file.
+
+### include/vendor.sh
+
+Helper functions for downloading and injecting vendor files. How to use:
+
+	./mk inject ARGUMENTS
+	./mk -d coreboot TARGET
+
+Refer elsewhere in the documentation for how to handle vendor files, and/or
+read [the guide](../install/ivy_has_common).
+
+script/
+-------
+
+### script/trees
+
+*This* is the other beating heart of Libreboot. Used heavily by Libreboot, this
+script is what handles defconfig files for SeaBIOS, U-Boot *and* coreboot; it
+used to be separate scripts, but the logic was unified under this single script.
+
 
 include/
 --------

@@ -36,11 +36,7 @@ Libreboot releases are named after the release date, and may come with
 amendments called "revisions". You may wish to read [the release
 schedule](../release_schedule/).
 
-The latest release is [Libreboot 20241206](releases/20241206/). This release
-adds support for the U-boot payload, and the following boards: Lenovo ThinkPad
-T480, Lenovo ThinkPad T480S, Dell OptiPlex 780 USFF, Dell OptiPlex 780 MT.
-
-The latest revision is [Libreboot 20241206 revision 11](releases/20241206rev11/).
+The latest release is [Libreboot 25.04 Corny Calamity Revision 1](releases/25.04rev1/).
 
 ## Technical overview
 
